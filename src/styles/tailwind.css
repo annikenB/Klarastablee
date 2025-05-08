@@ -5,9 +5,15 @@
 
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  --color-roed-500: #E61011;
 }
 
+@font-face {
+  font-family: Instrument;
+  src: url(../../public/InstrumentSerif-Regular.woff2);
+  --font-script: InstrumentSerif-Regular;
+
+}
 @layer base {
   *,
   ::after,
