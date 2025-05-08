@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+---
+
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<article
+  id="newsletter-popup"
+  class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden"
+>
+  <div class="absolute inset-0 bg-opacity-50 backdrop-blur-sm z-40 mt-voresm">
+  </div>
+
+  <div
+    class="p-0 max-w-5xl mx-auto relative flex rounded-3xl overflow-hidden z-50 border border-lilla-950"
+  >
+    <div class="flex-1 flex flex-col justify-center items-center p-6">
+      <button
+        id="close-popup-btn"
+        class="bg-transparent text-sm absolute top-2.5 right-2.5 group"
+      >
+      </button>
+
+      <p>A Note from Klaras Table</p>
+      <p class="mb-4 text-center">
+        Little stories, curated inspiration and a new recipe every month
+      </p>
+      <p>Sign up for our newsletter</p>
+      <div class="w-full">
+        <label for="by" class="block mb-1 text-sm"> </label>
+        <input
+          type="text"
+          id="by"
+          class="w-full border-0 border-b-2 border-grey focus:outline-none text-center"
+          placeholder="Your Email"
+          required
+        />
+        <div class="max-w-xl mx-auto text-center mt-4 pb-voresxs">
+          <a href="/"><Button variant="secondary">Subscribe</Button></a>
+          <p>rund logo her</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.onload = () => {
+      const popup = document.getElementById("newsletter-popup");
+      const closeButton = document.getElementById("close-popup-btn");
+
+      setTimeout(() => {
+        popup.classList.remove("hidden");
+      }, 10000);
+
+      closeButton.addEventListener("click", () => {
+        popup.classList.add("hidden");
+      });
+    };
+  </script>
+</article>
