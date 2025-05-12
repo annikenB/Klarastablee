@@ -2,8 +2,82 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import test3 from "../assets/images/test3.png";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
-<MainLayout title="Titel"> <article></article></MainLayout>
+<MainLayout title="Titel">
+  <article>
+    <article class="text-center m-60">
+      <section class="pt-20">
+        <h1>Recipe of the Month</h1>
+        <p>
+          Now that the season is finally changing and we are heading towards the
+          warmer months, some of my favorite fruits are starting to be in
+          season. I want to introduce you to this fresh dish with poached pears.
+        </p>
+      </section>
+      <section class="text-center">
+        <h1 class="text-center p-20">
+          HIBISCUS AND ELDERFLOWER POACHED PEARS with mascarpone cream
+        </h1>
+
+        <p>
+          Spring has sprung, and wow, was that much needed. Every corner of
+          Copenhagen smells like lilac and elderflower and I am so, so here for
+          it. What screams spring more than poaching fruit with spring flowers
+          in it? (Okay maybe hibiscus doesn’t exactly scream danish spring, but
+          the color and acidity was just what this dish needed so forgive me) Do
+          tell if you know! Until then, here is an itty bitty recipe for some
+          pretty pink poached pears with mascarpone cream 3
+        </p>
+        <p>
+          Note that the pears need to rest for 12 hours or longer, so make them
+          the day before you need to use them!
+        </p>
+      </section>
+      <section>
+        <h3>You need</h3>
+        <p>
+          5 pears 1 liter of water 1dl of white sugar 1 lemon 2 tablespoons of
+          dried hibiscus flowers 2,5 dl of elderflower nectar (if you made it
+          yourself, go girl, but if you’re like the rest of us, just buy it in
+          any grocery shop) 250g of mascarpone 1 egg, pasteurized 0.5dl of white
+          sugar
+        </p>
+      </section>
+      <section class="p-20">
+        <h3 class="p-10">Day one</h3>
+        <p>
+          Start by bringing your water, sugar, elderflower nectar, hibiscus,
+          lemon juice, lemon zest (or if organic just dump the whole juiced
+          lemon in there) to a boil in a medium sized pot. While the brine is
+          coming to boil, peel the skin off the pears, but keep the stem on, it
+          looks hella cute! When the brine is boiling, add the pears and let
+          them simmer for 10-12 minutes, or till the pears are soft enough to
+          stick a knife in them without too much resistance. Take the pot off
+          the heat and let them rest for an hour before transferring them to an
+          air tight box and pour the brine over. Let them rest and soak up color
+          and taste in the fridge overnight.
+        </p>
+        <h3 class="p-10">Day two</h3>
+        <p>
+          Right before serving your dessert, whip up your mascarpone cream. Add
+          the egg and sugar to a mixing bowl with sugar and whip it on high
+          speed till it is light and fluffy in color and the sugar is fully
+          incorporated. It should take two minutes. Now add in the mascarpone
+          and whip it on medium speed. At first it becomes liquid, but if you
+          keep whipping, it becomes an airy cream, that you can scoop with a
+          spoon. Keep an eye on it, it can become very solid if you whip too
+          long! Plate on whole pear with a scoop of mascarpone cream and voila,
+          you have a simple, sassy spring dessert
+        </p>
+        <p class="p-10">Xx Klara</p>
+        <div class="flex items-center justify-center">
+          <Image src={test3} alt="test" class="" />
+        </div>
+      </section>
+    </article>
+  </article>
+</MainLayout>

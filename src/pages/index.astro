@@ -12,7 +12,12 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Home">
   <article>
     <section class="relative h-svh w-full">
-      <video autoplay loop muted class="absolute top-0 left-0 object-cover">
+      <video
+        autoplay
+        loop
+        muted
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      >
         <source src="indexvideo.MP4" type="video/mp4" />
       </video>
 
@@ -45,16 +50,16 @@ import thumbsup from "../assets/images/thumbsup.png";
       </p>
       <p class="text-center p-5">We’d love to help you</p>
     </section>
-    <section class="p-20">
+    <section class="">
       <h2 class="text-center p-20">What are you looking for?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <a href="/produker">
+        <a href="/produkter">
           <Cardone title="Celebration Cakes" image />
         </a>
-        <a href="/produker">
+        <a href="/produkter">
           <Cardone title="Smaller Cakes" image />
         </a>
-        <a href="/produker">
+        <a href="/produkter">
           <Cardone title="Events" image />
         </a>
       </div>

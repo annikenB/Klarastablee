@@ -1,0 +1,46 @@
+---
+import Button from "../components/Button.astro";
+
+const {
+  title = "Standard Tittel",
+  image = "https://via.placeholder.com/300",
+  quantity = 1,
+  price = "100,00",
+  buttonLabel = "Legg i handlekurv",
+  href = "",
+} = Astro.props;
+
+const cardStyling =
+  "bg-white rounded-lg p-4 transition-transform duration-300 transform hover:scale-105 flex flex-col justify-between h-full group";
+
+const imageStyling = "w-full object-cover rounded-md mb-4";
+
+const priceStyling = "text-base font-semibold text-gray-900";
+
+const titleStyling = "group-hover:text-roed-600 py-voresxs";
+
+const buttonStyling = "max-w-xl"; // Brukt for begge knappecontainere
+---
+
+<div class={cardStyling}>
+  <div class="grow">
+    <img src={image} alt={title} class={imageStyling} />
+  </div>
+
+  <div>
+    <h3 class={titleStyling}>{title}</h3>
+    <p class={priceStyling}>{price}</p>
+
+    <div class={`${buttonStyling} md:hidden block`}>
+      <a href={href}>
+        <Button variant="mobileprimary">{buttonLabel}</Button>
+      </a>
+    </div>
+
+    <div class={`${buttonStyling} hidden md:block`}>
+      <a href={href}>
+        <Button variant="primary">{buttonLabel}</Button>
+      </a>
+    </div>
+  </div>
+</div>

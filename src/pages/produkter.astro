@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import test3 from "../assets/images/test3.png";
+import Cardtwo from "../components/Cardtwo.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
@@ -11,44 +13,147 @@ import thumbsup from "../assets/images/thumbsup.png";
     <section class="text-center p-20">
       <h1 class="text-center p-20">Cakes and Events</h1>
       <p>
-        The dessert is always the highlight of the event. Make yours stand out.
-        We offer cakes and desserts for your next event or celebration of other
-        kinds to be enjoyed by friends and family.  We can also do catering,
-        delevery and table set up in the Copenhagen area for an aditional fee.
-        All orders can be adjusted for allergies or specific needs All orders
-        must be places ??? to pick up date Pick up at: ??? Please reach out to
-        MAIL for further questions or inquiries - we would love to assist you
+        Dessert is the highlight of the event. Make yours stand out. We offer
+        cakes and desserts for your next commercial or private event. All orders
+        can be adjusted for allergies or specific needs. We also offer delivery,
+        table set ups, events and catering in the Copenhagen area.
+      </p>
+      <p>
+        Please reach out to MAIL for further questions or inquiries - we would
+        love to assist you
       </p>
     </section>
+  </article>
 
-    <section id="sektion 2" class="p-20">
-      <h2 class="text-center">Shop all</h2>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-      >
-        <p>card her</p>
-        <p>card her</p>
-        <p>card her</p>
-        <p>card her</p>
+  <section class="py-12">
+    <h2 class="text-center">Shop all</h2>
+
+    <div
+      class="flex gap-4 overflow-x-auto px-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
+    >
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo
+          title="Celebration Cake"
+          image={test3}
+          price="65 dk pr. person - min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo
+          title="Petite Pies"
+          image={test3}
+          price="65 dk pr. person - min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo
+          title="Tiny Treats"
+          image="https://via.placeholder.com/300"
+          price="65 dk pr. person - min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo
+          title="Madeleines"
+          image="https://via.placeholder.com/300"
+          price="65 dk pr. person - min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo
+          title="Private Event"
+          image="https://via.placeholder.com/300"
+          price="pris min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo
+          title="Commercial Event"
+          image="https://via.placeholder.com/300"
+          price="pris min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo title="Pavlova" image="https://via.placeholder.com/300" />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo title="Produkt 8" image={test3} />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo title="Produkt 9" image="https://via.placeholder.com/300" />
+      </div>
+      <div class="shrink-0 snap-start w-[250px]">
+        <Cardtwo title="Produkt 10" image="https://via.placeholder.com/300" />
+      </div>
+    </div>
+  </section>
+
+  <section id="sektion 4" class="p-20">
+    <section class="">
+      <h2 class="text-center p-20">Events and cakes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Cardtwo
+          title="Private Event"
+          image={test3}
+          price="pris min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+        <Cardtwo
+          title="Commercial Event"
+          image="https://via.placeholder.com/300"
+          price="pris min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
       </div>
     </section>
-    <section id="sektion 3" class="p-20">
-      <h2 class="text-center">Events & Catering</h2>
+    <section class="">
+      <h2 class="text-center p-20">Cakes and Sweets</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <p class="text-center">Cards</p>
-        <p class="text-center">Cards</p>
+        <Cardtwo
+          title="Celebration Cake"
+          image="https://via.placeholder.com/300"
+          price="65 dk pr. person - min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+        <Cardtwo
+          title="Petite Pies"
+          image="https://via.placeholder.com/300"
+          price="65 dk pr. person - min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Cardtwo
+          title="Tiny Treats"
+          image="https://via.placeholder.com/300"
+          price="65 dk pr. person - min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
+        <Cardtwo
+          title="Madeleines"
+          image="https://via.placeholder.com/300"
+          price="65 dk pr. person - min. 10 servings"
+          buttonLabel="knap her"
+          href="/betal"
+        />
       </div>
     </section>
-    <section id="sektion 4" class="p-20">
-      <h2 class="text-center">Cakes & Sweets</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <p class="text-center">Cards</p>
-        <p class="text-center">Cards</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <p class="text-center">CArds</p>
-        <p class="text-center">cards</p>
-      </div>
-    </section>
-  </article></MainLayout
->
+  </section>
+</MainLayout>
