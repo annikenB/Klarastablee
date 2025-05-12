@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Cardone from "../components/Cardone.astro";
 import Newsletter from "../components/Newsletter.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -10,12 +11,22 @@ import thumbsup from "../assets/images/thumbsup.png";
 <Newsletter />
 <MainLayout title="Home">
   <article>
-    <section id="hero" class="p-40">
-      <h1 class="text-center text-blaa-100">Video her</h1>
+    <section class="relative h-svh w-full">
+      <video autoplay loop muted class="absolute top-0 left-0 object-cover">
+        <source src="indexvideo.MP4" type="video/mp4" />
+      </video>
+
+      <div
+        class="relative top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"
+      >
+        <div>
+          <h1 class="text-white">Personalised cakes, desserts and events</h1>
+        </div>
+      </div>
     </section>
     <section id="sektion 1">
       <h1 class="text-center">Klaras Table</h1>
-      <p class="text-center ml-60 mr-60 mt-60 font-script">
+      <p class="text-center ml-60 mr-60 mt-20 font-script">
         Klaras Table is a Copenhagen based culinary studio, offering thoughtful
         cakes and sweet treats for events of all kinds.  From simple morning
         plates and petit fours, to handmade cakes for weddings and larger
@@ -26,19 +37,29 @@ import thumbsup from "../assets/images/thumbsup.png";
         true centerpieces— and will be the first thing your guests will notice
         upon arrival, and certainly something they'll remember when leaving. 
         Whether you're planning something small and cozy or a larger gathering,
-        Klaras Table brings sweetness and artistic touch to the table. For
-        further information or questions please reach out to
-         @infoklarastable@gmail.com
+        Klaras Table brings sweetness and artistic touch to the table.
+        <p class="text-center p-5">
+          For further information or questions please reach out to
+          @infoklarastable@gmail.com
+        </p>
       </p>
-      <p class="text-center p-20">We’d love to help you</p>
+      <p class="text-center p-5">We’d love to help you</p>
     </section>
-    <section id="sektion 2">
-      <h2 class="text-center">What are you looking for?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <p class="text-center">Cakes</p>
-        <p class="text-center">Events</p>
+    <section class="p-20">
+      <h2 class="text-center p-20">What are you looking for?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/produker">
+          <Cardone title="Celebration Cakes" image />
+        </a>
+        <a href="/produker">
+          <Cardone title="Smaller Cakes" image />
+        </a>
+        <a href="/produker">
+          <Cardone title="Events" image />
+        </a>
       </div>
     </section>
+
     <section id="sektion 3">
       <h2 class="text-center">Reviews</h2>
     </section>
