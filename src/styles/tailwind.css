@@ -4,16 +4,54 @@
 @plugin '@tailwindcss/forms';
 
 
-@theme {
-  --color-roed-500: #E61011;
+@theme{
+  /* dette er til variabler og tolkens i designsystem */
+  --color-red-100: #FFFFFF;
+  --color-red-200: #F9C3C4;
+  --color-red-300: #F38788;
+  --color-red-400: #ED4C4D;
+  --color-red-500: #E61011;
+  --color-red-600: #AD0C0D;
+  --color-red-700: #730808;
+  --color-red-800: #3A0404;
+  --color-red-900: #230203;
+  --color-red-1000: #000000;
+
+  --color-beige-100: #FFFFFF;
+  --color-beige-200: #FFFFF9;
+  --color-beige-300: #FFFFF9;
+  --color-beige-400: #FEFEF7;
+  --color-beige-500: #FEFEF4;
+  --color-beige-600: #BEBEB7;
+  --color-beige-700: #7F7F7A;
+  --color-beige-800: #40403D;
+  --color-beige-900: #262625;
+  --color-beige-1000: #000000;
+}
+
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Instrument;
-  src: url(../../public/InstrumentSerif-Regular.woff2);
-  --font-script: InstrumentSerif-Regular;
-
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif/InstrumentSerif-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
+
+@theme{
+  /* dette er til variabler og tolkens i designsystem */
+  --font-serif: "Instrument";
+  --font-display: "Instrument";
+}
+
 @layer base {
   *,
   ::after,
