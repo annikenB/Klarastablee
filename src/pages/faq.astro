@@ -1,0 +1,240 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import pilhover from "../assets/images/vhover.webp";
+import thumbsup from "../assets/images/thumbsup.png";
+import pil from "../assets/images/v.webp";
+---
+
+<MainLayout title="Titel">
+  <article>
+    <section class="text-center p-20">
+      <h1 class="text-center p-20">Frequently Asked Questions</h1>
+      <p>
+        Klaras Table is a one-woman Copenhagen based culinary project founded by
+        Klara Jespersen. She specializes in the sweet kitchen and is driven by
+        hunger for a space where creativity, curiosity and playfulness blooms
+        though taste, flavour and texture. Klaras Table started as a hobby
+        project in the spring of 2022. (And, not gonna lie — also a bit of a
+        sweet tooth for daily dessert.)
+      </p>
+    </section>
+    <section class="">
+      <div class="max-w-4xl mx-auto my-voresxs px-voresxs">
+        <div class="space-y-4">
+          <div class="faq-item">
+            <button
+              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              id="faq1Button"
+            >
+              Is it possible to get cakes and catering outside of Copenhagen?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq1Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                Of course it is! We do that upon request and the prices vary
+                depending on where should deliver or cater.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              id="faq2Button"
+            >
+              Where can I pick up my order?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq2Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                As our production kitchen is remote, pick up addresses may vary.
+                But we always deliver!
+              </p>
+            </div>
+          </div>
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              id="faq3Button"
+            >
+              What are the prices?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq3Answer" class="faq-answer hidden px-4 py-2">
+              <p>Prices are listed at the cake explanation ( link her?)</p>
+            </div>
+          </div>
+
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+              id="faq4Button"
+            >
+              How long time does it take from order to pick up
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq4Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                You have to order cake at least a week beforehand. We recommend
+                booking an event 2 months in advance, as our calendar fills up
+                quickly!
+              </p>
+            </div>
+          </div>
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              id="faq5Button"
+            >
+              What ingredients do you use?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq5Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                We focus on seasonal ingredients, and always use danish dairy
+                and organic eggs. Non negotiable!
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left py-2 text-lg font-semibold rounded-lg focus:outline-none flex justify-between items-center group"
+              id="faq6Button"
+            >
+              What if i or my guests have allergies? (lactose, gluten etc.)
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq6Answer" class="faq-answer hidden px-4 py-2">
+              <p class="max-w-xs">
+                Please contact us regarding allergies! We are happy to inform
+                you and take allergies into consideration.We dont do glutenfree
+                cakes, but we can always make you a dessert without flour. Our
+                pavlova for example!
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item border-t border-b-1 border-lilla-950">
+            <button
+              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              id="faq7Button"
+            >
+              I am vegan - what can I get?
+              <div class="relative w-4 h-4 ml-voresl">
+                <Image
+                  src={pil}
+                  alt="pil"
+                  class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
+                />
+                <Image
+                  src={pilhover}
+                  alt="pil hover"
+                  class="absolute inset-0 w-6 opacity-0 group-hover:opacity-100 mt-1 z-10"
+                />
+              </div>
+            </button>
+            <div id="faq7Answer" class="faq-answer hidden px-4 py-2">
+              <p>
+                We don't specialize in entire vegan or gluten free cakes, but
+                don’t hesitate to contact us if you need an alternative to a
+                cake you ordered.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script type="module" client:load>
+        function toggleAnswer(buttonId, answerId) {
+          const button = document.getElementById(buttonId);
+          const answer = document.getElementById(answerId);
+          const arrow = button.querySelector(".faq-arrow");
+
+          answer.classList.toggle("hidden");
+          arrow.innerHTML = answer.classList.contains("hidden")
+            ? "&#9660;"
+            : "&#9650;";
+        }
+
+        for (let i = 1; i <= 11; i++) {
+          const buttonId = `faq${i}Button`;
+          const answerId = `faq${i}Answer`;
+          document.getElementById(buttonId).addEventListener("click", () => {
+            toggleAnswer(buttonId, answerId);
+          });
+        }
+      </script>
+    </section>
+  </article>
+</MainLayout>
