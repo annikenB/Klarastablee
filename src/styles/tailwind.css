@@ -4,17 +4,98 @@
 @plugin '@tailwindcss/forms';
 
 
+@theme{
+  /* dette er til variabler og tolkens i designsystem */
+  --color-primary-100: #FFFFFF;
+  --color-primary-200: #F9C3C4;
+  --color-primary-300: #F38788;
+  --color-primary-400: #ED4C4D;
+  --color-primary-500: #E61011;
+  --color-primary-600: #AD0C0D;
+  --color-primary-700: #730808;
+  --color-primary-800: #3A0404;
+  --color-primary-900: #230203;
+  --color-primary-1000: #000000;
+
+  --color-beige-100: #FFFFFF;
+  --color-beige-200: #FFFFF9;
+  --color-beige-300: #FFFFF9;
+  --color-beige-400: #FEFEF7;
+  --color-beige-500: #FEFEF4;
+  --color-beige-600: #BEBEB7;
+  --color-beige-700: #7F7F7A;
+  --color-beige-800: #40403D;
+  --color-beige-900: #262625;
+  --color-beige-1000: #000000;
+}
+
+
 @theme {
-  --color-roed-500: #E61011;
+  --text-lillexxlarge: 2.5rem;   /* 40px */
+  --text-lillexlarge: 2.25rem;  /* 36px */
+  --text-lillelarge: 2rem;      /* 32px */
+  --text-lillemedium: 1.75rem;  /* 28px */
+  --text-lillesmall: 1.5rem;    /* 24px */
+  --text-lillexsmall: 1.125rem; /* 18px */
+
+  --text-body-small: 0.75rem;   /* 12px */
+  --text-body-base: 1rem;       /* 16px */
+  --text-body-large: 1.25rem;   /* 20px */
+}
+
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Instrument;
-  src: url(../../public/InstrumentSerif-Regular.woff2);
-  --font-script: InstrumentSerif-Regular;
-
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif/InstrumentSerif-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
+
+@theme{
+  /* dette er til variabler og tolkens i designsystem */
+  --font-serif: "Instrument Serif";
+  --font-display: "Instrument Serif";
+}
+
 @layer base {
+
+  h1 {
+    @apply    text-lillexxlarge font-display text-primary-900;
+  }
+
+  h2 {
+    @apply  text-lillexlarge font-display  text-primary-900;
+  }
+
+  h3 {
+    @apply   text-lillelarge font-display text-primary-900;
+  }
+
+  h4 {
+    @apply   text-lillemedium font-display text-primary-900;
+  }
+
+  h5 {
+    @apply  fontslay text-lillesmall font-display text-primary-900;
+  }
+
+  h5 {
+    @apply   text-lillexsmall  font-display text-primary-900;
+  }
+  
+
+  p {
+    @apply  text-body-base font-display text-primary-900;
+  }
   *,
   ::after,
   ::before,

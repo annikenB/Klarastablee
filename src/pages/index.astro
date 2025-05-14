@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 
-<Newsletter />
+<!-- <Newsletter /> -->
 <MainLayout title="Home">
   <article>
     <section class="relative h-svh w-full">
@@ -25,13 +25,15 @@ import thumbsup from "../assets/images/thumbsup.png";
         class="relative top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center"
       >
         <div>
-          <h1 class="text-white">Personalised cakes, desserts and events</h1>
+          <h1 class="text-beige-100 text-5xl">
+            Personalised cakes, desserts and events
+          </h1>
         </div>
       </div>
     </section>
     <section id="sektion 1">
-      <h1 class="text-center">Klaras Table</h1>
-      <p class="text-center ml-60 mr-60 mt-20 font-script">
+      <h1 class="text-center">Your local cake dealer</h1>
+      <p class="text-center ml-60 mr-60 mt-20 font-script font-display">
         Klaras Table is a Copenhagen based culinary studio, offering thoughtful
         cakes and sweet treats for events of all kinds. From simple morning
         plates and petit fours, to handmade cakes for weddings and larger
@@ -43,9 +45,11 @@ import thumbsup from "../assets/images/thumbsup.png";
         upon arrival, and certainly something they'll remember when leaving.
         Whether you're planning something small and cozy or a larger gathering,
         Klaras Table brings sweetness and artistic touch to the table.
-        <p class="text-center p-5">
+        <p class="text-center p-5 font-display">
           For further information or questions please reach out to
-          @infoklarastable@gmail.com
+          <a class="font-display" href="mailto:infoklarastable@gmail.com"
+            >infoklarastable@gmail.com</a
+          >
         </p>
       </p>
       <p class="text-center p-5">We’d love to help you</p>
