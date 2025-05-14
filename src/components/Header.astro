@@ -23,28 +23,32 @@ import "../styles/tailwind.css";
       &times;
     </button>
 
-    <a href="/">Home</a>
-    <a href="/produkter"><p class="font-script">Book Cake or Event</p></a>
-    <a href="/gallery">Gallery</a>
-    <a href="/about">About</a>
-    <a href="/playground">Set Your Table</a>
-    <a href="/recipe">Recipe of the month</a>
-    <a href="/cart">Your Cart</a>
+    <a href="/"
+      ><p class="font-display">
+        Home<p></p>
+        <a href="/produkter"><p class="font-display">Book Cake or Event</p></a>
+        <a href="/gallery"><p class="font-display">Gallery</p></a>
+        <a href="/about"><p class="font-display">About</p></a>
+        <a href="/playground"><p class="font-display">Set Your Table</p></a>
+        <a href="/recipe"><p class="font-display">Recipe of the month</p></a>
+        <a href="/cart"><p class="font-display">Your Cart</p></a>
+      </p>
+
+      <script>
+        const toggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("mobileMenu");
+        const close = document.getElementById("closeMenu");
+
+        toggle?.addEventListener("click", () => {
+          menu?.classList.remove("hidden");
+          toggle.classList.add("hidden"); // Skjul burgerikon
+        });
+
+        close?.addEventListener("click", () => {
+          menu?.classList.add("hidden");
+          toggle.classList.remove("hidden"); // Vis burgerikon igjen
+        });
+      </script>
+    </a>
   </nav>
-
-  <script>
-    const toggle = document.getElementById("menuToggle");
-    const menu = document.getElementById("mobileMenu");
-    const close = document.getElementById("closeMenu");
-
-    toggle?.addEventListener("click", () => {
-      menu?.classList.remove("hidden");
-      toggle.classList.add("hidden"); // Skjul burgerikon
-    });
-
-    close?.addEventListener("click", () => {
-      menu?.classList.add("hidden");
-      toggle.classList.remove("hidden"); // Vis burgerikon igjen
-    });
-  </script>
 </header>
