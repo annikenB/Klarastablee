@@ -5,7 +5,7 @@ import "../styles/tailwind.css";
 <header class="z-50 fixed top-0">
   <button
     id="menuToggle"
-    class="fixed top-4 left-4 text-black text-4xl z-50"
+    class="fixed top-4 left-4 text-primary-900 text-lillelarge z-50"
     aria-label="Åpne meny"
   >
     &#9776;
@@ -13,7 +13,7 @@ import "../styles/tailwind.css";
 
   <nav
     id="mobileMenu"
-    class="hidden fixed inset-0 bg-red-500 text-white flex flex-col items-end justify-end gap-6 text-2xl z-40 pb-60 pr-20"
+    class="hidden fixed inset-0 bg-primary-500 text-beige-100 flex flex-col items-end justify-end gap-6 z-40 pb-60 pr-20"
   >
     <button
       id="closeMenu"
@@ -22,17 +22,42 @@ import "../styles/tailwind.css";
     >
       &times;
     </button>
-
-    <a href="/"
-      ><p class="font-display">
-        Home<p></p>
-        <a href="/produkter"><p class="font-display">Book Cake or Event</p></a>
-        <a href="/gallery"><p class="font-display">Gallery</p></a>
-        <a href="/about"><p class="font-display">About</p></a>
-        <a href="/playground"><p class="font-display">Set Your Table</p></a>
-        <a href="/recipe"><p class="font-display">Recipe of the month</p></a>
-        <a href="/cart"><p class="font-display">Your Cart</p></a>
-      </p>
+    <div class="mt-10">
+      <a href="/"
+        ><p class="font-display text-beige-100 text-lillexlarge">
+          Home<p></p>
+          <a href="/produkter"
+            ><p class="font-display text-beige-100 text-lillexlarge">
+              Book Cake or Event
+            </p></a
+          >
+          <a href="/gallery"
+            ><p class="font-display text-beige-100 text-lillexlarge">
+              Gallery
+            </p></a
+          >
+          <a href="/about"
+            ><p class="font-display text-beige-100 text-lillexlarge">
+              About
+            </p></a
+          >
+          <a href="/playground"
+            ><p class="font-display text-beige-100 text-lillexlarge">
+              Set Your Table
+            </p></a
+          >
+          <a href="/recipe"
+            ><p class="font-display text-beige-100 text-lillexlarge">
+              Recipe of the month
+            </p></a
+          >
+          <a href="/cart"
+            ><p class="font-display text-beige-100 text-lillexlarge">
+              Your Cart
+            </p></a
+          >
+        </p>
+      </a>
 
       <script>
         const toggle = document.getElementById("menuToggle");
@@ -49,6 +74,6 @@ import "../styles/tailwind.css";
           toggle.classList.remove("hidden"); // Vis burgerikon igjen
         });
       </script>
-    </a>
+    </div>
   </nav>
 </header>

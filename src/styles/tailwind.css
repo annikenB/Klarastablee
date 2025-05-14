@@ -6,16 +6,16 @@
 
 @theme{
   /* dette er til variabler og tolkens i designsystem */
-  --color-red-100: #FFFFFF;
-  --color-red-200: #F9C3C4;
-  --color-red-300: #F38788;
-  --color-red-400: #ED4C4D;
-  --color-red-500: #E61011;
-  --color-red-600: #AD0C0D;
-  --color-red-700: #730808;
-  --color-red-800: #3A0404;
-  --color-red-900: #230203;
-  --color-red-1000: #000000;
+  --color-primary-100: #FFFFFF;
+  --color-primary-200: #F9C3C4;
+  --color-primary-300: #F38788;
+  --color-primary-400: #ED4C4D;
+  --color-primary-500: #E61011;
+  --color-primary-600: #AD0C0D;
+  --color-primary-700: #730808;
+  --color-primary-800: #3A0404;
+  --color-primary-900: #230203;
+  --color-primary-1000: #000000;
 
   --color-beige-100: #FFFFFF;
   --color-beige-200: #FFFFF9;
@@ -27,6 +27,14 @@
   --color-beige-800: #40403D;
   --color-beige-900: #262625;
   --color-beige-1000: #000000;
+}
+
+
+@theme {
+  --text-lillexlarge: 3.5rem;   /* 40px */
+  --text-lillelarge: 2rem;      /* 32px */
+  --text-medium: 1.25rem;       /* 20px */
+  --text-base: 1rem;
 }
 
 
@@ -55,19 +63,19 @@
 @layer base {
 
   h1 {
-    @apply   font-display  text-red-400;
+    @apply   font-display text-primary-900;
   }
 
   h2 {
-    @apply   font-display   text-red-400;
+    @apply   font-display  text-primary-900;
   }
 
   h3 {
-    @apply   font-display  text-red-400;
+    @apply   font-display text-primary-900;
   }
 
   p {
-    @apply   font-display  text-red-400;
+    @apply   font-display text-primary-900;
   }
   *,
   ::after,
