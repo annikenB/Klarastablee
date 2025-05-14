@@ -31,7 +31,8 @@
 
 
 @theme {
-  --text-lillexlarge: 3.5rem;   /* 40px */
+  --text-lillexxlarge: 3.5rem;
+  --text-lillexlarge: 2.5rem;    /* 40px */
   --text-lillelarge: 2rem;      /* 32px */
   --text-medium: 1.25rem;       /* 20px */
   --text-base: 1rem;
@@ -63,11 +64,11 @@
 @layer base {
 
   h1 {
-    @apply   font-display text-primary-900;
+    @apply    text-lillexlarge font-display text-primary-900;
   }
 
   h2 {
-    @apply   font-display  text-primary-900;
+    @apply  text-lillelarge font-display  text-primary-900;
   }
 
   h3 {
