@@ -53,6 +53,22 @@
 }
 
 @layer base {
+
+  h1 {
+    @apply   font-display  text-red-400;
+  }
+
+  h2 {
+    @apply   font-display   text-red-400;
+  }
+
+  h3 {
+    @apply   font-display  text-red-400;
+  }
+
+  p {
+    @apply   font-display  text-red-400;
+  }
   *,
   ::after,
   ::before,
