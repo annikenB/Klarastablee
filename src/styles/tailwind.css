@@ -48,8 +48,8 @@
 
 @theme{
   /* dette er til variabler og tolkens i designsystem */
-  --font-serif: "Instrument";
-  --font-display: "Instrument";
+  --font-serif: "Instrument Serif";
+  --font-display: "Instrument Serif";
 }
 
 @layer base {
