@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import apollo from "../assets/images/apollo.webp";
@@ -10,7 +9,6 @@ import tiramisu from "../assets/images/tiramisu.webp";
 import summerhouse from "../assets/images/summerhouse.webp";
 import softIce from "../assets/images/softIce.webp";
 import soakedPear from "../assets/images/soakedPear.webp";
-import setUp from "../assets/images/setUp.webp";
 import rodgrodmedflode from "../assets/images/rodgrodmedflode.webp";
 import redCurrant from "../assets/images/redCurrant.webp";
 import recipe from "../assets/images/recipe.webp";
@@ -45,33 +43,33 @@ import bread from "../assets/images/bread.webp";
         process and bts
       </p>
     </section>
-    <!-- billeder til galley under -->
+
     <section id="sektion-2" class="ml-40 mr-40">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
         <div class="relative group">
           <Image src={walkingCake} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Layered bithday cake
           </p>
         </div>
 
         <div class="relative group ">
           <Image src={softIce} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Rasberry softice
           </p>
         </div>
 
         <div class="relative group">
           <Image src={tiramisu} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Petite tiramisu
           </p>
         </div>
       </div>
@@ -80,27 +78,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={powderSugar} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Classic Madeleines
           </p>
         </div>
 
         <div class="relative group">
           <Image src={rodgrodmedflode} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Danish Rødgrød med fløde
           </p>
         </div>
 
         <div class="relative group">
           <Image src={chokMadeleine} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Chocolate covered Madeleines
           </p>
         </div>
       </div>
@@ -109,27 +107,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={butter} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Radish with butter and flaky salt
           </p>
         </div>
 
         <div class="relative group">
           <Image src={manyPies} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Petite pies
           </p>
         </div>
 
         <div class="relative group">
           <Image src={outsideCake} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            My own birthday cake
           </p>
         </div>
       </div>
@@ -139,27 +137,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={miniCake} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Mini cakes
           </p>
         </div>
 
         <div class="relative group">
           <Image src={longSetUp} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Event for ???
           </p>
         </div>
 
         <div class="relative group">
           <Image src={figs} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Everything figs
           </p>
         </div>
       </div>
@@ -169,27 +167,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={christmas} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Christmas setup
           </p>
         </div>
 
         <div class="relative group">
           <Image src={MBsetup} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Event for collaboration between H&M and Magda Butrym
           </p>
         </div>
 
         <div class="relative group">
           <Image src={granola} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Granola with blood oranges
           </p>
         </div>
       </div>
@@ -198,27 +196,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={pannaCotta} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Panna Cotta
           </p>
         </div>
 
         <div class="relative group">
           <Image src={redCurrant} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Home picked red currant from Italy
           </p>
         </div>
 
         <div class="relative group">
           <Image src={orangesAware} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Event for Aware
           </p>
         </div>
       </div>
@@ -227,27 +225,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={bread} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Homemade bread
           </p>
         </div>
 
         <div class="relative group">
           <Image src={lemonCurd} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Lemon cake in the making
           </p>
         </div>
 
         <div class="relative group">
           <Image src={italy} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+           Dream kitchen in Italy
           </p>
         </div>
       </div>
@@ -256,27 +254,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={cherry} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            ???
           </p>
         </div>
 
         <div class="relative group">
           <Image src={summerhouse} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Cooking from my summerhouse
           </p>
         </div>
 
         <div class="relative group">
           <Image src={pear} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+          Poched pear in yoghurt
           </p>
         </div>
       </div>
@@ -285,27 +283,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={cherryCakes} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Mini cakes with cherries on top
           </p>
         </div>
 
         <div class="relative group">
           <Image src={yoghurt} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            More breakfast
           </p>
         </div>
 
         <div class="relative group">
           <Image src={petitepies} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Petite pies for ????
           </p>
         </div>
       </div>
@@ -314,27 +312,27 @@ import bread from "../assets/images/bread.webp";
         <div class="relative group">
           <Image src={recipe} alt="tets" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Making a lemon cake recipe
           </p>
         </div>
 
         <div class="relative group">
           <Image src={soakedPear} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Preparing pears
           </p>
         </div>
 
         <div class="relative group">
           <Image src={apollo} alt="test" class="" />
           <p
-            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="text-center absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-100"
           >
-            Mer info
+            Mini cakes for Apollo
           </p>
         </div>
       </div>
