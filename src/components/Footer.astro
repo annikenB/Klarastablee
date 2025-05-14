@@ -1,9 +1,74 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 ---
 
-<div class="p-20">
-  <a href="/contact">Contact</a>
-  <a href="/faq">FAQ</a>
-  <p>Footer - Klaras table</p>
-</div>
+<section class="mt-40 mx-5 h-full font-display">
+  <section class="md:grid grid-cols-5 justify-between gap-4">
+    <nav>
+      <ul>
+        <li class="pb-2 hover:text-primary-500">
+          <a href="/about">About</a>
+        </li>
+        <li class="pb-2 hover:text-primary-500">
+          <a href="/contact">Contact</a>
+        </li>
+        <li class="pb-2 hover:text-primary-500">
+          <a href="/faq">FAQ</a>
+        </li>
+        <li class="pb-2 hover:text-primary-500">
+          <a href="https://www.instagram.com/klarastable/" target="_blank">
+            Instagram
+          </a>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul>
+        <li class="pb-2">
+          CVR: 3984978
+        </li>
+        <li class="pb-2">Coptright 2025©</li>
+        <li class="pb-2">Smiley report</li>
+      </ul>
+    </nav>
+
+    <!-- disse nav er snyde / easyfix -->
+    <nav>
+    </nav>
+    <nav>
+    </nav>
+
+    <nav>
+      <ul class="space-y-4">
+        <li class="text-center">
+          Sign up for our monthly newsletter
+        </li>
+        <li>
+          <form class="flex w-full justify-between items-center border-b border-primary-800">
+            <input
+              type="email"
+              class="border border-beige-100 text-beige-700 w-full max-w-sm"
+              placeholder="Your email"
+              required
+            />
+            <a href="/konto">
+              <button type="submit" class="px-4 py-2 text-beige-700 hover:text-primary-500">
+                Submit
+              </button>
+            </a>
+          </form>
+        </li>
+      </ul>
+    </nav>
+    
+  </section>
+<!--big logo måske som billede?-->
+  <section class="text-center mt-voress">
+    <h1>Klaras Table</h1>
+    <p>big logo skal måske være billede?</p>
+  </section>
+</section>
+

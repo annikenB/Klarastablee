@@ -64,7 +64,10 @@
   /* dette er til variabler og tolkens i designsystem */
   --font-serif: "Instrument Serif";
   --font-display: "Instrument Serif";
+  --font-italic: "Instrument Serif";
 }
+
+
 
 @layer base {
 
@@ -102,6 +105,11 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  em {
+    font-family: var(--font-italic);
+    font-style: italic;
   }
 }
 
