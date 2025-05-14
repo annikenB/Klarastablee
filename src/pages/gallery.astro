@@ -2,11 +2,38 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import test1 from "../assets/images/test1.png";
-import bildetest2 from "../assets/images/bildetest2.png";
-import test3 from "../assets/images/test3.png";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import apollo from "../assets/images/apollo.webp";
+import yoghurt from "../assets/images/yoghurt.webp";
+import walkingCake from "../assets/images/walkingCake.webp";
+import tiramisu from "../assets/images/tiramisu.webp";
+import summerhouse from "../assets/images/summerhouse.webp";
+import softIce from "../assets/images/softIce.webp";
+import soakedPear from "../assets/images/soakedPear.webp";
+import setUp from "../assets/images/setUp.webp";
+import rodgrodmedflode from "../assets/images/rodgrodmedflode.webp";
+import redCurrant from "../assets/images/redCurrant.webp";
+import recipe from "../assets/images/recipe.webp";
+import powderSugar from "../assets/images/powderSugar.webp";
+import petitepies from "../assets/images/petitepies.webp";
+import pear from "../assets/images/pear.webp";
+import pannaCotta from "../assets/images/pannaCotta.webp";
+import outsideCake from "../assets/images/outsideCake.webp";
+import orangesAware from "../assets/images/orangesAware.webp";
+import miniCake from "../assets/images/miniCake.webp";
+import MBsetup from "../assets/images/MBsetup.webp";
+import manyPies from "../assets/images/manyPies.webp";
+import longSetUp from "../assets/images/longSetUp.webp";
+import lemonCurd from "../assets/images/lemonCurd.webp";
+import italy from "../assets/images/italy.webp";
+import granola from "../assets/images/granola.webp";
+import figs from "../assets/images/figs.webp";
+import christmas from "../assets/images/christmas.webp";
+import chokMadeleine from "../assets/images/chokMadeleine.webp";
+import cherryCakes from "../assets/images/cherryCakes.webp";
+import cherry from "../assets/images/cherry.webp";
+import butter from "../assets/images/butter.webp";
+import bread from "../assets/images/bread.webp";
 ---
 
 <MainLayout title="Titel">
@@ -18,10 +45,11 @@ import thumbsup from "../assets/images/thumbsup.png";
         process and bts
       </p>
     </section>
-    <section id="sektion-2" class="p-10">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="relative group p-10">
-          <Image src={test1} alt="tets" class="" />
+    <!-- billeder til galley under -->
+    <section id="sektion-2" class="ml-40 mr-40">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={walkingCake} alt="tets" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -29,8 +57,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={bildetest2} alt="test" class="" />
+        <div class="relative group ">
+          <Image src={softIce} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -38,8 +66,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={test3} alt="test" class="" />
+        <div class="relative group">
+          <Image src={tiramisu} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -48,9 +76,9 @@ import thumbsup from "../assets/images/thumbsup.png";
         </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="relative group p-10">
-          <Image src={test1} alt="vinkasse" class="" />
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={powderSugar} alt="tets" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -58,8 +86,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={bildetest2} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={rodgrodmedflode} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -67,8 +95,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={test3} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={chokMadeleine} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -76,9 +104,10 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="relative group p-10">
-          <Image src={test1} alt="vinkasse" class="" />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={butter} alt="tets" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -86,8 +115,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={bildetest2} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={manyPies} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -95,8 +124,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={test3} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={outsideCake} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -104,9 +133,11 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="relative group p-10">
-          <Image src={test1} alt="vinkasse" class="" />
+
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={miniCake} alt="tets" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -114,8 +145,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={bildetest2} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={longSetUp} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -123,8 +154,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={test3} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={figs} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -132,9 +163,11 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="relative group p-10">
-          <Image src={test1} alt="vinkasse" class="" />
+
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={christmas} alt="tets" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -142,8 +175,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={bildetest2} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={MBsetup} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -151,8 +184,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={test3} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={granola} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -160,9 +193,10 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="relative group p-10">
-          <Image src={test1} alt="vinkasse" class="" />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={pannaCotta} alt="tets" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -170,8 +204,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={bildetest2} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={redCurrant} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -179,8 +213,8 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
 
-        <div class="relative group p-10">
-          <Image src={test3} alt="vinkasse" class="" />
+        <div class="relative group">
+          <Image src={orangesAware} alt="test" class="" />
           <p
             class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
@@ -188,6 +222,123 @@ import thumbsup from "../assets/images/thumbsup.png";
           </p>
         </div>
       </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={bread} alt="tets" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+
+        <div class="relative group">
+          <Image src={lemonCurd} alt="test" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+
+        <div class="relative group">
+          <Image src={italy} alt="test" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={cherry} alt="tets" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+
+        <div class="relative group">
+          <Image src={summerhouse} alt="test" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+
+        <div class="relative group">
+          <Image src={pear} alt="test" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={cherryCakes} alt="tets" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+
+        <div class="relative group">
+          <Image src={yoghurt} alt="test" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+
+        <div class="relative group">
+          <Image src={petitepies} alt="test" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 pb-2">
+        <div class="relative group">
+          <Image src={recipe} alt="tets" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+
+        <div class="relative group">
+          <Image src={soakedPear} alt="test" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+
+        <div class="relative group">
+          <Image src={apollo} alt="test" class="" />
+          <p
+            class="absolute top-10 left-1/2 -translate-x-1/2 text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            Mer info
+          </p>
+        </div>
+      </div>
+
     </section>
   </article></MainLayout
 >
