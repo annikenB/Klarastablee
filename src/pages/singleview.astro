@@ -1,9 +1,94 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import cherry from "../assets/images/cherry.webp";
 ---
 
-<MainLayout title="Titel"> <article></article></MainLayout>
+<MainLayout title="Produkt">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 m-voress pt-20">
+    <!-- Venstre kolonne: Bilder -->
+    <div class="w-full">
+      <div class="w-full max-w-lg mx-auto">
+        <form class="mb-4">
+          <div class="space-y-4">
+            <Image src={cherry} alt="mellemkasse" class="m-voress" />
+            <Image src={cherry} alt="mellemkasse" class="m-voress" />
+            <Image src={cherry} alt="mellemkasse" class="m-voress" />
+            <Image src={cherry} alt="mellemkasse" class="m-voress" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Høyre kolonne: Sticky oppsummering -->
+    <div class="max-h-fit self-start sticky top-4 p-4 bg-blaa-300 rounded">
+      <div>
+        <h3>Titel produkt</h3>
+        <p class="text-lg leading-relaxed mt-2">pris</p>
+      </div>
+
+      <form>
+        <div class="my-4">
+          <label for="quantity" class="block mb-1">Antall</label>
+          <input
+            id="quantity"
+            name="quantity"
+            type="number"
+            min="10"
+            value="10"
+            class="w-24 p-2.5 text-center border rounded"
+            required
+          />
+        </div>
+      </form>
+
+      <div class="mb-6">
+        <button
+          class="px-4 py-2 bg-lilla-950 text-white rounded hover:bg-lilla-800"
+        >
+          Knap her
+        </button>
+      </div>
+
+      <!-- Tabs: Radio + label + content i riktig rekkefølge -->
+      <div class="flex border-b border-gray-300">
+        <div class="flex flex-col">
+          <input
+            type="radio"
+            name="tabs"
+            id="tab1"
+            class="hidden peer"
+            checked
+          />
+          <label
+            for="tab1"
+            class="cursor-pointer px-4 py-2 text-gray-600 peer-checked:text-lilla-950 peer-checked:border-b-2 peer-checked:border-lilla-950"
+          >
+            <h4>Detaljer</h4>
+          </label>
+          <div class="hidden peer-checked:block mt-4">
+            <p class="text-gray-700">
+              Her er detaljer om produktet. F.eks. innhold, leverandør,
+              flasketyper, osv.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col ml-8">
+          <input type="radio" name="tabs" id="tab2" class="hidden peer" />
+          <label
+            for="tab2"
+            class="cursor-pointer px-4 py-2 text-gray-600 peer-checked:text-lilla-950 peer-checked:border-b-2 peer-checked:border-lilla-950"
+          >
+            <h4>Annen info</h4>
+          </label>
+          <div class="hidden peer-checked:block mt-4">
+            <p class="text-gray-700">
+              Her er annen info, som leveringstid, vilkår, returrett og mer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
