@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import cherry from "../assets/images/cherry.webp";
+import ProductCard from "../components/ProductCard.astro";
 ---
 
 <MainLayout title="Produkt">
@@ -21,7 +22,7 @@ import cherry from "../assets/images/cherry.webp";
     </div>
 
     <!-- Høyre kolonne: Sticky oppsummering -->
-    <div class="max-h-fit self-start sticky top-4 p-4 bg-blaa-300 rounded">
+    <div class="max-h-fit self-start sticky top-4 p-4">
       <div>
         <h3>Titel produkt</h3>
         <p class="text-lg leading-relaxed mt-2">pris</p>
@@ -43,11 +44,7 @@ import cherry from "../assets/images/cherry.webp";
       </form>
 
       <div class="mb-6">
-        <button
-          class="px-4 py-2 bg-lilla-950 text-white rounded hover:bg-lilla-800"
-        >
-          Knap her
-        </button>
+        <button class="px-4 py-2 text-primary-900"> Knap her </button>
       </div>
 
       <!-- Tabs: Radio + label + content i riktig rekkefølge -->
@@ -62,14 +59,14 @@ import cherry from "../assets/images/cherry.webp";
           />
           <label
             for="tab1"
-            class="cursor-pointer px-4 py-2 text-gray-600 peer-checked:text-lilla-950 peer-checked:border-b-2 peer-checked:border-lilla-950"
+            class="cursor-pointer px-4 py-2 text-gray-600 peer-checked:text-primary-900 peer-checked:border-b-2 peer-checked:border-primary-900"
           >
-            <h4>Detaljer</h4>
+            <h5>Detaljer</h5>
           </label>
           <div class="hidden peer-checked:block mt-4">
             <p class="text-gray-700">
-              Her er detaljer om produktet. F.eks. innhold, leverandør,
-              flasketyper, osv.
+              These petite pies are great for bla bla. Lorem ipsum osv hej med
+              sif dette gør sig gældende til.
             </p>
           </div>
         </div>
@@ -78,9 +75,9 @@ import cherry from "../assets/images/cherry.webp";
           <input type="radio" name="tabs" id="tab2" class="hidden peer" />
           <label
             for="tab2"
-            class="cursor-pointer px-4 py-2 text-gray-600 peer-checked:text-lilla-950 peer-checked:border-b-2 peer-checked:border-lilla-950"
+            class="cursor-pointer px-4 py-2 text-gray-600 peer-checked:text-primary-900 peer-checked:border-b-2 peer-checked:border-primary-900"
           >
-            <h4>Annen info</h4>
+            <h5>Annen info</h5>
           </label>
           <div class="hidden peer-checked:block mt-4">
             <p class="text-gray-700">
