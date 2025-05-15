@@ -1,32 +1,30 @@
 ---
 const {
-  title,
-  price,
-  details,
-  otherInfo,
-  minQuantity = 10,
-  defaultQuantity = 10,
+  title = "Standard produkt",
+  price = "Pris ikke oppgitt",
+  quantityMin = 10,
+  details = "Produktdetaljer kommer her.",
+  otherInfo = "Annen info som levering, vilkår osv.",
+  buttonLabel = "Knap her",
 } = Astro.props;
 ---
 
-<div
-  class="max-h-fit self-start sticky top-4 p-4 border rounded shadow-md bg-white"
->
+<div class="p-6 sticky top-4 self-start max-w-md">
   <div>
-    <h3>{title}</h3>
-    <p class="text-lg leading-relaxed mt-2">{price} kr</p>
+    <h3 class="text-xl font-semibold text-primary-800">{title}</h3>
+    <p class="text-lg leading-relaxed mt-2 text-primary-00">{price}</p>
   </div>
 
   <form>
     <div class="my-4">
-      <label for="quantity" class="block mb-1">Antall</label>
+      <label for="quantity" class="block mb-1 text-sm text-gray-600"></label>
       <input
         id="quantity"
         name="quantity"
         type="number"
-        min={minQuantity}
-        value={defaultQuantity}
-        class="w-24 p-2.5 text-center border rounded"
+        min={quantityMin}
+        value={quantityMin}
+        class="w-24 p-2.5 text-center outline-none focus:ring-2 focus:ring-primary-900"
         required
       />
     </div>
@@ -34,12 +32,13 @@ const {
 
   <div class="mb-6">
     <button
-      class="px-4 py-2 text-primary-900 border border-primary-900 rounded hover:bg-primary-100 transition"
+      class="bg-beige-100 text-primary-900 px-4 py-2 hover:bg-primary-800 transition"
     >
-      Kjøp
+      {buttonLabel}
     </button>
   </div>
 
+  <!-- Tabs -->
   <div class="flex border-b border-gray-300">
     <div class="flex flex-col">
       <input type="radio" name="tabs" id="tab1" class="hidden peer" checked />

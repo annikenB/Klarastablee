@@ -21,70 +21,17 @@ import ProductCard from "../components/ProductCard.astro";
       </div>
     </div>
 
-    <!-- Høyre kolonne: Sticky oppsummering -->
+    <!-- Høyre kolonne: Sticky produktcard-->
     <div class="max-h-fit self-start sticky top-4 p-4">
       <div>
-        <h3>Titel produkt</h3>
-        <p class="text-lg leading-relaxed mt-2">pris</p>
-      </div>
-
-      <form>
-        <div class="my-4">
-          <label for="quantity" class="block mb-1">Antall</label>
-          <input
-            id="quantity"
-            name="quantity"
-            type="number"
-            min="10"
-            value="10"
-            class="w-24 p-2.5 text-center border rounded"
-            required
-          />
-        </div>
-      </form>
-
-      <div class="mb-6">
-        <button class="px-4 py-2 text-primary-900"> Knap her </button>
-      </div>
-
-      <!-- Tabs: Radio + label + content i riktig rekkefølge -->
-      <div class="flex border-b border-gray-300">
-        <div class="flex flex-col">
-          <input
-            type="radio"
-            name="tabs"
-            id="tab1"
-            class="hidden peer"
-            checked
-          />
-          <label
-            for="tab1"
-            class="cursor-pointer px-4 py-2 text-gray-600 peer-checked:text-primary-900 peer-checked:border-b-2 peer-checked:border-primary-900"
-          >
-            <h5>Detaljer</h5>
-          </label>
-          <div class="hidden peer-checked:block mt-4">
-            <p class="text-gray-700">
-              These petite pies are great for bla bla. Lorem ipsum osv hej med
-              sif dette gør sig gældende til.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex flex-col ml-8">
-          <input type="radio" name="tabs" id="tab2" class="hidden peer" />
-          <label
-            for="tab2"
-            class="cursor-pointer px-4 py-2 text-gray-600 peer-checked:text-primary-900 peer-checked:border-b-2 peer-checked:border-primary-900"
-          >
-            <h5>Annen info</h5>
-          </label>
-          <div class="hidden peer-checked:block mt-4">
-            <p class="text-gray-700">
-              Her er annen info, som leveringstid, vilkår, returrett og mer.
-            </p>
-          </div>
-        </div>
+        <ProductCard
+          title="Cherry pie"
+          price="kr 199"
+          quantityMin={10}
+          buttonLabel="Legg i kurv"
+          details="Saftig og deilig eplekake bakt med kjærlighet."
+          otherInfo="Leveres innen 3 dager. Retur ikke mulig for matvarer."
+        />
       </div>
     </div>
   </section>
