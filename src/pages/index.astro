@@ -6,6 +6,7 @@ import Cardone from "../components/Cardone.astro";
 import Newsletter from "../components/Newsletter.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import celebrationCake from "../assets/images/celebrationCake.webp";
 ---
 
 <!-- <Newsletter /> -->
@@ -58,7 +59,13 @@ import thumbsup from "../assets/images/thumbsup.png";
       <h2 class="text-center p-20">What are you looking for?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <a href="/produkter">
-          <Cardone title="Celebration Cakes" image />
+          <Cardone
+            title="Celebration Cakes"
+            Image
+            src={celebrationCake}
+            alt="tets"
+            class=""
+          />
         </a>
         <a href="/produkter">
           <Cardone title="Smaller Cakes" image />

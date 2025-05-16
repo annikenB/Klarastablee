@@ -70,35 +70,60 @@
 
 
 @layer base {
-
   h1 {
-    @apply    text-lillexxlarge font-display text-primary-900;
+    @apply     text-body-large font-display text-primary-900;
   }
 
   h2 {
-    @apply  text-lillexlarge font-display  text-primary-900;
+    @apply     text-body-large font-display text-primary-900;
   }
 
   h3 {
-    @apply   text-lillelarge font-display text-primary-900;
+    @apply     text-body-large font-display text-primary-900;
   }
-
   h4 {
-    @apply   text-lillemedium font-display text-primary-900;
+    @apply     text-body-large font-display text-primary-900;
+  }
+  p {
+    @apply     text-body-large font-display text-primary-900;
   }
 
-  h5 {
-    @apply  text-lillesmall font-display text-primary-900;
   }
 
-  h5 {
-    @apply   text-lillexsmall  font-display text-primary-900;
-  }
   
 
-  p {
-    @apply  text-body-base font-display text-primary-900;
+
+  @media (min-width: 768px) {
+    h1 {
+      @apply    text-lillexxlarge font-display text-primary-900;
+    }
+  
+    h2 {
+      @apply  text-lillexlarge font-display  text-primary-900;
+    }
+  
+    h3 {
+      @apply   text-lillelarge font-display text-primary-900;
+    }
+  
+    h4 {
+      @apply   text-lillemedium font-display text-primary-900;
+    }
+  
+    h5 {
+      @apply  text-lillesmall font-display text-primary-900;
+    }
+  
+    h5 {
+      @apply   text-lillexsmall  font-display text-primary-900;
+    }
+    
+  
+    p {
+      @apply  text-body-base font-display text-primary-900;
+    }
   }
+
   *,
   ::after,
   ::before,
@@ -111,7 +136,7 @@
     font-family: var(--font-italic);
     font-style: italic;
   }
-}
+
 
 @layer components{
 
