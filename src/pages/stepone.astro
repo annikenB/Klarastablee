@@ -3,11 +3,42 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="Titel">
   <article>
-    <h1 class="text-center p-20">Customise your order</h1>
-  </article></MainLayout
+    <h1 class="text-center pt-20">Customise your order</h1>
+  </article>
+  <div>
+    <p class="text-primary-500">First step</p>
+    <p>Second step</p>
+    <p>Last step</p>
+  </div>
+
+  <div class="flex flex-col items-center justify-center">
+    <div class="text-center max-w-xl px-4 mb-6">
+      <p class="mb-4">
+        First step,<br>
+        Please provide us with information about the scale of your event or celebration.<br>
+        We are happy to assist you with quantity recommendations at a later stage.
+      </p>
+      <p class="mb-2 text-base">How many people will be attending?</p>
+      <input type="number" min="10" value="10" class="border border-primary-900 px-3 py-1 w-32 text-center">
+    </div>
+  
+    <div class="text-center max-w-xl px-4 mb-6">
+      <p class="mb-2 text-base">Add a comment about preferred flavours</p>
+      <input type="text" class="border px-3 py-1 w-full text-center">
+    </div>
+  
+    <div class="text-center max-w-xl px-4">
+      <p class="mb-2 text-base">Do you have any dietary restrictions we should consider?</p>
+      <input type="text"class="border px-3 py-1 w-full text-center">
+    </div>
+  </div>
+  
+  
+
+  
+  </MainLayout
 >

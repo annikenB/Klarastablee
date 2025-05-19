@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import footerLogo from "../assets/images/footerLogo.png"; 
 ---
 
 <section class="mt-40 mx-5 h-full font-display">
@@ -31,7 +32,7 @@ import { Image } from "astro:assets";
           CVR: 3984978
         </li>
         <li class="pb-2">Coptright 2025©</li>
-        <li class="pb-2">Smiley report</li>
+        <li class="pb-2 hover:text-primary-500">Smiley report</li>
       </ul>
     </nav>
 
@@ -67,8 +68,7 @@ import { Image } from "astro:assets";
   </section>
 <!--big logo måske som billede?-->
   <section class="text-center mt-voress">
-    <h1>Klaras Table</h1>
-    <p>big logo skal måske være billede?</p>
+    <Image src={footerLogo} alt="tets" class="" />
   </section>
 </section>
 
