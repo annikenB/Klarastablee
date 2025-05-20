@@ -9,11 +9,12 @@ import { Image } from "astro:assets";
   <article>
     <h1 class="text-center pt-20">Customise your order</h1>
   </article>
-  <div>
-    <p class="text-primary-500">First step</p>
+  
+  <article class="flex w-[250px] mx-auto justify-between p-5">
+    <p>First step</p>
     <p>Second step</p>
     <p>Last step</p>
-  </div>
+  </article>
 
   <div class="flex flex-col items-center justify-center">
     <div class="text-center max-w-xl px-4 mb-6">
@@ -37,7 +38,12 @@ import { Image } from "astro:assets";
     </div>
   </div>
   
-  
+  <div>
+  <a href="/"><Button variant="secondary">Back</Button></a>
+  <a href="/steptwo"><Button variant="secondary">Next</Button></a>
+</div>
+
+
 
   
   </MainLayout

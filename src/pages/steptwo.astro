@@ -1,0 +1,66 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+---
+
+<MainLayout title="Titel">
+  <article>
+    <h1 class="text-center pt-20">Customise your order</h1>
+  </article>
+  
+  <article class="flex w-[250px] mx-auto justify-between p-5">
+    <p>First step</p>
+    <p>Second step</p>
+    <p>Last step</p>
+    </article>
+
+  <div class="flex flex-col items-center justify-center">
+    <div class="text-center max-w-xl px-4 mb-6">
+      <p class="mb-4">
+        The second step,<br>
+        Please provide us with information about catering and other services as well as how much help you want.
+Style preferences and special requests will be addressed in a subsequent discussion. <br> What additional services are you interested in?
+      </p>
+    </div>
+    
+    
+    <div class="max-w-xl mx-auto p-6">
+        <div class="space-y-4">
+          <label class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2">
+            <span>Delivery in Copenhagen</span>
+            <input type="checkbox" name="delivery" class="w-5 h-5 accent-blue-600" />
+          </label>
+      
+          <label class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2">
+            <span>Do you want a cake setup</span>
+            <input type="checkbox" name="cakeSetup" class="w-5 h-5 accent-blue-600" />
+          </label>
+      
+          <label class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2">
+            <span>Klara at your event</span>
+            <input type="checkbox" name="klara" class="w-5 h-5 accent-blue-600" />
+          </label>
+      
+          <label class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2">
+            <span>Rental of silver trays, stands</span>
+            <input type="checkbox" name="rental" class="w-5 h-5 accent-blue-600" />
+          </label>
+      
+          <label class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2">
+            <span>Artistic tablescaping & curation</span>
+            <input type="checkbox" name="tablescaping" class="w-5 h-5 accent-blue-600" />
+          </label>
+        </div>
+      </div>
+      
+<!-- knapperne -->
+      <div>
+        <a href="/stepone"><Button variant="secondary">Back</Button></a>
+        <a href="/stepthree"><Button variant="secondary">Next</Button></a>
+      </div>
+
+  
+  </MainLayout
+>
