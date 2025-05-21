@@ -7,15 +7,6 @@ import logoRed from "../assets/images/logoRed.webp";
 ---
 
 <header class="z-50 fixed top-0">
-  <!-- SLET DENNE det var den gamle
-    <button
-    id="menuToggle"
-    class="fixed top-4 left-4 text-primary-900 text-lillelarge z-50"
-    aria-label="Åpne meny"
-  >
-    &#9776;
-  </button> -->
-
   <!-- Lukket burger -->
   <button
     id="menuToggle"
@@ -26,26 +17,38 @@ import logoRed from "../assets/images/logoRed.webp";
     <span class="line block h-[1px] w-15 bg-white"></span>
   </button>
 
-  <!-- Hvidt logo -->
+  <!-- logo -->
   <div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
-    <img
-      id="logo"
-      src={logoWhite.src}
-      alt="billede af kage"
-      class="w-[12.5vw] max-w-[100px]"
-      style="display: block;"
-    />
+    <a href="/" class="group block w-[12.5vw] max-w-[100px] relative">
+      <!-- Logo White (default) -->
+      <Image
+        id="logoWhite"
+        src={logoWhite}
+        alt="logo white"
+        class="w-full absolute top-0 left-0 transition-opacity duration-300 group-hover:opacity-0"
+      />
+      <!-- Logo Black (scroll) -->
+      <Image
+        id="logoBlack"
+        src={logoBlack}
+        alt="logo black"
+        class="w-full absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-0"
+      />
+      <!-- Logo Red (hover) -->
+      <Image
+        src={logoRed}
+        alt="logo red"
+        class="w-full absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      />
+    </a>
   </div>
 
 
-
-<!-- under er åben burger -->
+<!-- under er åben cheeseburger -->
   <nav
     id="mobileMenu"
     class="hidden fixed inset-0 bg-primary-500 text-beige-100 flex flex-col items-end justify-end gap-6 z-40 pb-60 pr-20"
   >
-
-
     <button
   id="closeMenu"
   class="absolute top-4 left-4 z-50 flex flex-col justify-center items-center cursor-pointer h-10 w-15 p-2"
@@ -54,7 +57,6 @@ import logoRed from "../assets/images/logoRed.webp";
   <span class="block absolute w-15 h-[1px] bg-current rotate-45"></span>
   <span class="block absolute w-15 h-[1px] bg-current -rotate-45"></span>
 </button>
-
 
 <div class="fixed inset-0 flex flex-col justify-center items-center sm:items-end pr-4 sm:pr-10 space-y-4 text-center sm:text-right">
   <a href="/" class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:text-beige-900">
@@ -79,10 +81,6 @@ import logoRed from "../assets/images/logoRed.webp";
     Instagram
   </a>
 </div>
-
-
-
-
 
       <script>
         const toggle = document.getElementById("menuToggle");
@@ -118,6 +116,25 @@ import logoRed from "../assets/images/logoRed.webp";
       });
     }
   });
+
+// Skift mellem hvidt og sort logo npår scroll
+const white = document.getElementById("logoWhite");
+    const black = document.getElementById("logoBlack");
+
+    window.addEventListener("scroll", () => {
+      const threshold = window.innerHeight * 0.9;
+      const scrolledPast = window.scrollY > threshold;
+
+      if (scrolledPast) {
+        white.classList.add("opacity-0");
+        black.classList.remove("opacity-0");
+      } else {
+        white.classList.remove("opacity-0");
+        black.classList.add("opacity-0");
+      }
+    });
+
+
     </script>
   </nav>
 </header>
