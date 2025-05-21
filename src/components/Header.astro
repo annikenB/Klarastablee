@@ -1,27 +1,67 @@
 ---
 import "../styles/tailwind.css";
+import { Image } from "astro:assets";
+import logoBlack from "../assets/images/logoBlack.webp";
+import logoWhite from "../assets/images/logoWhite.webp";
+import logoRed from "../assets/images/logoRed.webp";
 ---
 
 <header class="z-50 fixed top-0">
-  <button
+  <!-- SLET DENNE det var den gamle
+    <button
     id="menuToggle"
     class="fixed top-4 left-4 text-primary-900 text-lillelarge z-50"
     aria-label="Åpne meny"
   >
     &#9776;
+  </button> -->
+
+  <!-- Lukket burger -->
+  <button
+    id="menuToggle"
+    class="fixed top-4 left-6 z-50 flex flex-col items-center justify-center h-10 w-15 p-2"
+    aria-label="Åpne meny"
+  >
+    <span class="line block h-[1px] w-15 bg-white mb-sm"></span>
+    <span class="line block h-[1px] w-15 bg-white"></span>
   </button>
 
+  <!-- Hvidt logo -->
+  <div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+    <img
+      id="logo"
+      src={logoWhite.src}
+      alt="billede af kage"
+      class="w-[12.5vw] max-w-[100px]"
+      style="display: block;"
+    />
+  </div>
+
+
+
+<!-- under er åben burger -->
   <nav
     id="mobileMenu"
     class="hidden fixed inset-0 bg-primary-500 text-beige-100 flex flex-col items-end justify-end gap-6 z-40 pb-60 pr-20"
   >
-    <button
+    <!-- <button
       id="closeMenu"
       class="absolute top-4 left-4 text-4xl z-50"
       aria-label="Lukk meny"
     >
       &times;
-    </button>
+    </button> -->
+
+    <button
+  id="closeMenu"
+  class="absolute top-4 left-4 z-50 flex flex-col justify-center items-center cursor-pointer h-10 w-15 p-2"
+  aria-label="Luk menu"
+>
+  <span class="block absolute w-15 h-[1px] bg-current rotate-45"></span>
+  <span class="block absolute w-15 h-[1px] bg-current -rotate-45"></span>
+</button>
+
+
     <div class="mt-10">
       <a href="/"
         ><p class="font-display text-beige-100 text-lillexlarge">
@@ -73,7 +113,30 @@ import "../styles/tailwind.css";
           menu?.classList.add("hidden");
           toggle.classList.remove("hidden"); // Vis burgerikon igjen
         });
-      </script>
+
+      // burgeren der skifter farve
+      const menuButton = document.getElementById("menuToggle");
+      const lines = menuButton.querySelectorAll(".line");
+
+      window.addEventListener("scroll", () => {
+      const threshold = window.innerHeight * 0.9;
+
+      if (window.scrollY > threshold) {
+      lines.forEach(line => {
+        line.classList.remove("bg-white");
+        line.classList.add("bg-primary-900");
+      });
+    } else {
+      lines.forEach(line => {
+        line.classList.remove("bg-primary-900");
+        line.classList.add("bg-white");
+      });
+    }
+  });
+    </script>
+
+
     </div>
   </nav>
 </header>
+
