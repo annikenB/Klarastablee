@@ -9,9 +9,9 @@ import ProductCard from "../components/ProductCard.astro";
   <section class="grid grid-cols-1 md:grid-cols-2 gap-6 m-voress pt-20">
     <!-- Venstre kolonne: Bilder -->
     <div class="w-full">
-      <div class="w-full max-w-lg mx-auto">
-        <form class="mb-4">
-          <div class="space-y-4">
+      <div class="w-full">
+        <form class="">
+          <div class="space-y-4 m-md">
             <Image src={cherry} alt="mellemkasse" class="m-voress" />
             <Image src={cherry} alt="mellemkasse" class="m-voress" />
             <Image src={cherry} alt="mellemkasse" class="m-voress" />
@@ -22,7 +22,7 @@ import ProductCard from "../components/ProductCard.astro";
     </div>
 
     <!-- Høyre kolonne: Sticky produktcard-->
-    <div class="max-h-fit self-start sticky top-4 p-4">
+    <div class="max-h-fit self-start sticky top-4">
       <div>
         <ProductCard
           title="Cherry pie"
