@@ -1,0 +1,224 @@
+---
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import star from "../assets/images/mini.webp";
+import trustpilot from "../assets/images/trustpilot.png";
+---
+
+<section class="relative w-full mx-auto">
+  <div class="relative w-full overflow-hidden">
+    <div
+      id="carouselItems"
+      class="flex transition-transform duration-700 ease-in-out gap-8"
+    >
+      <div class="flex gap-6 w-max">
+        <div class="flex flex-col rounded-form p-8 w-80 m-sm">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
+
+          <h4 class="mb-4">NEMT OG GODT</h4>
+
+          <p class="">
+            Vi har brugt Naturvinskassen gennem flere år og elsker det hver
+            gang.
+          </p>
+        </div>
+
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
+
+          <h4 class="mb-4">VI ELSKER DET!</h4>
+
+          <p class="">Mega god vin og rigtig god service!</p>
+        </div>
+
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
+
+          <h4 class="mb-4">RIGTIG GOD VIN</h4>
+
+          <p class="">Vi får altid mange forskellige interessante naturvine!</p>
+        </div>
+
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
+
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
+
+          <p class="">Vi ser alltid frem til vores levering.</p>
+        </div>
+
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
+
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
+
+          <p class="">Vi ser alltid frem til vores levering.</p>
+        </div>
+
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
+
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
+
+          <p class="">Vi ser alltid frem til vores levering.</p>
+        </div>
+
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
+
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
+
+          <p class="">Vi ser alltid frem til vores levering.</p>
+        </div>
+
+        <div class="flex flex-col rounded-form p-8 w-80">
+          <div class="grid grid-cols-5 mb-4">
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+            <Image src={star} class="stjerne" alt="Stjerne" />
+          </div>
+
+          <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
+
+          <p class="">Vi ser alltid frem til vores levering.</p>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="prev"
+      class="absolute top-1/2 left-2 transform -translate-y-1/2 p-3 rounded-full"
+    >
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button
+      id="next"
+      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white text-black p-3 rounded-full"
+    >
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <div class="text-center hidden md:block">
+      <a
+        href="https://dk.trustpilot.com/review/naturvinskassen.dk"
+        target="_blank"
+      >
+        <Button variant="secondary">Se alle Trustpilot anmeldelser</Button>
+      </a>
+      <div class="text-center md:hidden block">
+        <a
+          href="https://dk.trustpilot.com/review/naturvinskassen.dk"
+          target="_blank"
+        >
+          <Button variant="mobilesecondary"
+            >Se alle Trustpilot anmeldelser</Button
+          >
+        </a>
+      </div>
+    </div>
+
+    <script>
+      let currentIndex = 0;
+      const itemsPerView = 4;
+      const carouselItems = document.getElementById("carouselItems");
+      const totalItems = carouselItems.children[0].children.length;
+
+      const prevButton = document.getElementById("prev");
+      const nextButton = document.getElementById("next");
+
+      function updateCarousel() {
+        const offset = (-currentIndex * 100) / itemsPerView;
+        carouselItems.style.transform = `translateX(${offset}%)`;
+      }
+
+      prevButton.addEventListener("click", () => {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateCarousel();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = Math.min(
+          currentIndex + 1,
+          Math.floor(totalItems / itemsPerView) - 1
+        );
+        updateCarousel();
+      });
+
+      updateCarousel();
+    </script>
+  </div>
+  <style>
+    .stjerne {
+      width: auto;
+      height: 30px;
+    }
+  </style>
+</section>
