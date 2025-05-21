@@ -1,19 +1,178 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import tablenocloth from "../assets/images/tablenocloth.webp";
+import finePlate from "../assets/images/finePlate.webp";
+import mini from "../assets/images/mini.webp";
+import cutlery from "../assets/images/cutlery.webp";
+import cherrycake from "../assets/images/cherrycake.webp";
+import bigcandle from "../assets/images/bigcandle.webp";
+import karaffel from "../assets/images/karaffel.webp";
+import plate from "../assets/images/plate.webp";
+import bialetti from "../assets/images/bialetti.webp";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <section class="text-center p-20">
-      <h1>Set Your table</h1>
-      <p>
-        Get inspiration to your next event or dinner hosting. Pick and place
-        items on the table to set your dream table.
-      </p>
-    </section>
-  </article></MainLayout
->
+<MainLayout title="Set Your Table">
+  <section class="text-center p-20">
+    <h1 class="text-4xl font-bold mb-4">Set Your Table</h1>
+    <p class="text-lg">
+      Get inspiration to your next event or dinner hosting. Pick and place items
+      on the table to set your dream table.
+    </p>
+  </section>
+
+  <div class="flex items-center justify-center min-h-screen relative">
+    <!-- STORT BILDE -->
+    <div
+      id="drop-area"
+      class="relative w-[600px] h-[600px] bg-white overflow-hidden"
+    >
+      <Image
+        src={tablenocloth}
+        alt="Big image"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- SMÅ BILDER RUNDT (ingen over det store) -->
+    <!-- Flyttet tidligere top center-bilde hit: -->
+    <div class="absolute top-[10%] left-[5%]">
+      <Image
+        src={finePlate}
+        alt="Draggable"
+        class="w-26 h-26 draggable cursor-move"
+      />
+    </div>
+
+    <div class="absolute top-[15%] left-[20%]">
+      <Image
+        src={cherrycake}
+        alt="Draggable"
+        class="w-30 h-30 draggable cursor-move"
+      />
+    </div>
+
+    <div class="absolute top-[15%] right-[20%]">
+      <Image
+        src={mini}
+        alt="Draggable"
+        class="w-16 h-16 draggable cursor-move"
+      />
+    </div>
+
+    <div class="absolute top-1/2 left-[5%] -translate-y-1/2">
+      <Image
+        src={cutlery}
+        alt="Draggable"
+        class="w-30 h-30 draggable cursor-move"
+      />
+    </div>
+
+    <div class="absolute top-1/2 right-[5%] -translate-y-1/2">
+      <Image
+        src={plate}
+        alt="Draggable"
+        class="w-26 h-26 draggable cursor-move"
+      />
+    </div>
+
+    <div class="absolute bottom-[15%] left-[20%]">
+      <Image
+        src={bigcandle}
+        alt="Draggable"
+        class="w-36 h-36 draggable cursor-move"
+      />
+    </div>
+
+    <div class="absolute bottom-[5%] left-1/2 -translate-x-1/2">
+      <Image
+        src={karaffel}
+        alt="Draggable"
+        class="w-26 h-26 draggable cursor-move"
+      />
+    </div>
+
+    <div class="absolute bottom-[10%] right-[10%]">
+      <Image
+        src={bialetti}
+        alt="Draggable"
+        class="w-20 h-20 draggable cursor-move"
+      />
+    </div>
+  </div>
+
+  <script>
+    const draggables = document.querySelectorAll(".draggable");
+    const dropArea = document.getElementById("drop-area");
+    const clearBtn = document.getElementById("clear-btn");
+
+    let currentImg = null;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    draggables.forEach((img) => {
+      img.addEventListener("pointerdown", (e) => {
+        e.preventDefault();
+
+        const rect = e.target.getBoundingClientRect();
+        offsetX = e.clientX - rect.left;
+        offsetY = e.clientY - rect.top;
+
+        currentImg = e.target.cloneNode(true);
+        currentImg.style.position = "fixed";
+        currentImg.style.pointerEvents = "none";
+        currentImg.style.zIndex = "1000";
+        currentImg.style.width = e.target.offsetWidth + "px";
+        currentImg.style.height = e.target.offsetHeight + "px";
+        document.body.appendChild(currentImg);
+
+        moveAt(e.clientX, e.clientY);
+
+        function moveAt(x, y) {
+          currentImg.style.left = x - offsetX + "px";
+          currentImg.style.top = y - offsetY + "px";
+        }
+
+        const onPointerMove = (e) => {
+          requestAnimationFrame(() => {
+            moveAt(e.clientX, e.clientY);
+          });
+        };
+
+        const onPointerUp = (e) => {
+          document.removeEventListener("pointermove", onPointerMove);
+          document.removeEventListener("pointerup", onPointerUp);
+
+          const dropBounds = dropArea.getBoundingClientRect();
+          if (
+            e.clientX >= dropBounds.left &&
+            e.clientX <= dropBounds.right &&
+            e.clientY >= dropBounds.top &&
+            e.clientY <= dropBounds.bottom
+          ) {
+            const newImg = currentImg.cloneNode(true);
+            newImg.style.position = "absolute";
+            newImg.style.pointerEvents = "auto";
+            newImg.style.left = e.clientX - dropBounds.left - offsetX + "px";
+            newImg.style.top = e.clientY - dropBounds.top - offsetY + "px";
+            newImg.style.zIndex = "10";
+            newImg.classList.add("draggable");
+            dropArea.appendChild(newImg);
+          }
+
+          currentImg.remove();
+          currentImg = null;
+        };
+
+        document.addEventListener("pointermove", onPointerMove);
+        document.addEventListener("pointerup", onPointerUp);
+      });
+    });
+
+    clearBtn?.addEventListener("click", () => {
+      [...dropArea.querySelectorAll("img")].forEach((el) => {
+        if (!el.classList.contains("object-cover")) el.remove();
+      });
+    });
+  </script>
+</MainLayout>
