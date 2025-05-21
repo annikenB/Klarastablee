@@ -1,16 +1,10 @@
 ---
-const { title = "Standard Tittel", image = "https://via.placeholder.com/300" } =
-  Astro.props;
+const { title = "Standard Tittel", image = "https://via.placeholder.com/300" } = Astro.props;
 
-const cardStyling =
-  "bg-gul-50 rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105 group";
-
-const imageContainerStyling = "relative w-full h-64";
-
-const imageStyling = "w-full h-full object-cover";
-
-const titleOverlayStyling =
-  "absolute inset-0 flex items-center justify-center  bg-opacity-40 text-beige-100  transition-colors duration-300 ";
+const cardStyling = "overflow-hidden"; 
+const imageContainerStyling = "relative flex justify-center items-center overflow-hidden";
+const imageStyling = "w-full object-contain transition-transform duration-300 hover:scale-110"; 
+const titleOverlayStyling = "absolute inset-0 flex items-center justify-center bg-opacity-40 !text-beige-100 transition-colors duration-300 pointer-events-none";
 ---
 
 <div class={cardStyling}>
