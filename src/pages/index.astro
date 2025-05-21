@@ -7,6 +7,8 @@ import Review from "../components/Review.astro";
 import Newsletter from "../components/Newsletter.astro";
 import { Image } from "astro:assets";
 import celebrationCake from "../assets/images/celebrationCake.webp";
+import Apollo from "../assets/images/apollo.webp";
+import miniCake from "../assets/images/miniCake.webp";
 ---
 
 <!-- <Newsletter /> -->
@@ -78,12 +80,13 @@ import celebrationCake from "../assets/images/celebrationCake.webp";
           />
         </a>
         <a href="/produkter">
-          <Cardone title="Smaller Cakes" image={celebrationCake.src} />
+          <Cardone title="Smaller Cakes" image={miniCake.src} />
         </a>
         <a href="/produkter">
-          <Cardone title="Events" image={celebrationCake.src} />
+          <Cardone title="Events" image={Apollo.src} />
         </a>
       </div>
+      <p>knap her</p>
     </section>
 
     <!-- sektion 3, trustpilot -->
