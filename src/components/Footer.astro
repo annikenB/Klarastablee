@@ -5,68 +5,63 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import footerLogo from "../assets/images/footerLogo.webp";
 ---
-
-<section class="mt-40 mx-5 h-full font-display">
-  <section class="md:grid grid-cols-5 justify-between gap-4">
-    <nav>
+<section class="pt-lg h-full font-display ">
+  <section class="md:grid grid-cols-5 gap-4 px-sm">
+    <!-- 1. kol i grid -->
+    <nav class="col-span-1">
       <ul>
+        <li class="pb-2 hover:text-primary-500"><a href="/about">About</a></li>
+        <li class="pb-2 hover:text-primary-500"><a href="/contact">Contact</a></li>
+        <li class="pb-2 hover:text-primary-500"><a href="/faq">FAQ</a></li>
         <li class="pb-2 hover:text-primary-500">
-          <a href="/about">About</a>
-        </li>
-        <li class="pb-2 hover:text-primary-500">
-          <a href="/contact">Contact</a>
-        </li>
-        <li class="pb-2 hover:text-primary-500">
-          <a href="/faq">FAQ</a>
-        </li>
-        <li class="pb-2 hover:text-primary-500">
-          <a href="https://www.instagram.com/klarastable/" target="_blank">
-            Instagram
-          </a>
+          <a href="https://www.instagram.com/klarastable/" target="_blank">Instagram</a>
         </li>
       </ul>
-
-      <nav>
-        <ul>
-          <li class="pb-2">CVR: 3984978</li>
-          <li class="pb-2">Coptright 2025©</li>
-          <li class="pb-2 hover:text-primary-500">Smiley report</li>
-        </ul>
-      </nav>
-
-      <!-- disse nav er snyde / easyfix -->
-      <nav></nav>
-      <nav></nav>
-
-      <nav>
-        <ul class="space-y-4">
-          <li class="text-center">Sign up for our monthly newsletter</li>
-          <li>
-            <form
-              class="flex w-full justify-between items-center border-b border-primary-800"
-            >
-              <input
-                type="email"
-                class="border border-beige-100 text-beige-700 w-full max-w-sm"
-                placeholder="Your email"
-                required
-              />
-              <a href="/konto">
-                <button
-                  type="submit"
-                  class="px-4 py-2 text-beige-700 hover:text-primary-500"
-                >
-                  Submit
-                </button>
-              </a>
-            </form>
-          </li>
-        </ul>
-      </nav>
     </nav>
-    <!--big logo måske som billede?-->
-    <section class="text-center mt-voress">
-      <Image src={footerLogo} alt="tets" class="" />
-    </section>
+
+    <!-- 2. kol i grid -->
+    <nav class="col-span-1">
+      <ul>
+        <li class="pb-2">CVR: 3984978</li>
+        <li class="pb-2">Copyright 2025©</li>
+        <li class="pb-2 hover:text-primary-500">Smiley report</li>
+      </ul>
+    </nav>
+
+    <!-- 3-4 i grid er komme, lille smart fix -->
+    <div class="col-span-2"></div>
+
+    <!-- 5. sign up -->
+    <nav class="col-span-1">
+      <ul class="space-y-4 border-b">
+        <li class="text-left md:text-center">Sign up for our monthly newsletter</li>
+        <li>
+          <form class="flex w-full justify-between items-center ">
+            <input
+              type="email"
+              class=" text-beige-700 w-full border-0"
+              placeholder="Your email"
+              required
+            />
+            <a href="/konto">
+              <button
+                type="submit"
+                class="px-4 py-2 text-beige-700 hover:text-primary-500"
+              >
+                Submit
+              </button>
+            </a>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- kæmpe logo -->
+  <section class="text-center mt-voress">
+    <Image src={footerLogo} alt="tets" class="pt-xs" />
   </section>
 </section>
+
+
+
