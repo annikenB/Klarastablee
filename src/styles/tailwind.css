@@ -129,6 +129,10 @@
   p {
     @apply     text-mobile-xsmall font-display text-primary-900;
   }
+  span {
+    @apply     text-mobile-xsmall italic font-display text-primary-500;
+  }
+  
 
   }
 
@@ -162,6 +166,10 @@
     p {
       @apply  text-mobile-base font-display text-primary-900;
     }
+
+    span {
+      @apply     text-mobile-base italic font-display text-primary-500;
+    }
   }
 
   *,
@@ -172,11 +180,7 @@
     border-color: var(--color-gray-200, currentColor);
   }
 
-  em {
-    font-family: var(--font-italic);
-    font-style: italic;
-  }
-
+  
 
 /* @layer components{
 
