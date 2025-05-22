@@ -1,4 +1,5 @@
 ---
+// File: src/pages/set-your-table.astro
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import tablenocloth from "../assets/images/tablenocloth.webp";
@@ -9,6 +10,7 @@ import cherrycake from "../assets/images/cherrycake.webp";
 import bigcandle from "../assets/images/bigcandle.webp";
 import karaffel from "../assets/images/karaffel.webp";
 import plate from "../assets/images/plate.webp";
+import flowers from "../assets/images/flowers.webp";
 import bialetti from "../assets/images/bialetti.webp";
 ---
 
@@ -16,101 +18,121 @@ import bialetti from "../assets/images/bialetti.webp";
   <section class="text-center">
     <h1 class="text-4xl font-bold mb-4 pt-40">Set Your Table</h1>
     <p class="text-lg">
-      Get inspiration to your next event or dinner hosting. <br> Pick and place items
-      on the table to set your dream table.
+      Get inspiration to your next event or dinner hosting. <br />
+      <span>Pick and place items</span> on the table to set your dream table.
     </p>
   </section>
 
-  <div class="flex items-center justify-center min-h-screen relative">
-    <!-- STORT BILDE -->
+  <div
+    class="flex items-center justify-center min-h-screen relative flex-col gap-4"
+  >
+    <!-- RESET-KNAPP -->
+    <div class="z-50">
+      <button
+        id="clear-btn"
+        class="bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600 transition"
+      >
+        Reset Table
+      </button>
+    </div>
+
+    <!-- STORT BILDE (BORD) -->
     <div
       id="drop-area"
       class="relative w-[600px] h-[600px] bg-white overflow-hidden"
     >
-      <Image
-        src={tablenocloth}
-        alt="Big image"
-        class="w-full h-full object-cover"
+      <img
+        id="table-img"
+        src={tablenocloth.src}
+        alt="Table image"
+        class="w-full h-full object-cover pointer-events-none"
       />
     </div>
 
-    <!-- SMÅ BILDER RUNDT (ingen over det store) -->
-    <!-- Flyttet tidligere top center-bilde hit: -->
-    <div class="absolute top-[10%] left-[5%]">
-      <Image
-        src={finePlate}
-        alt="Draggable"
+    <!-- DRAGGABLES -->
+    <div class="absolute top-[35%] left-[5%]">
+      <img
+        src={finePlate.src}
+        alt="Fine plate"
         class="w-26 h-26 draggable cursor-move"
       />
     </div>
 
     <div class="absolute top-[15%] left-[20%]">
-      <Image
-        src={cherrycake}
-        alt="Draggable"
+      <img
+        src={cherrycake.src}
+        alt="Cherry cake"
         class="w-30 h-30 draggable cursor-move"
       />
     </div>
 
     <div class="absolute top-[15%] right-[20%]">
-      <Image
-        src={mini}
-        alt="Draggable"
+      <img
+        src={mini.src}
+        alt="Mini dessert"
         class="w-16 h-16 draggable cursor-move"
       />
     </div>
 
-    <div class="absolute top-1/2 left-[5%] -translate-y-1/2">
-      <Image
-        src={cutlery}
-        alt="Draggable"
+    <div class="absolute top-2/3 left-[5%] -translate-y-1/2">
+      <img
+        src={cutlery.src}
+        alt="Cutlery"
         class="w-30 h-30 draggable cursor-move"
       />
     </div>
 
     <div class="absolute top-1/2 right-[5%] -translate-y-1/2">
-      <Image
-        src={plate}
-        alt="Draggable"
+      <img
+        src={plate.src}
+        alt="Plate"
         class="w-26 h-26 draggable cursor-move"
       />
     </div>
 
     <div class="absolute bottom-[15%] left-[20%]">
-      <Image
-        src={bigcandle}
-        alt="Draggable"
+      <img
+        src={bigcandle.src}
+        alt="Big candle"
         class="w-36 h-36 draggable cursor-move"
       />
     </div>
 
     <div class="absolute bottom-[5%] left-1/2 -translate-x-1/2">
-      <Image
-        src={karaffel}
-        alt="Draggable"
+      <img
+        src={karaffel.src}
+        alt="Karaffel"
         class="w-26 h-26 draggable cursor-move"
       />
     </div>
 
     <div class="absolute bottom-[10%] right-[10%]">
-      <Image
-        src={bialetti}
-        alt="Draggable"
+      <img
+        src={bialetti.src}
+        alt="Bialetti"
         class="w-20 h-20 draggable cursor-move"
+      />
+    </div>
+
+    <div class="absolute bottom-[20%] right-[20%]">
+      <img
+        src={flowers.src}
+        alt="Flowers"
+        class="w-30 h-30 draggable cursor-move"
       />
     </div>
   </div>
 
+  <!-- SCRIPT -->
   <script>
-    const draggables = document.querySelectorAll(".draggable");
     const dropArea = document.getElementById("drop-area");
     const clearBtn = document.getElementById("clear-btn");
 
-    let currentImg = null;
     let offsetX = 0;
     let offsetY = 0;
+    let currentImg = null;
 
-    draggables.forEach((img) => {
+    function makeDraggable(img) {
       img.addEventListener("pointerdown", (e) => {
         e.preventDefault();
 
@@ -126,17 +148,13 @@ import bialetti from "../assets/images/bialetti.webp";
         currentImg.style.height = e.target.offsetHeight + "px";
         document.body.appendChild(currentImg);
 
-        moveAt(e.clientX, e.clientY);
-
         function moveAt(x, y) {
           currentImg.style.left = x - offsetX + "px";
           currentImg.style.top = y - offsetY + "px";
         }
 
         const onPointerMove = (e) => {
-          requestAnimationFrame(() => {
-            moveAt(e.clientX, e.clientY);
-          });
+          requestAnimationFrame(() => moveAt(e.clientX, e.clientY));
         };
 
         const onPointerUp = (e) => {
@@ -157,6 +175,7 @@ import bialetti from "../assets/images/bialetti.webp";
             newImg.style.top = e.clientY - dropBounds.top - offsetY + "px";
             newImg.style.zIndex = "10";
             newImg.classList.add("draggable");
+            makeDraggable(newImg);
             dropArea.appendChild(newImg);
           }
 
@@ -167,11 +186,13 @@ import bialetti from "../assets/images/bialetti.webp";
         document.addEventListener("pointermove", onPointerMove);
         document.addEventListener("pointerup", onPointerUp);
       });
-    });
+    }
+
+    document.querySelectorAll(".draggable").forEach(makeDraggable);
 
     clearBtn?.addEventListener("click", () => {
       [...dropArea.querySelectorAll("img")].forEach((el) => {
-        if (!el.classList.contains("object-cover")) el.remove();
+        if (!el.classList.contains("pointer-events-none")) el.remove();
       });
     });
   </script>
