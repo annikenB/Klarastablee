@@ -6,16 +6,27 @@ const {
   image = "https://via.placeholder.com/300",
   price = "",
   buttonLabel = "Read More",
-  href = "", // lenken til produktsiden
+  href = "",
 } = Astro.props;
+
+const cardStyling = "bg-white p-4 transition";
+const imageWrapperStyling = "relative overflow-hidden";
+const imageStyling =
+  "w-full object-contain mb-4 transition-transform duration-300 hover:scale-110";
+const titleStyling = "font-semibold text-lg";
+const priceStyling = "text-gray-600 mt-2";
+const buttonWrapperStyling = "mt-4";
 ---
 
-<article class="bg-white p-4 transition">
-  <img src={image} alt={title} class="w-full object-cover mb-4" />
-  <h3 class="font-semibold text-lg">{title}</h3>
-  {price && <p class="text-gray-600 mt-2">{price}</p>}
+<article class={cardStyling}>
+  <div class={imageWrapperStyling}>
+    <img src={image} alt={title} class={imageStyling} />
+  </div>
 
-  <div class="mt-4">
+  <h3 class={titleStyling}>{title}</h3>
+  {price && <p class={priceStyling}>{price}</p>}
+
+  <div class={buttonWrapperStyling}>
     <Link href={href}>{buttonLabel}</Link>
   </div>
 </article>
