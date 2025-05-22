@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Linkbutton from "../components/Linkbutton.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 ---
@@ -9,9 +10,9 @@ import { Image } from "astro:assets";
   <article>
     <h1 class="text-center pt-20">Customise your order</h1>
   </article>
-  
+
   <article class="flex w-[250px] mx-auto justify-between p-5">
-    <p>First step</p>
+    <p><span> First step</span></p>
     <p>Second step</p>
     <p>Last step</p>
   </article>
@@ -19,32 +20,35 @@ import { Image } from "astro:assets";
   <div class="flex flex-col items-center justify-center">
     <div class="text-center max-w-xl px-4 mb-6">
       <p class="mb-4">
-        First step,<br>
-        Please provide us with information about the scale of your event or celebration.<br>
+        First step,<br />
+        Please provide us with information about the scale of your event or celebration.<br
+        />
         We are happy to assist you with quantity recommendations at a later stage.
       </p>
       <p class="mb-2 text-base">How many people will be attending?</p>
-      <input type="number" min="10" value="10" class="border border-primary-900 px-3 py-1 w-32 text-center">
+      <input
+        type="number"
+        min="10"
+        value="10"
+        class="border border-primary-900 px-3 py-1 w-32 text-center"
+      />
     </div>
-  
+
     <div class="text-center max-w-xl px-4 mb-6">
       <p class="mb-2 text-base">Add a comment about preferred flavours</p>
-      <input type="text" class="border px-3 py-1 w-full text-center">
+      <input type="text" class="border px-3 py-1 w-full text-center" />
     </div>
-  
+
     <div class="text-center max-w-xl px-4">
-      <p class="mb-2 text-base">Do you have any dietary restrictions we should consider?</p>
-      <input type="text"class="border px-3 py-1 w-full text-center">
+      <p class="mb-2 text-base">
+        Do you have any dietary restrictions we should consider?
+      </p>
+      <input type="text" class="border px-3 py-1 w-full text-center" />
+    </div>
+
+    <div class="py-sm mx-auto">
+      <Linkbutton href="/produkter" label="Back" variant="secondary" />
+      <Linkbutton href="/steptwo" label="Next" variant="secondary" />
     </div>
   </div>
-  
-  <div>
-  <a href="/"><Button variant="secondary">Back</Button></a>
-  <a href="/steptwo"><Button variant="secondary">Next</Button></a>
-</div>
-
-
-
-  
-  </MainLayout
->
+</MainLayout>
