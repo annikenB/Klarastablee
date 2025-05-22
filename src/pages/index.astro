@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Linkbutton from "../components/Linkbutton.astro";
 import Link from "../components/Link.astro";
 import Cardone from "../components/Cardone.astro";
 import Review from "../components/Review.astro";
@@ -14,7 +15,9 @@ import miniCake from "../assets/images/miniCake.webp";
 <!-- <Newsletter /> -->
 <MainLayout title="Home">
   <article>
-    <section class="relative h-svh w-full flex items-center justify-center overflow-hidden">
+    <section
+      class="relative h-svh w-full flex items-center justify-center overflow-hidden"
+    >
       <video
         autoplay
         loop
@@ -24,9 +27,9 @@ import miniCake from "../assets/images/miniCake.webp";
       >
         <source src="indexvideo.MP4" type="video/mp4" />
       </video>
-    
+
       <div class="relative z-10">
-        <h1 class="!text-beige-100 text-center  whitespace-nowrap">
+        <h1 class="!text-beige-100 text-center whitespace-nowrap">
           Personalised cakes, desserts and events
         </h1>
       </div>
@@ -34,6 +37,7 @@ import miniCake from "../assets/images/miniCake.webp";
 
     <section id="sektion-1" class="px-4 pt-md">
       <h2 class="text-center">Your local cake dealer</h2>
+
       <p
         class="text-center max-w-4xl mx-auto pt-sm font-script font-display leading-relaxed sm:leading-loose"
       >
@@ -86,7 +90,13 @@ import miniCake from "../assets/images/miniCake.webp";
           <Cardone title="Events" image={Apollo.src} />
         </a>
       </div>
-      <p>knap her</p>
+      <!-- tester knapper og  links komponeter -->
+      <Button href="/mer-info" label="read more" variant="secondary" />
+      <Button href="/kontakt" label="start your order" variant="primary" />
+      <!-- Primær link-knapp -->
+      <Linkbutton href="/om-oss" label="link" variant="primary" />
+      <!-- Sekundær link-knapp -->
+      <Linkbutton href="/kontakt" label="link" variant="secondary" />
     </section>
 
     <!-- sektion 3, trustpilot -->
@@ -95,6 +105,5 @@ import miniCake from "../assets/images/miniCake.webp";
       <h2 class="text-center pt-lg">Trustpilot</h2>
       <Review />
     </section>
-
   </article>
 </MainLayout>

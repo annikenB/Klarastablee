@@ -1,5 +1,16 @@
 ---
+const { href = "#", label = "Klikk her", variant = "primary" } = Astro.props;
+
+const baseStyles =
+  "inline-block px-4 py-2 rounded font-semibold transition-colors duration-300";
+const variantStyles = {
+  primary: "bg-primary-500 text-beige-100 ",
+  secondary: "bg-primary-900 text-beige-100 ",
+};
+
+const buttonClass = `${baseStyles} ${variantStyles[variant] || variantStyles.primary}`;
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<a href={href} class={buttonClass}>
+  {label}
+</a>

@@ -1,0 +1,20 @@
+---
+const {
+  href = "#",
+  label = "Klikk her",
+  variant = "primary", // "primary" eller "secondary"
+} = Astro.props;
+
+const baseStyles =
+  "inline-block px-4 py-2 rounded font-semibold transition-colors duration-300";
+const variantStyles = {
+  primary: "bg-primary-500 text-beige-100 hover:bg-primary-600",
+  secondary: "bg-primary-900 text-beige-100 hover:bg-primary-800",
+};
+
+const linkClass = `${baseStyles} ${variantStyles[variant] || variantStyles.primary}`;
+---
+
+<a href={href} class={linkClass}>
+  {label}
+</a>
