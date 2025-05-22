@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import klara from "../assets/images/klara.webp";
+import klaraMarie from "../assets/images/klaraMarie.webp";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
@@ -19,9 +21,10 @@ import thumbsup from "../assets/images/thumbsup.png";
         sweet tooth for daily dessert.)
       </p>
     </section>
-    <section class="text-center">
-      <h1 class="text-center">Bilde her</h1>
+    <section>
+      <Image src={klaraMarie} alt="test" class="w-[300px] mx-auto" />
     </section>
+
     <section class="text-center p-20">
       <p>
         My love for hosting started as small, intimate dinners for loved ones;
@@ -42,14 +45,14 @@ import thumbsup from "../assets/images/thumbsup.png";
     </section>
     <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
       <div>
-        <p class="text-center">bilde her</p>
+        <Image src={klara} alt="test" class="w-[300px]" />
       </div>
       <div>
-        <p>bilde her</p>
+        <Image src={klara} alt="test" class="w-[300px]" />
       </div>
     </section>
     <section class="text-center p-20">
-      <p>bilde her</p>
+      <Image src={klara} alt="test" class="w-[300px]" />
     </section>
     <section class="text-center p-20">
       <p>
@@ -64,10 +67,12 @@ import thumbsup from "../assets/images/thumbsup.png";
     </section>
     <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
       <div>
-        <p class="text-center">bilde her</p>
+        <p class="text-center">
+          <Image src={klara} alt="test" class="w-[300px]" />
+        </p>
       </div>
       <div>
-        <p>bilde her</p>
+        <Image src={klara} alt="test" class="w-[300px]" />
       </div>
     </section>
     <section class="text-center p-20">
@@ -84,8 +89,8 @@ import thumbsup from "../assets/images/thumbsup.png";
     <section class="text-center p-20">
       <p>With Love, Klara 3</p>
     </section>
-    <section class="text-center p-20">
-      <p>bilde her</p>
+    <section>
+      <Image src={klara} alt="test" class="w-[300px] mx-auto" />
     </section>
   </article>
 </MainLayout>
