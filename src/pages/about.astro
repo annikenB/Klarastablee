@@ -3,89 +3,241 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import sunflower from "../assets/images/sunflower.webp";
+import cooking from "../assets/images/cooking.webp";
+import portrait from "../assets/images/klaraMarie.webp";
+import closeup from "../assets/images/colseUp.webp";
+import Klara from "../assets/images/klara.webp";
+import lemoncurd from "../assets/images/lemonCurd.webp";
+import recipe from "../assets/images/recipe.webp";
+import setup from "../assets/images/settingup.webp";
+import rasberry from "../assets/images/rasberry.webp";
+import dog from "../assets/images/dog.webp";
+import mini from "../assets/images/mini.webp";
+import lemon from "../assets/images/lemon.webp";
+import pear from "../assets/images/drawingpear.webp";
+import cutlery from "../assets/images/cutlery.webp";
+import bialetti from "../assets/images/bialetti.webp";
+import cake from "../assets/images/cherrycake.webp";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <section class="text-center p-20">
-      <h1 class="text-center p-20">About</h1>
-      <p>
-        Klaras Table is a one-woman Copenhagen based culinary project founded by
-        Klara Jespersen. She specializes in the sweet kitchen and is driven by
-        hunger for a space where creativity, curiosity and playfulness blooms
-        though taste, flavour and texture. Klaras Table started as a hobby
-        project in the spring of 2022. (And, not gonna lie — also a bit of a
-        sweet tooth for daily dessert.)
-      </p>
-    </section>
-    <section class="text-center">
-      <h1 class="text-center">Bilde her</h1>
-    </section>
-    <section class="text-center p-20">
-      <p>
-        My love for hosting started as small, intimate dinners for loved ones;
-        private kitchen parties with pasta all over the table, coffee sizzling
-        from moka pots on the stove and kitchen-counter-conversations continuing
-        all night, always ending with the star of the show - dessert.
-      </p>
-    </section>
-    <section class="text-center">
-      <h1 class="text-center">illustasjon:P</h1>
-    </section>
-    <section class="text-center p-20">
-      <p>
-        Food connects people. Room for dessert means room for a little more
-        conversation, a bit more connection, and room for making an evening last
-        a bit longer. A sweet chance to linger with people you love.
-      </p>
-    </section>
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-      <div>
-        <p class="text-center">bilde her</p>
+<MainLayout title="About">
+  <article class="grid md:grid-cols-5 md:gap-x-6">
+
+    <!--1. kolonne-->
+    <article class="hidden md:block">
+      <div class="flex justify-end">
+        <Image
+          src={mini}
+          alt="Drawing of a small cake"
+          class="w-[30%] h-auto my-80"
+        />
       </div>
-      <div>
-        <p>bilde her</p>
+      <div class="flex justify-end">
+        <Image
+          src={lemon}
+          alt="Drawing of a lemon"
+          class="w-[30%] h-auto my-180"
+        />
       </div>
-    </section>
-    <section class="text-center p-20">
-      <p>bilde her</p>
-    </section>
-    <section class="text-center p-20">
-      <p>
-        The private dinner parties since evolved to commercial hosting for
-        international brands. Klaras Table’s take on hosting, is to bring the
-        heart warm, intimate vibe of sitting on the kitchen counter into the
-        event scene. This vibe in combination with culinary artistry and
-        curating tablescapes sets the room for connection and conversation
-        through food. Because conversations in the kitchen are always a tiny bit
-        better.
-      </p>
-    </section>
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-      <div>
-        <p class="text-center">bilde her</p>
+      <div class="flex justify-end">
+        <Image
+          src={pear}
+          alt="Drawing of a lemon"
+          class="w-[30%] h-auto my-120"
+        />
       </div>
-      <div>
-        <p>bilde her</p>
+    </article>
+    
+
+  
+    <!-- Indholdskolonne fylder alt på mobile, 3/5 på desktop -->
+    <div class="col-span-full md:col-span-3 flex flex-col items-center text-center">
+  
+      <!-- Sektioner herunder -->
+      <section class="pb-xs md:p-xs">
+        <h1 class="mt-40 md:p-xs">About</h1>
+        <p class="max-w-prose">
+          Klaras Table is a one-woman Copenhagen based culinary project founded by
+          Klara Jespersen. She specializes in the sweet kitchen and is driven by
+          hunger for a space where creativity, curiosity and playfulness blooms
+          though taste, flavour and texture. Klaras Table started as a hobby
+          project in the spring of 2022. (And, not gonna lie — also a bit of a
+          sweet tooth for daily dessert).
+        </p>
+      </section>
+  
+      <section class="p-xs">
+        <Image
+          src={portrait}
+          alt="Portrait of Klara"
+          class="w-[50%] h-auto mx-auto"
+        />
+      </section>
+  
+      <section class="md:p-xs">
+        <p class="max-w-prose">
+          My love for hosting started as small, intimate dinners for loved ones;
+          private kitchen parties with pasta all over the table, coffee sizzling
+          from moka pots on the stove and kitchen-counter-conversations continuing
+          all night, always ending with the star of the show - dessert.
+        </p>
+      </section>
+  
+      <section class="p-0 m-0 flex justify-center items-center">
+        <Image
+          src={sunflower}
+          alt="illustration of a sunflower"
+          class="w-[15%] h-auto"
+        />
+      </section>
+  
+      <section class="pt-0 md:pb-xs">
+        <p class="max-w-prose">
+          Food connects people. Room for dessert means room for a little more
+          conversation, a bit more connection, and room for making an evening last
+          a bit longer. A sweet chance to linger with people you love.
+        </p>
+      </section>
+
+      <!-- <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 w-full">
+        <div class="flex justify-end items-center">
+          <Image
+            src={Klara}
+            alt="Portrait of Klara"
+            class="w-[80%] h-auto"
+          />
+        </div>
+        <div class="flex justify-start items-center">
+          <Image
+            src={lemoncurd}
+            alt="Lemon curd"
+            class="w-[60%] h-auto"
+          />
+        </div>
+      </section>
+  
+      <section class="p-xs">
+        <Image
+          src={recipe}
+          alt="Recipe image"
+          class="w-[50%] h-auto mx-auto"
+        />
+      </section> -->
+
+      <section class="w-full p-4 md:grid md:grid-cols-2 md:gap-4">
+        <!-- To billeder stacked på mobile, side om side på desktop -->
+        <div class="flex justify-center items-center mb-4 md:mb-0 md:justify-end">
+          <Image
+            src={Klara}
+            alt="Portrait of Klara"
+            class="w-2/3 h-auto md:w-[80%]"
+          />
+        </div>
+      
+        <div class="flex justify-center items-center md:justify-start hidden md:block">
+          <Image
+            src={lemoncurd}
+            alt="Lemon curd"
+            class="w-1/2 h-auto md:w-[60%]"
+          />
+        </div>
+      </section>
+      
+      <!-- Sidste billede skjult på mobil, vist på desktop -->
+      <section class="p-xs hidden md:block">
+        <Image
+          src={recipe}
+          alt="Recipe image"
+          class="w-[50%] h-auto mx-auto"
+        />
+      </section>
+      
+      
+
+      
+      
+  
+      <section class="md:p-xs">
+        <p class="max-w-prose">
+          The private dinner parties since evolved to commercial hosting for
+          international brands. Klaras Table’s take on hosting, is to bring the
+          heart warm, intimate vibe of sitting on the kitchen counter into the
+          event scene. This vibe in combination with culinary artistry and
+          curating tablescapes sets the room for connection and conversation
+          through food. Because conversations in the kitchen are always a tiny bit
+          better.
+        </p>
+      </section>
+  
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 w-full">
+        <div class="flex justify-center items-center md:justify-end">
+          <Image
+            src={dog}
+            alt="Klara cooking at home with her dog"
+            class="w-[70%] h-auto"
+          />
+        </div>
+        <div class="flex justify-start items-center">
+          <Image
+            src={setup}
+            alt="Klaras setup for event"
+            class="w-[60%] h-auto hidden md:block"
+          />
+        </div>
+      </section>
+  
+      <section class="md:p-xs">
+        <p class="max-w-prose">
+          The approach? Never stop playing. Events and cake projects are always
+          planned in close contact with the client, to meet their visions and
+          wants for a project. Through curiosity in terms of visuals, sensory
+          inputs and a strong aesthetic drive, Klaras Table creates everything
+          from tiny tarts to big wedding cakes, small breakfasts to big fashion
+          events. Curating plates, cakes and room for conversation - and I am
+          loving each and every project.
+        </p>
+      </section>
+  
+      <section class="md:p-xs">
+        <p class="max-w-prose">
+          With Love, Klara <br />&lt;3
+        </p>
+      </section>
+  
+      <section class="p-xs">
+        <Image
+          src={rasberry}
+          alt="Raspberry"
+          class="w-[30%] h-auto mx-auto"
+        />
+      </section>
+    </div>
+  
+    <!-- 5. kolonne -->
+    <article class="hidden md:block">
+      <div class="">
+        <Image
+          src={cutlery}
+          alt="Drawing of cutlery"
+          class="w-[40%] h-auto my-120"
+        />
       </div>
-    </section>
-    <section class="text-center p-20">
-      <p class="">
-        The approach? Never stop playing. Events and cake projects are always
-        planned in close contact with the client, to meet their visions and
-        wants for a project. Through curiosity in terms of visuals, sensory
-        inputs and a strong aesthetic drive, Klaras Table creates everything
-        from tiny tarts to big wedding cakes, small breakfasts to big fashion
-        events. Curating plates, cakes and room for conversation - and I am
-        loving each and every project.
-      </p>
-    </section>
-    <section class="text-center p-20">
-      <p>With Love, Klara 3</p>
-    </section>
-    <section class="text-center p-20">
-      <p>bilde her</p>
-    </section>
+      <div class="">
+        <Image
+          src={bialetti}
+          alt="Drawing of cutlery"
+          class="w-[40%] h-auto my-220"
+        />
+      </div>
+      <div class="">
+        <Image
+          src={cake}
+          alt="Drawing of cutlery"
+          class="w-[40%] h-auto mt-380"
+        />
+      </div>
+    </article>
   </article>
+  
 </MainLayout>
