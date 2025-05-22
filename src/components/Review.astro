@@ -1,8 +1,6 @@
 ---
-import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
-import star from "../assets/images/mini.webp";
-import trustpilot from "../assets/images/trustpilot.png";
+import star from "../assets/images/bigStar.webp";
 ---
 
 <section class="relative w-full mx-auto">
@@ -15,7 +13,7 @@ import trustpilot from "../assets/images/trustpilot.png";
         class="flex transition-transform duration-700 ease-in-out gap-8"
       >
         <div class="flex gap-6 w-max">
-          <div class="flex flex-col rounded-form p-8 w-80 m-sm">
+          <div class="flex flex-col rounded-form p-8 w-80">
             <div class="grid grid-cols-5 mb-4">
               <Image src={star} class="stjerne" alt="Stjerne" />
               <Image src={star} class="stjerne" alt="Stjerne" />
@@ -24,12 +22,27 @@ import trustpilot from "../assets/images/trustpilot.png";
               <Image src={star} class="stjerne" alt="Stjerne" />
             </div>
 
-            <h4 class="mb-4">NEMT OG GODT</h4>
+            <h5 class="">
+              “I had the best experience with Klaras Table. The cakes were so
+              good and she was very sweet when she came to put up the
+              installation.”
+            </h5>
+            <p class="py-xs">Naja Heggum</p>
+          </div>
 
-            <p class="">
-              Vi har brugt Naturvinskassen gennem flere år og elsker det hver
-              gang.
-            </p>
+          <div class="flex flex-col rounded-form p-8 w-80">
+            <div class="grid grid-cols-5 mb-4">
+              <Image src={star} class="stjerne" alt="Stjerne" />
+              <Image src={star} class="stjerne" alt="Stjerne" />
+              <Image src={star} class="stjerne" alt="Stjerne" />
+              <Image src={star} class="stjerne" alt="Stjerne" />
+              <Image src={star} class="stjerne" alt="Stjerne" />
+            </div>
+            <h5 class="">
+              “I ordered a custom order and everything was very smooth from the
+              decision on flavours to the delevery. Would recommend.”
+            </h5>
+            <p class="py-xs">Naja Heggum</p>
           </div>
 
           <div class="flex flex-col rounded-form p-8 w-80">
@@ -41,9 +54,11 @@ import trustpilot from "../assets/images/trustpilot.png";
               <Image src={star} class="stjerne" alt="Stjerne" />
             </div>
 
-            <h4 class="mb-4">VI ELSKER DET!</h4>
-
-            <p class="">Mega god vin og rigtig god service!</p>
+            <h5 class="">
+              “Such nice cakes and very interesting flavors and very very
+              pretty.”
+            </h5>
+            <p class="py-xs">Naja Heggum</p>
           </div>
 
           <div class="flex flex-col rounded-form p-8 w-80">
@@ -55,11 +70,12 @@ import trustpilot from "../assets/images/trustpilot.png";
               <Image src={star} class="stjerne" alt="Stjerne" />
             </div>
 
-            <h4 class="mb-4">RIGTIG GOD VIN</h4>
-
-            <p class="">
-              Vi får altid mange forskellige interessante naturvine!
-            </p>
+            <h5 class="">
+              “I had the best experience with Klaras Table. The cakes were so
+              good and she was very sweet when she came to put up the
+              installation.”
+            </h5>
+            <p class="py-xs">Naja Heggum</p>
           </div>
 
           <div class="flex flex-col rounded-form p-8 w-80">
@@ -71,9 +87,12 @@ import trustpilot from "../assets/images/trustpilot.png";
               <Image src={star} class="stjerne" alt="Stjerne" />
             </div>
 
-            <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
-
-            <p class="">Vi ser alltid frem til vores levering.</p>
+            <h5 class="">
+              “I had the best experience with Klaras Table. The cakes were so
+              good and she was very sweet when she came to put up the
+              installation.”
+            </h5>
+            <p class="py-xs">Naja Heggum</p>
           </div>
 
           <div class="flex flex-col rounded-form p-8 w-80">
@@ -85,23 +104,12 @@ import trustpilot from "../assets/images/trustpilot.png";
               <Image src={star} class="stjerne" alt="Stjerne" />
             </div>
 
-            <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
-
-            <p class="">Vi ser alltid frem til vores levering.</p>
-          </div>
-
-          <div class="flex flex-col rounded-form p-8 w-80">
-            <div class="grid grid-cols-5 mb-4">
-              <Image src={star} class="stjerne" alt="Stjerne" />
-              <Image src={star} class="stjerne" alt="Stjerne" />
-              <Image src={star} class="stjerne" alt="Stjerne" />
-              <Image src={star} class="stjerne" alt="Stjerne" />
-              <Image src={star} class="stjerne" alt="Stjerne" />
-            </div>
-
-            <h4 class="mb-4">GLÆDER OS HVER GANG</h4>
-
-            <p class="">Vi ser alltid frem til vores levering.</p>
+            <h5 class="">
+              “I had the best experience with Klaras Table. The cakes were so
+              good and she was very sweet when she came to put up the
+              installation.”
+            </h5>
+            <p class="py-xs">Naja Heggum</p>
           </div>
 
           <div class="flex flex-col rounded-form p-8 w-80">
@@ -171,60 +179,41 @@ import trustpilot from "../assets/images/trustpilot.png";
           d="M9 5l7 7-7 7"></path>
       </svg>
     </button>
-
-    <div class="text-center hidden md:block">
-      <a
-        href="https://dk.trustpilot.com/review/naturvinskassen.dk"
-        target="_blank"
-      >
-        <Button variant="secondary">Se alle Trustpilot anmeldelser</Button>
-      </a>
-      <div class="text-center md:hidden block">
-        <a
-          href="https://dk.trustpilot.com/review/naturvinskassen.dk"
-          target="_blank"
-        >
-          <Button variant="mobilesecondary"
-            >Se alle Trustpilot anmeldelser</Button
-          >
-        </a>
-      </div>
-    </div>
-
-    <script>
-      let currentIndex = 0;
-      const itemsPerView = 4;
-      const carouselItems = document.getElementById("carouselItems");
-      const totalItems = carouselItems.children[0].children.length;
-
-      const prevButton = document.getElementById("prev");
-      const nextButton = document.getElementById("next");
-
-      function updateCarousel() {
-        const offset = (-currentIndex * 100) / itemsPerView;
-        carouselItems.style.transform = `translateX(${offset}%)`;
-      }
-
-      prevButton.addEventListener("click", () => {
-        currentIndex = Math.max(currentIndex - 1, 0);
-        updateCarousel();
-      });
-
-      nextButton.addEventListener("click", () => {
-        currentIndex = Math.min(
-          currentIndex + 1,
-          Math.floor(totalItems / itemsPerView) - 1
-        );
-        updateCarousel();
-      });
-
-      updateCarousel();
-    </script>
   </div>
-  <style>
-    .stjerne {
-      width: auto;
-      height: 30px;
+
+  <script>
+    let currentIndex = 0;
+    const itemsPerView = 4;
+    const carouselItems = document.getElementById("carouselItems");
+    const totalItems = carouselItems.children[0].children.length;
+
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+
+    function updateCarousel() {
+      const offset = (-currentIndex * 100) / itemsPerView;
+      carouselItems.style.transform = `translateX(${offset}%)`;
     }
-  </style>
+
+    prevButton.addEventListener("click", () => {
+      currentIndex = Math.max(currentIndex - 1, 0);
+      updateCarousel();
+    });
+
+    nextButton.addEventListener("click", () => {
+      currentIndex = Math.min(
+        currentIndex + 1,
+        Math.floor(totalItems / itemsPerView) - 1
+      );
+      updateCarousel();
+    });
+
+    updateCarousel();
+  </script>
 </section>
+<style>
+  .stjerne {
+    width: auto;
+    height: 30px;
+  }
+</style>

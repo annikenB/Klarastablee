@@ -5,9 +5,11 @@ import Linkbutton from "../components/Linkbutton.astro";
 import Link from "../components/Link.astro";
 import Cardone from "../components/Cardone.astro";
 import Review from "../components/Review.astro";
+
 import Newsletter from "../components/Newsletter.astro";
 import { Image } from "astro:assets";
 import celebrationCake from "../assets/images/celebrationCake.webp";
+
 import Apollo from "../assets/images/apollo.webp";
 import miniCake from "../assets/images/miniCake.webp";
 ---
@@ -42,14 +44,16 @@ import miniCake from "../assets/images/miniCake.webp";
         class="text-center max-w-4xl mx-auto pt-sm font-script font-display leading-relaxed sm:leading-loose"
       >
         Klaras Table is a <span>Copenhagen based culinary studio</span>,
-        offering thoughtful cakes and sweet treats for events of all kinds. <br
-        />
+        offering thoughtful <span>cakes</span> and <span>sweet treats</span> for
+        events of all kinds. <br />
         From simple morning plates and petit fours, to handmade cakes for weddings
         and larger celebrations, <br />
         everything is thought out with eye for detail and a desire to combine culinary
         artistry and uncompromising taste. <br /><br />
-        Klaras Table offer more than just desserts. We cook, cater, and serve as
-        part of your event setting the food frame to any <br />
+        Klaras Table offer more than just desserts. We <span>cook</span>, <span
+          >cater</span
+        >, and <span>serve</span> as part of your event setting the food frame to
+        any <br />
         gathering. The cakes are true centerpieces — and will be the first thing
         your guests will notice upon arrival, and certainly <br />
         something they'll remember when leaving. <br /><br />
@@ -92,12 +96,10 @@ import miniCake from "../assets/images/miniCake.webp";
         </a>
       </div>
       <!-- tester knapper og links komponeter her-->
-      <Button href="/mer-info" label="read more" variant="secondary" />
-      <Button href="/kontakt" label="start your order" variant="primary" />
       <!-- Primær link-knapp -->
-      <Linkbutton href="/om-oss" label="link" variant="primary" />
-      <!-- Sekundær link-knapp -->
-      <Linkbutton href="/kontakt" label="link" variant="secondary" />
+      <div class="py-sm">
+        <Linkbutton href="/produkter" label="VIEW ALL" variant="primary" />
+      </div>
     </section>
 
     <!-- sektion 3, trustpilot -->
@@ -105,6 +107,11 @@ import miniCake from "../assets/images/miniCake.webp";
     <section id="sektion 3">
       <h2 class="text-center pt-lg">Trustpilot</h2>
       <Review />
+      <div class="mx-md">
+        <Link href="https://dk.trustpilot.com" target="_blank">
+          Read all Reviews here
+        </Link>
+      </div>
     </section>
   </article>
 </MainLayout>
