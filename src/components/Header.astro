@@ -9,14 +9,16 @@ import logoRed from "../assets/images/logoRed.webp";
 <header class="z-50 fixed top-0">
   <!-- Lukket burger -->
   <button
-  id="menuToggle"
-  class="group fixed top-4 left-6 z-50 flex flex-col items-center justify-center h-10 w-15 p-2"
-  aria-label="Åpne meny"
->
-  <span class="line block h-[1px] w-15 bg-white mb-sm group-hover:bg-primary-500"></span>
-  <span class="line block h-[1px] w-15 bg-white group-hover:bg-primary-500"></span>
-</button>
-
+    id="menuToggle"
+    class="group fixed top-4 left-6 z-50 flex flex-col items-center justify-center h-10 w-15 p-2"
+    aria-label="Åpne meny"
+  >
+    <span
+      class="line block h-[1px] w-15 bg-white mb-sm group-hover:bg-primary-500"
+    ></span>
+    <span class="line block h-[1px] w-15 bg-white group-hover:bg-primary-500"
+    ></span>
+  </button>
 
   <!-- logo -->
   <div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
@@ -44,80 +46,104 @@ import logoRed from "../assets/images/logoRed.webp";
     </a>
   </div>
 
-
-<!-- under er åben cheeseburger -->
+  <!-- under er åben cheeseburger -->
   <nav
     id="mobileMenu"
     class="hidden fixed inset-0 bg-primary-500 text-beige-100 flex flex-col items-end justify-end gap-6 z-40 pb-60 pr-20"
   >
     <button
-  id="closeMenu"
-  class="absolute top-4 left-4 z-50 flex flex-col justify-center items-center cursor-pointer h-10 w-15 p-2"
-  aria-label="Luk menu"
->
-  <span class="block absolute w-15 h-[1px] bg-current rotate-45"></span>
-  <span class="block absolute w-15 h-[1px] bg-current -rotate-45"></span>
-</button>
+      id="closeMenu"
+      class="absolute top-4 left-4 z-50 flex flex-col justify-center items-center cursor-pointer h-10 w-15 p-2"
+      aria-label="Luk menu"
+    >
+      <span class="block absolute w-15 h-[1px] bg-current rotate-45"></span>
+      <span class="block absolute w-15 h-[1px] bg-current -rotate-45"></span>
+    </button>
 
-<div class="fixed inset-0 flex flex-col justify-center items-center sm:items-end pr-4 sm:pr-10 space-y-4 text-center sm:text-right">
-  <a href="/" class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:text-beige-900">
-    Home
-  </a>
-  <a href="/produkter" class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:text-beige-900">
-    Book Cake or Event
-  </a>
-  <a href="/gallery" class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:text-beige-900">
-    Gallery
-  </a>
-  <a href="/about" class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:text-beige-900">
-    About
-  </a>
-  <a href="/playground" class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:text-beige-900">
-    Set Your Table
-  </a>
-  <a href="/recipe" class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:text-beige-900">
-    Recipe of the month
-  </a>
-  <a href="https://www.instagram.com/klaras.table/" target="_blank" class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:text-beige-900">
-    Instagram
-  </a>
-</div>
+    <div
+      class="fixed inset-0 flex flex-col justify-center items-center sm:items-end pr-4 sm:pr-10 space-y-4 text-center sm:text-right"
+    >
+      <a
+        href="/"
+        class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+      >
+        Home
+      </a>
+      <a
+        href="/produkter"
+        class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+      >
+        Book Cake or Event
+      </a>
+      <a
+        href="/gallery"
+        class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+      >
+        Gallery
+      </a>
+      <a
+        href="/about"
+        class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl
+        hover:italic"
+      >
+        About
+      </a>
+      <a
+        href="/playground"
+        class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+      >
+        Set Your Table
+      </a>
+      <a
+        href="/recipe"
+        class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+      >
+        Recipe of the month
+      </a>
+      <a
+        href="https://www.instagram.com/klaras.table/"
+        target="_blank"
+        class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+      >
+        Instagram
+      </a>
+    </div>
 
     <script>
       const toggle = document.getElementById("menuToggle");
       const menu = document.getElementById("mobileMenu");
       const close = document.getElementById("closeMenu");
-    
+
       toggle?.addEventListener("click", () => {
         menu?.classList.remove("hidden");
         toggle.classList.add("hidden");
       });
-    
+
       close?.addEventListener("click", () => {
         menu?.classList.add("hidden");
         toggle.classList.remove("hidden");
       });
-    
+
       const menuButton = document.getElementById("menuToggle");
       const lines = menuButton.querySelectorAll(".line");
       const logoWhite = document.getElementById("logoWhite");
       const logoBlack = document.getElementById("logoBlack");
       const logoRed = document.getElementById("logoRed");
-    
+
       const isHome = window.location.pathname === "/";
-    
+
       if (isHome) {
         // Forsiden – scroll-effekt
         window.addEventListener("scroll", () => {
           const threshold = window.innerHeight * 0.9;
           const scrolled = window.scrollY > threshold;
-    
+
           // Skift burger-farve
-          lines.forEach(line => {
+          lines.forEach((line) => {
             line.classList.toggle("bg-white", !scrolled);
             line.classList.toggle("bg-primary-900", scrolled);
           });
-    
+
           // Skift logo: hvid ↔ sort
           if (logoWhite && logoBlack) {
             logoWhite.classList.toggle("opacity-0", scrolled);
@@ -126,19 +152,15 @@ import logoRed from "../assets/images/logoRed.webp";
         });
       } else {
         // Alle andre sider – statisk sort logo og burger
-        lines.forEach(line => {
+        lines.forEach((line) => {
           line.classList.remove("bg-white");
           line.classList.add("bg-primary-900");
         });
-    
+
         if (logoWhite) logoWhite.classList.add("hidden");
         if (logoBlack) logoBlack.classList.remove("opacity-0");
         if (logoRed) logoRed.classList.remove("group-hover:opacity-100"); // Forhindr hvidt-logo-hover
       }
     </script>
-
-
-    </script>
   </nav>
 </header>
-
