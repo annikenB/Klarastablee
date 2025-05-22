@@ -6,18 +6,19 @@ import celebrationCake from "../assets/images/celebrationCake.webp";
 import walkingCake from "../assets/images/walkingCake.webp";
 import outsideCake from "../assets/images/outsideCake.webp";
 import ProductCard from "../components/ProductCard.astro";
+import petitepies from "../assets/images/petitepies.webp";
 ---
 
 <MainLayout title="Produkt">
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 m-voress pt-20">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-20">
     <!-- Venstre kolonne: Bilder -->
     <div class="w-full">
       <div class="w-full">
         <form class="">
           <div class="space-y-4 m-md">
-            <Image src={celebrationCake} alt="Cake" class="" />
-            <Image src={walkingCake} alt="Cake" class="" />
-            <Image src={outsideCake} alt="Cake" class="" />
+            <Image src={petitepies} alt="pie" class="" />
+            <Image src={petitepies} alt="pie" class="" />
+            <Image src={petitepies} alt="pie" class="" />
           </div>
         </form>
       </div>
@@ -27,7 +28,7 @@ import ProductCard from "../components/ProductCard.astro";
     <div class="max-h-fit self-start sticky top-4">
       <div>
         <ProductCard
-          title="Celebration Cake"
+          title="Petite Pies"
           price="65 dkk each"
           buttonLabel="Start your order"
           details="Saftig og deilig eplekake bakt med kjærlighet."
