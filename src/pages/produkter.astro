@@ -8,6 +8,7 @@ import Cardtwo from "../components/Cardtwo.astro";
 import celebrationCake from "../assets/images/celebrationCake.webp";
 import petitepies from "../assets/images/petitepies.webp";
 import manyPies from "../assets/images/manyPies.webp";
+import chokMadeleine from "../assets/images/chokMadeleine.webp";
 import MBsetup from "../assets/images/MBsetup.webp";
 import apollo from "../assets/images/apollo.webp";
 import { Image } from "astro:assets";
@@ -38,12 +39,12 @@ import thumbsup from "../assets/images/thumbsup.png";
       class="flex gap-4 overflow-x-auto px-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
     >
       <div class="shrink-0 snap-start w-[300px]">
-        <a href="/singleview" class="block">
+        <a href="/celebrationCake" class="block">
           <Cardtwo
             title="Celebration Cake"
             image={celebrationCake.src}
             price="65 dk pr. person - min. 10 servings"
-            buttonLabel="knap her"
+            buttonLabel="Read More"
           />
         </a>
       </div>
@@ -53,7 +54,7 @@ import thumbsup from "../assets/images/thumbsup.png";
             title="Petite Pies"
             image={petitepies.src}
             price="65 dk pr. person - min. 10 servings"
-            buttonLabel="knap her"
+            buttonLabel="Read more"
           />
         </a>
       </div>
@@ -63,7 +64,7 @@ import thumbsup from "../assets/images/thumbsup.png";
             title="Tiny Treats"
             image={manyPies.src}
             price="65 dk pr. person - min. 10 servings"
-            buttonLabel="knap her"
+            buttonLabel="Read More"
           />
         </a>
       </div>
@@ -71,9 +72,9 @@ import thumbsup from "../assets/images/thumbsup.png";
         <a href="/singleview" class="block">
           <Cardtwo
             title="Madeleines"
-            image="https://via.placeholder.com/300"
-            price="65 dk pr. person - min. 10 servings"
-            buttonLabel="knap her"
+            image={chokMadeleine.src}
+            price="45 dk pr. person - min. 10 servings"
+            buttonLabel="Read More"
           />
         </a>
       </div>
@@ -81,9 +82,9 @@ import thumbsup from "../assets/images/thumbsup.png";
         <a href="/singleview" class="block">
           <Cardtwo
             title="Private Event"
-            image="https://via.placeholder.com/300"
+            image={apollo.src}
             price="pris min. 10 servings"
-            buttonLabel="knap her"
+            buttonLabel="Read more"
           />
         </a>
       </div>
@@ -91,15 +92,10 @@ import thumbsup from "../assets/images/thumbsup.png";
         <a href="/singleview" class="block">
           <Cardtwo
             title="Commercial Event"
-            image="https://via.placeholder.com/300"
+            image={MBsetup.src}
             price="pris min. 10 servings"
-            buttonLabel="knap her"
+            buttonLabel="Read More"
           />
-        </a>
-      </div>
-      <div class="shrink-0 snap-start w-[300px]">
-        <a href="/singleview" class="block">
-          <Cardtwo title="Pavlova" image="https://via.placeholder.com/300" />
         </a>
       </div>
     </div>
@@ -107,57 +103,69 @@ import thumbsup from "../assets/images/thumbsup.png";
 
   <section id="sektion 4" class="p-20">
     <section class="">
-      <h2 class="text-center p-20">Events and cakes</h2>
+      <h2 class="text-center p-20">Events and Catering</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Cardtwo
-          title="Private Event"
-          image={apollo.src}
-          price="pris min. 10 servings"
-          buttonLabel="knap her"
-          href="/singleview"
-        />
-        <Cardtwo
-          title="Commercial Event"
-          image={MBsetup.src}
-          price="pris min. 10 servings"
-          buttonLabel="knap her"
-          href="/singleview"
-        />
+        <div class="w-[500px]">
+          <Cardtwo
+            title="Private Event"
+            image={apollo.src}
+            price="pris min. 10 servings"
+            buttonLabel="knap her"
+            href="/singleview"
+          />
+        </div>
+        <div class="w-[500px]">
+          <Cardtwo
+            title="Commercial Event"
+            image={MBsetup.src}
+            price="pris min. 10 servings"
+            buttonLabel="knap her"
+            href="/singleview"
+          />
+        </div>
       </div>
     </section>
     <section class="">
       <h2 class="text-center p-20">Cakes and Sweets</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Cardtwo
-          title="Celebration Cake"
-          image="https://via.placeholder.com/300"
-          price="65 dk pr. person - min. 10 servings"
-          buttonLabel="knap her"
-          href="/singleview"
-        />
-        <Cardtwo
-          title="Petite Pies"
-          image="https://via.placeholder.com/300"
-          price="65 dk pr. person - min. 10 servings"
-          buttonLabel="knap her"
-          href="/singleview"
-        />
+        <div class="w-[500px]">
+          <Cardtwo
+            title="Celebration Cake"
+            image={celebrationCake.src}
+            price="65 dk pr. person - min. 10 servings"
+            buttonLabel="knap her"
+            href="/singleview"
+          />
+        </div>
+        <div class="w-[500px]">
+          <Cardtwo
+            title="Petite Pies"
+            image={petitepies.src}
+            price="65 dk pr. person - min. 10 servings"
+            buttonLabel="knap her"
+            href="/singleview"
+          />
+        </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Cardtwo
-          title="Tiny Treats"
-          image="https://via.placeholder.com/300"
-          price="65 dk pr. person - min. 10 servings"
-          buttonLabel="knap her"
-          href="/singleview"
-        />
-        <Cardtwo
-          title="Madeleines"
-          image="https://via.placeholder.com/300"
-          price="65 dk pr. person - min. 10 servings"
-          buttonLabel="knap her"
-          href="/singleview"
-        />
+        <div class="w-[500px]">
+          <Cardtwo
+            title="Tiny Treats"
+            image={manyPies.src}
+            price="65 dk pr. person - min. 10 servings"
+            buttonLabel="knap her"
+            href="/singleview"
+          />
+        </div>
+        <div class="w-[500px]">
+          <Cardtwo
+            title="Madeleines"
+            image={chokMadeleine.src}
+            price="65 dk pr. person - min. 10 servings"
+            buttonLabel="knap her"
+            href="/singleview"
+          />
+        </div>
       </div>
     </section>
   </section>

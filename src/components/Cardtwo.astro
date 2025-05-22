@@ -1,24 +1,23 @@
 ---
+import Link from "../components/Link.astro"; // Husk riktig path
+
 const {
   title = "Produktnavn",
   image = "https://via.placeholder.com/300",
   price = "",
-  buttonLabel = "Les mer",
-  slug = "", // NYTT: slug for produktet
+  buttonLabel = "read more",
+  slug = "",
 } = Astro.props;
 
 const link = `/singleview?product=${slug}`;
 ---
 
-<a href={link} class="block">
-  <article class="bg-white p-4 text-center transition">
-    <img src={image} alt={title} class="w-full object-cover mb-4" />
-    <h3 class="text-lg font-semibold">{title}</h3>
-    {price && <p class="text-gray-600 mt-2">{price}</p>}
-    <span
-      class="mt-4 inline-block bg-primary-500 text-white px-4 py-2 hover:bg-primary-600 transition"
-    >
-      {buttonLabel}
-    </span>
-  </article>
-</a>
+<article class="bg-white p-4 transition">
+  <img src={image} alt={title} class="w-full object-cover rounded mb-4" />
+  <h3 class="font-semibold">{title}</h3>
+  {price && <p class="text-gray-600 mt-2">{price}</p>}
+
+  <div class="mt-4">
+    <Link href={link}>{buttonLabel}</Link>
+  </div>
+</article>
