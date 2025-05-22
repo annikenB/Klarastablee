@@ -1,7 +1,6 @@
 ---
-// File: src/pages/set-your-table.astro
 import MainLayout from "../layouts/MainLayout.astro";
-import { Image } from "astro:assets";
+import Linkbutton from "../components/Linkbutton.astro";
 import tablenocloth from "../assets/images/tablenocloth.webp";
 import finePlate from "../assets/images/finePlate.webp";
 import mini from "../assets/images/mini.webp";
@@ -26,17 +25,12 @@ import bialetti from "../assets/images/bialetti.webp";
   <div
     class="flex items-center justify-center min-h-screen relative flex-col gap-4"
   >
-    <!-- RESET-KNAPP -->
+    <!-- RESET-LENKE MED KOMPONENT -->
     <div class="z-50">
-      <button
-        id="clear-btn"
-        class="bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600 transition"
-      >
-        Reset Table
-      </button>
+      <Linkbutton href="#" label="Reset Table" variant="primary" />
     </div>
 
-    <!-- STORT BILDE (BORD) -->
+    <!-- BORD -->
     <div
       id="drop-area"
       class="relative w-[600px] h-[600px] bg-white overflow-hidden"
@@ -44,12 +38,12 @@ import bialetti from "../assets/images/bialetti.webp";
       <img
         id="table-img"
         src={tablenocloth.src}
-        alt="Table image"
+        alt="Table"
         class="w-full h-full object-cover pointer-events-none"
       />
     </div>
 
-    <!-- DRAGGABLES -->
+    <!-- DRAGGABLE ITEMS -->
     <div class="absolute top-[35%] left-[5%]">
       <img
         src={finePlate.src}
@@ -57,7 +51,6 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-26 h-26 draggable cursor-move"
       />
     </div>
-
     <div class="absolute top-[15%] left-[20%]">
       <img
         src={cherrycake.src}
@@ -65,7 +58,6 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-30 h-30 draggable cursor-move"
       />
     </div>
-
     <div class="absolute top-[15%] right-[20%]">
       <img
         src={mini.src}
@@ -73,7 +65,6 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-16 h-16 draggable cursor-move"
       />
     </div>
-
     <div class="absolute top-2/3 left-[5%] -translate-y-1/2">
       <img
         src={cutlery.src}
@@ -81,7 +72,6 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-30 h-30 draggable cursor-move"
       />
     </div>
-
     <div class="absolute top-1/2 right-[5%] -translate-y-1/2">
       <img
         src={plate.src}
@@ -89,7 +79,6 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-26 h-26 draggable cursor-move"
       />
     </div>
-
     <div class="absolute bottom-[15%] left-[20%]">
       <img
         src={bigcandle.src}
@@ -97,7 +86,6 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-36 h-36 draggable cursor-move"
       />
     </div>
-
     <div class="absolute bottom-[5%] left-1/2 -translate-x-1/2">
       <img
         src={karaffel.src}
@@ -105,7 +93,6 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-26 h-26 draggable cursor-move"
       />
     </div>
-
     <div class="absolute bottom-[10%] right-[10%]">
       <img
         src={bialetti.src}
@@ -113,7 +100,6 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-20 h-20 draggable cursor-move"
       />
     </div>
-
     <div class="absolute bottom-[20%] right-[20%]">
       <img
         src={flowers.src}
@@ -126,7 +112,7 @@ import bialetti from "../assets/images/bialetti.webp";
   <!-- SCRIPT -->
   <script>
     const dropArea = document.getElementById("drop-area");
-    const clearBtn = document.getElementById("clear-btn");
+    const resetLink = document.querySelector("a[href='#']");
 
     let offsetX = 0;
     let offsetY = 0;
@@ -190,7 +176,8 @@ import bialetti from "../assets/images/bialetti.webp";
 
     document.querySelectorAll(".draggable").forEach(makeDraggable);
 
-    clearBtn?.addEventListener("click", () => {
+    resetLink?.addEventListener("click", (e) => {
+      e.preventDefault();
       [...dropArea.querySelectorAll("img")].forEach((el) => {
         if (!el.classList.contains("pointer-events-none")) el.remove();
       });
