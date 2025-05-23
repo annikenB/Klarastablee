@@ -1,10 +1,12 @@
 ---
+import Linkbutton from "../components/Linkbutton.astro";
 const {
   title = "Standard produkt",
   price = "Pris ikke oppgitt",
   details = "Produktdetaljer kommer her.",
   otherInfo = "Annen info som levering, vilkår osv.",
-  buttonLabel = "Knap her",
+  buttonLabel = "Start your Order",
+  href = "",
 } = Astro.props;
 ---
 
@@ -19,7 +21,7 @@ const {
       href="/stepone"
       class="bg-beige-100 text-primary-500 border-2 border-primary-500 hover:text-primary-500 transition inline-block text-center"
     >
-      <p>{buttonLabel}</p>
+      <Linkbutton href="/stepone" label="START YOUR ORDER" variant="primary" />
     </a>
   </div>
 

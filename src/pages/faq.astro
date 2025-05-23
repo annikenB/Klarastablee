@@ -10,34 +10,28 @@ import pil from "../assets/images/pil.webp";
 
 <MainLayout title="Frequently Asked Questions">
   <article>
-    <section class="text-center p-20">
-      <h1 class="text-center p-20">Frequently Asked Questions</h1>
-      <p>
-        Klaras Table is a one-woman Copenhagen based culinary project founded by
-        Klara Jespersen. She specializes in the sweet kitchen and is driven by
-        hunger for a space where creativity, curiosity and playfulness blooms
-        though taste, flavour and texture. Klaras Table started as a hobby
-        project in the spring of 2022. (And, not gonna lie — also a bit of a
-        sweet tooth for daily dessert.)
-      </p>
+    <section class="text-center pt-40 pb-sm">
+      <h1 class="text-center mx-auto pt-sm max-w-4xl">
+        Frequently Asked Questions
+      </h1>
     </section>
-    <section class="">
-      <div class="max-w-4xl mx-auto my-voresxs px-voresxs">
+    <section class="mt-md">
+      <div class="max-w-4xl mx-auto my-xs px-xs sm:px-sm">
         <div class="space-y-4">
-          <div class="faq-item">
+          <div class="faq-item border-b-1 border-primary-900">
             <button
-              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
               id="faq1Button"
-              ><h4>
+            >
+              <h4>
                 Is it possible to get cakes and catering outside of Copenhagen?
               </h4>
-              <div class="relative w-4 h-4 ml-voresl">
+              <div class="relative w-4 h-4 ml-lg">
                 <Image
                   src={pil}
                   alt="pil"
                   class="absolute inset-0 w-6 opacity-100 group-hover:opacity-0 mt-1 z-10"
                 />
-
                 <Image
                   src={pilhover}
                   alt="pil hover"
@@ -53,13 +47,13 @@ import pil from "../assets/images/pil.webp";
             </div>
           </div>
 
-          <div class="faq-item border-t border-b-1 border-primary-950">
+          <div class="faq-item border-b-1 border-primary-900">
             <button
-              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
               id="faq2Button"
             >
               <h4>Where can I pick up my order?</h4>
-              <div class="relative w-4 h-4 ml-voresl">
+              <div class="relative w-4 h-4 ml-lg">
                 <Image
                   src={pil}
                   alt="pil"
@@ -79,13 +73,14 @@ import pil from "../assets/images/pil.webp";
               </p>
             </div>
           </div>
-          <div class="faq-item border-t border-b-1 border-primary-950">
+
+          <div class="faq-item border-b-1 border-primary-900">
             <button
-              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
               id="faq3Button"
             >
               <h4>What are the prices?</h4>
-              <div class="relative w-4 h-4 ml-voresl">
+              <div class="relative w-4 h-4 ml-lg">
                 <Image
                   src={pil}
                   alt="pil"
@@ -103,13 +98,13 @@ import pil from "../assets/images/pil.webp";
             </div>
           </div>
 
-          <div class="faq-item border-t border-b-1 border-primary-950">
+          <div class="faq-item border-b-1 border-primary-900">
             <button
-              class="w-full text-left py-2 text-lg font-semibold bg-blaa-300 rounded-lg focus:outline-none flex justify-between items-center group"
+              class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
               id="faq4Button"
             >
               <h4>How long time does it take from order to pick up?</h4>
-              <div class="relative w-4 h-4 ml-voresl">
+              <div class="relative w-4 h-4 ml-lg">
                 <Image
                   src={pil}
                   alt="pil"
@@ -130,13 +125,14 @@ import pil from "../assets/images/pil.webp";
               </p>
             </div>
           </div>
-          <div class="faq-item border-t border-b-1 border-primary-950">
+
+          <div class="faq-item border-b-1 border-primary-900">
             <button
-              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
               id="faq5Button"
             >
               <h4>What ingredients do you use?</h4>
-              <div class="relative w-4 h-4 ml-voresl">
+              <div class="relative w-4 h-4 ml-lg">
                 <Image
                   src={pil}
                   alt="pil"
@@ -157,15 +153,15 @@ import pil from "../assets/images/pil.webp";
             </div>
           </div>
 
-          <div class="faq-item border-t border-b-1 border-primary-950">
+          <div class="faq-item border-b-1 border-primary-900">
             <button
-              class="w-full text-left py-2 text-lg font-semibold rounded-lg focus:outline-none flex justify-between items-center group"
+              class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
               id="faq6Button"
             >
               <h4>
                 What if i or my guests have allergies? (lactose, gluten etc.)
               </h4>
-              <div class="relative w-4 h-4 ml-voresl">
+              <div class="relative w-4 h-4 ml-lg">
                 <Image
                   src={pil}
                   alt="pil"
@@ -179,22 +175,22 @@ import pil from "../assets/images/pil.webp";
               </div>
             </button>
             <div id="faq6Answer" class="faq-answer hidden px-4 py-2">
-              <p class="max-w-xs">
+              <p>
                 Please contact us regarding allergies! We are happy to inform
-                you and take allergies into consideration.We dont do glutenfree
-                cakes, but we can always make you a dessert without flour. Our
-                pavlova for example!
+                you and take allergies into consideration. We don’t do
+                glutenfree cakes, but we can always make you a dessert without
+                flour. Our pavlova for example!
               </p>
             </div>
           </div>
 
-          <div class="faq-item border-t border-b-1 border-primary-950">
+          <div class="faq-item border-b-1 border-primary-900">
             <button
-              class="w-full text-left py-2 text-lg font-semibold focus:outline-none flex justify-between items-center group"
+              class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
               id="faq7Button"
             >
               <h4>I am vegan - what can I get?</h4>
-              <div class="relative w-4 h-4 ml-voresl">
+              <div class="relative w-4 h-4 ml-lg">
                 <Image
                   src={pil}
                   alt="pil"
