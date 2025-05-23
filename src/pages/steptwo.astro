@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 
 <MainLayout title="Step Two">
   <article>
-    <h1 class="text-center pt-20">Customise your order</h1>
+    <h1 class="text-center mt-40 md:p-xs">Customise your order</h1>
   </article>
 
   <article class="flex w-[250px] mx-auto justify-between p-5">
@@ -20,7 +20,7 @@ import { Image } from "astro:assets";
   <div class="flex flex-col items-center justify-center">
     <div class="text-center max-w-xl px-4 mb-6">
       <p class="mb-4">
-        The second step,<br />
+        Second step,<br />
         Please provide us with information about catering and other services as well
         as how much help you want. Style preferences and special requests will be
         addressed in a subsequent discussion. <br /> What additional services are
@@ -28,65 +28,74 @@ import { Image } from "astro:assets";
       </p>
     </div>
 
-    <div class="max-w-xl mx-auto p-6">
-      <div class="space-y-4">
-        <label
-          class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2"
-        >
-          <p>Delivery in Copenhagen</p>
-          <input
-            type="checkbox"
-            name="delivery"
-            class="w-5 h-5 accent-blue-600"
-          />
-        </label>
-
-        <label
-          class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2"
-        >
-          <p>Do you want a cake setup</p>
-          <input
-            type="checkbox"
-            name="cakeSetup"
-            class="w-5 h-5 accent-blue-600"
-          />
-        </label>
-
-        <label
-          class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2"
-        >
-          <p>Klara at your event</p>
-          <input type="checkbox" name="klara" class="w-5 h-5 accent-blue-600" />
-        </label>
-
-        <label
-          class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2"
-        >
-          <p>Rental of silver trays, stands</p>
-          <input
-            type="checkbox"
-            name="rental"
-            class="w-5 h-5 accent-blue-600"
-          />
-        </label>
-
-        <label
-          class="grid grid-cols-[1fr_auto] gap-x-16 items-center px-4 py-2"
-        >
-          <p>Artistic tablescaping & curation</p>
-          <input
-            type="checkbox"
-            name="tablescaping"
-            class="w-5 h-5 accent-blue-600"
-          />
-        </label>
-      </div>
+    <div class="max-w-xl mx-auto p-4 space-y-4">
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>5 pears</p>
+        <input type="checkbox" name="pears" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
+    
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>1 liter of water</p>
+        <input type="checkbox" name="water" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
+    
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>1 dl of white sugar</p>
+        <input type="checkbox" name="sugar1" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
+    
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>1 lemon</p>
+        <input type="checkbox" name="lemon" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
+    
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>Delivery in Copenhagen</p>
+        <input type="checkbox" name="hibiscus" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
+    
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>Do you want a cake setup</p>
+        <input type="checkbox" name="elderflower" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
+    
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>Klara catering at your event</p>
+        <input type="checkbox" name="mascarpone" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
+    
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>Rental of silver trays, stands</p>
+        <input type="checkbox" name="egg" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
+    
+      <label class="flex items-center justify-between gap-4 cursor-pointer">
+        <p>Artistic tablescaping & curation</p>
+        <input type="checkbox" name="sugar2" class="peer hidden" />
+        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+      </label>
     </div>
-
-    <!-- knapperne -->
-    <div class="py-sm">
-      <Linkbutton href="/steptwo" label="Back" variant="secondary" />
-      <Linkbutton href="/stepthree" label="Next" variant="secondary" />
+    <div class="text-center max-w-xl px-4">
+      <p class="m-xs text-base">
+        Add a comment
+      </p>
+      <input type="text" class="border px-3 py-1 w-full text-center" />
+    </div>
+        <!-- knapperne -->
+        <div class="py-sm">
+          <Linkbutton href="/stepone" label="Back" variant="secondary" />
+          <Linkbutton href="/stepthree" label="Next" variant="secondary" />
+    
+      </div>
+    </div> 
     </div>
   </div>
 </MainLayout>

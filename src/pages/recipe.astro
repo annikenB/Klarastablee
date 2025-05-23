@@ -38,7 +38,7 @@ import pear from "../assets/images/drawingpear.webp";
         />
       </div>
     </article>
-    <!-- Indholdskolonne fylder alt på mobile, 3/5 på desktop -->
+
     <div
       class="col-span-full md:col-span-3 flex flex-col items-center text-center"
     >
@@ -59,7 +59,66 @@ import pear from "../assets/images/drawingpear.webp";
       </section>
       <section class="md:p-xs">
         <span> You need</span>:
-        <!-- <ul class="">
+
+        <!-- <div class="max-w-xl mx-auto p-4 space-y-4">
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>5 pears</p>
+            <input type="checkbox" name="pears" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>1 liter of water</p>
+            <input type="checkbox" name="water" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>1 dl of white sugar</p>
+            <input type="checkbox" name="sugar1" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>1 lemon</p>
+            <input type="checkbox" name="lemon" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>2 tbsp dried hibiscus flowers</p>
+            <input type="checkbox" name="hibiscus" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>2.5 dl elderflower nectar</p>
+            <input type="checkbox" name="elderflower" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>250g mascarpone</p>
+            <input type="checkbox" name="mascarpone" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>1 pasteurized egg</p>
+            <input type="checkbox" name="egg" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        
+          <label class="flex items-center justify-between gap-4 cursor-pointer">
+            <p>0.5 dl white sugar</p>
+            <input type="checkbox" name="sugar2" class="peer hidden" />
+            <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+          </label>
+        </div>
+        
+          </div>
+        </div> -->
+        <ul class="">
           <p>5 pears</p>
           <p>1 liter of water</p>
           <p>1dl of white sugar</p>
@@ -72,75 +131,9 @@ import pear from "../assets/images/drawingpear.webp";
             <p>1 egg, pasteurized</p>
             <p>0.5dl of white
               sugar</p>
-        </ul> -->
-
-
-        <ul class="space-y-2">
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-2 border-black peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>5 pears</p>
-            </label>
-          </li>
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-1 border-primary-800 peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>1 liter of water</p>
-            </label>
-          </li>
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-2 border-black peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>1 dl of white sugar</p>
-            </label>
-          </li>
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-2 border-black peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>1 lemon</p>
-            </label>
-          </li>
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-2 border-black peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>2 tbsp dried hibiscus flowers</p>
-            </label>
-          </li>
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-2 border-black peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>2.5 dl elderflower nectar</p>
-            </label>
-          </li>
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-2 border-black peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>250g mascarpone</p>
-            </label>
-          </li>
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-2 border-black peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>1 pasteurized egg</p>
-            </label>
-          </li>
-          <li>
-            <label class="flex items-center justify-center gap-6 cursor-pointer">
-              <input type="checkbox" class="hidden peer" />
-              <p class="w-4 h-4 rounded-full border-2 border-black peer-checked:bg-red-500 transition" aria-hidden="true"></p>
-              <p>0.5 dl white sugar</p>
-            </label>
-          </li>
         </ul>
-    </section>
+      </section>
+        
 
       <section class="p-xs">
         <Image
