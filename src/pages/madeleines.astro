@@ -1,22 +1,20 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
-
 import ProductCard from "../components/ProductCard.astro";
-
 import chokMadeleine from "../assets/images/chokMadeleine.webp";
 import powderSugar from "../assets/images/powderSugar.webp";
 ---
 
 <MainLayout title="Produkt">
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 m-voress pt-20">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-40 pb-sm">
     <!-- Høyre kolonne: Sticky produktkort vises først på mobil -->
     <div class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4">
       <ProductCard
         title="Madeleines"
-        price="45 dkk each"
+        price="40 dkk each, min. 10 pieces"
         buttonLabel="Start your order"
-        details="Saftig og deilig eplekake bakt med kjærlighet."
+        details="All cakes and desserts are planned in close collaboration with each client, each creation is unique and tailored to your wishes, dreams, and the occasion."
         otherInfo="Leveres innen 3 dager. Retur ikke mulig for matvarer."
       />
     </div>
