@@ -48,68 +48,67 @@ import bialetti from "../assets/images/bialetti.webp";
       <img
         src={finePlate.src}
         alt="Fine plate"
-        class="w-16 h-16 sm:w-26 sm:h-26 draggable cursor-move"
+        class="w-16 h-16 sm:w-26 sm:h-26 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
     <div class="absolute top-[15%] left-[20%]">
       <img
         src={cherrycake.src}
         alt="Cherry cake"
-        class="w-20 h-20 sm:w-30 sm:h-30 draggable cursor-move"
+        class="w-20 h-20 sm:w-30 sm:h-30 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
     <div class="absolute top-[15%] right-[20%]">
       <img
         src={mini.src}
         alt="Mini dessert"
-        class="w-12 h-12 sm:w-16 sm:h-16 draggable cursor-move"
+        class="w-12 h-12 sm:w-16 sm:h-16 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
     <div class="absolute top-2/3 left-[5%] -translate-y-1/2">
       <img
         src={cutlery.src}
         alt="Cutlery"
-        class="w-20 h-20 sm:w-30 sm:h-30 draggable cursor-move"
+        class="w-20 h-20 sm:w-30 sm:h-30 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
     <div class="absolute top-1/3 right-[5%] -translate-y-1/2">
       <img
         src={plate.src}
         alt="Plate"
-        class="w-16 h-16 sm:w-26 sm:h-26 draggable cursor-move"
+        class="w-16 h-16 sm:w-26 sm:h-26 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
     <div class="absolute bottom-[15%] left-[20%]">
       <img
         src={bigcandle.src}
         alt="Big candle"
-        class="w-24 h-24 sm:w-36 sm:h-36 draggable cursor-move"
+        class="w-24 h-24 sm:w-36 sm:h-36 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
     <div class="absolute bottom-[15%] left-3/4 -translate-x-1/2">
       <img
         src={karaffel.src}
         alt="Karaffel"
-        class="w-16 h-16 sm:w-26 sm:h-26 draggable cursor-move"
+        class="w-16 h-16 sm:w-26 sm:h-26 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
     <div class="absolute bottom-[20%] right-[10%]">
       <img
         src={bialetti.src}
         alt="Bialetti"
-        class="w-14 h-14 sm:w-20 sm:h-20 draggable cursor-move"
+        class="w-14 h-14 sm:w-20 sm:h-20 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
     <div class="absolute bottom-[40%] right-[15%]">
       <img
         src={flowers.src}
         alt="Flowers"
-        class="w-20 h-20 sm:w-30 sm:h-30 draggable cursor-move"
+        class="w-20 h-20 sm:w-30 sm:h-30 draggable cursor-grab active:cursor-grabbing touch-none"
       />
     </div>
   </div>
 
-  <!-- SCRIPT -->
   <script>
     const dropArea = document.getElementById("drop-area");
     const resetLink = document.querySelector("a[href='#']");
@@ -119,6 +118,7 @@ import bialetti from "../assets/images/bialetti.webp";
     let currentImg = null;
 
     function makeDraggable(img) {
+      img.style.touchAction = "none"; // hindrer scrolling under drag på touch
       img.addEventListener("pointerdown", (e) => {
         e.preventDefault();
 
@@ -146,6 +146,7 @@ import bialetti from "../assets/images/bialetti.webp";
         const onPointerUp = (e) => {
           document.removeEventListener("pointermove", onPointerMove);
           document.removeEventListener("pointerup", onPointerUp);
+          document.removeEventListener("pointercancel", onPointerUp);
 
           const dropBounds = dropArea.getBoundingClientRect();
           if (
@@ -160,7 +161,12 @@ import bialetti from "../assets/images/bialetti.webp";
             newImg.style.left = e.clientX - dropBounds.left - offsetX + "px";
             newImg.style.top = e.clientY - dropBounds.top - offsetY + "px";
             newImg.style.zIndex = "10";
-            newImg.classList.add("draggable");
+            newImg.classList.add(
+              "draggable",
+              "cursor-grab",
+              "active:cursor-grabbing",
+              "touch-none"
+            );
             makeDraggable(newImg);
             dropArea.appendChild(newImg);
           }
@@ -171,6 +177,7 @@ import bialetti from "../assets/images/bialetti.webp";
 
         document.addEventListener("pointermove", onPointerMove);
         document.addEventListener("pointerup", onPointerUp);
+        document.addEventListener("pointercancel", onPointerUp);
       });
     }
 
