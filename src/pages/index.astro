@@ -78,22 +78,24 @@ import miniCake from "../assets/images/miniCake.webp";
     <section class="max-w-6xl mx-auto text-center pt-lg">
       <h2 class="text-2xl font-semibold pb-sm">What are you looking for?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-s">
-        <a href="/produkter">
+        <a href="/produkter#cakes">
           <Cardone
             title="Celebration Cakes"
             image={celebrationCake.src}
-            alt="Celebration Cake"
-            class=""
+            alt="Shop Celebration Cake"
           />
         </a>
-        <a href="/produkter">
-          <Cardone title="Smaller Cakes" image={miniCake.src} />
+        <a href="/produkter#cakes">
+          <Cardone title="Smaller Cakes" 
+          image={miniCake.src} 
+          alt="Shop Smaller cakes"/>
         </a>
-        <a href="/produkter">
-          <Cardone title="Events" image={Apollo.src} />
+        <a href="/produkter#events">
+          <Cardone title="Events"
+          image={Apollo.src}
+          alt="Shop Events"/>
         </a>
       </div>
-      <!-- tester knapper og links komponeter her-->
       <!-- Primær link-knapp -->
       <div class="py-sm">
         <Linkbutton href="/produkter" label="VIEW ALL" variant="primary" />
@@ -101,7 +103,6 @@ import miniCake from "../assets/images/miniCake.webp";
     </section>
 
     <!-- sektion 3, trustpilot -->
-
     <section id="sektion 3">
       <h2 class="text-center pt-lg">Trustpilot</h2>
       <div class="mx-md">
