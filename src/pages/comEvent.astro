@@ -11,30 +11,26 @@ import petitepies from "../assets/images/petitepies.webp";
 
 <MainLayout title="Commercial Event">
   <section class="grid grid-cols-1 md:grid-cols-2 gap-6 m-voress pt-20">
-    <!-- Venstre kolonne: Bilder -->
-    <div class="w-full">
-      <div class="w-full">
-        <form class="">
-          <div class="space-y-4 m-md">
-            <Image src={petitepies} alt="event" class="" />
-            <Image src={petitepies} alt="event" class="" />
-            <Image src={petitepies} alt="event" class="" />
-          </div>
-        </form>
-      </div>
+    <!-- Høyre kolonne: Sticky produktkort skal vises først på mobil -->
+    <div class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4">
+      <ProductCard
+        title="Commercial Event"
+        price="from ..."
+        buttonLabel="Start your order"
+        details="lorem ipsum (evt. inkl. tablewear) kuvert fra fra 199-350kr, kokkeløn (1000kr i timen) / +20 personer"
+        otherInfo="Leveres innen 3 dager. Retur ikke mulig for matvarer."
+      />
     </div>
 
-    <!-- Høyre kolonne: Sticky produktcard-->
-    <div class="max-h-fit self-start sticky top-4">
-      <div>
-        <ProductCard
-          title="Commercial Event"
-          price="from ..."
-          buttonLabel="Start your order"
-          details=" lorem ipsum(evt. inkl. tablewear) kuvert fra fra 199-350kr, kokkeløn (1000kr i timen) / +20 personer"
-          otherInfo="Leveres innen 3 dager. Retur ikke mulig for matvarer."
-        />
-      </div>
+    <!-- Venstre kolonne: Bilder -->
+    <div class="order-2 md:order-1 w-full">
+      <form>
+        <div class="space-y-4 m-md">
+          <Image src={petitepies} alt="event" class="" />
+          <Image src={petitepies} alt="event" class="" />
+          <Image src={petitepies} alt="event" class="" />
+        </div>
+      </form>
     </div>
   </section>
 </MainLayout>

@@ -32,46 +32,59 @@ import { Image } from "astro:assets";
       <label class="flex items-center justify-between gap-4 cursor-pointer">
         <p>Delivery in Copenhagen</p>
         <input type="checkbox" name="hibiscus" class="peer hidden" />
-        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+        <div
+          class="w-5 h-5 border-1 !border-primary-900 peer-checked:bg-primary-500 transition-colors"
+        >
+        </div>
       </label>
-    
+
       <label class="flex items-center justify-between gap-4 cursor-pointer">
         <p>Do you want a cake setup</p>
-        <input type="checkbox" name="elderflower" class="peer hidden" />
-        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+        <input type="checkbox" name="hibiscus" class="peer hidden" />
+        <div
+          class="w-5 h-5 border-1 !border-primary-900 peer-checked:bg-primary-500 transition-colors"
+        >
+        </div>
       </label>
-    
+
       <label class="flex items-center justify-between gap-4 cursor-pointer">
         <p>Klara catering at your event</p>
         <input type="checkbox" name="mascarpone" class="peer hidden" />
-        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+        <div
+          class="w-5 h-5 border-1 !border-primary-900 peer-checked:bg-primary-500 transition-colors"
+        >
+        </div>
       </label>
-    
+
       <label class="flex items-center justify-between gap-4 cursor-pointer">
         <p>Rental of silver trays, stands</p>
         <input type="checkbox" name="egg" class="peer hidden" />
-        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+        <div
+          class="w-5 h-5 border-1 !border-primary-900 peer-checked:bg-primary-500 transition-colors"
+        >
+        </div>
       </label>
-    
+
       <label class="flex items-center justify-between gap-4 cursor-pointer">
         <p>Artistic tablescaping & curation</p>
         <input type="checkbox" name="sugar2" class="peer hidden" />
-        <div class="w-5 h-5 border border-primary-800 peer-checked:bg-primary-500 transition-colors"></div>
+        <div
+          class="w-5 h-5 border-1 !border-primary-900 peer-checked:bg-primary-500 transition-colors"
+        >
+        </div>
       </label>
     </div>
     <div class="text-center max-w-xl px-4">
-      <p class="m-xs text-base">
-        Add a comment
-      </p>
-      <input type="text" class="border px-3 py-1 w-full text-center" />
+      <p class="m-xs text-base">Add a comment</p>
+      <input
+        type="text"
+        class="px-3 border-1 !border-primary-900 py-1 w-full text-center"
+      />
     </div>
-        <!-- knapperne -->
-        <div class="mt-md">
-          <Linkbutton href="/stepone" label="Back" variant="secondary" />
-          <Linkbutton href="/stepthree" label="Next" variant="secondary" />
-    
-      </div>
-    </div> 
+    <!-- knapperne -->
+    <div class="mt-md">
+      <Linkbutton href="/stepone" label="Back" variant="secondary" />
+      <Linkbutton href="/stepthree" label="Next" variant="secondary" />
     </div>
   </div>
 </MainLayout>

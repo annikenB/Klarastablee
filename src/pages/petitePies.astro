@@ -12,30 +12,26 @@ import petitepies from "../assets/images/petitepies.webp";
 
 <MainLayout title="Produkt">
   <section class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-20">
-    <!-- Venstre kolonne: Bilder -->
-    <div class="w-full">
-      <div class="w-full">
-        <form class="">
-          <div class="space-y-4 m-md">
-            <Image src={petitepies} alt="pie" class="" />
-            <Image src={petitepies} alt="pie" class="" />
-            <Image src={petitepies} alt="pie" class="" />
-          </div>
-        </form>
-      </div>
+    <!-- Høyre kolonne: Sticky produktkort vises først på mobil -->
+    <div class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4">
+      <ProductCard
+        title="Petite Pies"
+        price="65 dkk each"
+        buttonLabel="Start your order"
+        details="choose between many lorem ipsum"
+        otherInfo="Leveres x dager. Retur ikke mulig for matvarer."
+      />
     </div>
 
-    <!-- Høyre kolonne: Sticky produktcard-->
-    <div class="max-h-fit self-start sticky top-4">
-      <div>
-        <ProductCard
-          title="Petite Pies"
-          price="65 dkk each"
-          buttonLabel="Start your order"
-          details="choose between many lorem ipsum"
-          otherInfo="Leveres x  dager. Retur ikke mulig for matvarer."
-        />
-      </div>
+    <!-- Venstre kolonne: Bilder -->
+    <div class="order-2 md:order-1 w-full">
+      <form>
+        <div class="space-y-4 m-md">
+          <Image src={petitepies} alt="pie" class="" />
+          <Image src={petitepies} alt="pie" class="" />
+          <Image src={petitepies} alt="pie" class="" />
+        </div>
+      </form>
     </div>
   </section>
 </MainLayout>

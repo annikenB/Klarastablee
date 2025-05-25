@@ -6,7 +6,9 @@ import { Image } from "astro:assets";
 import lemoncurd from "../assets/images/lemonCurd.webp";
 import setup from "../assets/images/settingup.webp";
 import dog from "../assets/images/dog.webp";
+import lilac from "../assets/images/lilac.webp";
 import pink from "../assets/images/pinkPear.webp";
+
 import fresh from "../assets/images/freshPear.webp";
 import done from "../assets/images/pearSetup.webp";
 import pear from "../assets/images/drawingpear.webp";
@@ -46,15 +48,16 @@ import pear from "../assets/images/drawingpear.webp";
       <section class="pb-xs md:p-xs">
         <h1 class="mt-40 md:p-xs">Recipe of the month</h1>
         <p class="max-w-prose">
-          <span> Poched pears</span> with elderflower and hibiscus in May <br>
-          Spring has sprung, and every corner of
-          Copenhagen smells like lilac and elderflower and I am so here for
-          it. What screams spring more than poaching fruit with spring flowers
-          in it? (Okay maybe hibiscus doesn’t exactly scream danish spring, but
-          the color and acidity was just what this dish needed so forgive me). Here is an itty bitty recipe for some
-          pretty pink poached pears with mascarpone cream.
-          <span>Please note</span> that the pears need to rest for <span>12 hours</span> or longer, so make them
-            the day before you need to use them!
+          <span> Poched pears</span> with elderflower and hibiscus in May <br />
+          Spring has sprung, and every corner of Copenhagen smells like lilac and
+          elderflower and I am so here for it. What screams spring more than poaching
+          fruit with spring flowers in it? (Okay maybe hibiscus doesn’t exactly scream
+          danish spring, but the color and acidity was just what this dish needed
+          so forgive me). Here is an itty bitty recipe for some pretty pink poached
+          pears with mascarpone cream.
+          <span>Please note</span> that the pears need to rest for <span
+            >12 hours</span
+          > or longer, so make them the day before you need to use them!
         </p>
       </section>
       <section class="md:p-xs">
@@ -123,17 +126,16 @@ import pear from "../assets/images/drawingpear.webp";
           <p>1 liter of water</p>
           <p>1dl of white sugar</p>
           <p>1 lemon</p>
-          <p>2 tablespoons of
-            dried hibiscus flowers</p>
-          <p>2,5 dl of elderflower nectar (possible homemade oor just buy it in
-            any grocery store)</p>
-            <p>250g of mascarpone</p>
-            <p>1 egg, pasteurized</p>
-            <p>0.5dl of white
-              sugar</p>
+          <p>2 tablespoons of dried hibiscus flowers</p>
+          <p>
+            2,5 dl of elderflower nectar (possible homemade oor just buy it in
+            any grocery store)
+          </p>
+          <p>250g of mascarpone</p>
+          <p>1 egg, pasteurized</p>
+          <p>0.5dl of white sugar</p>
         </ul>
       </section>
-        
 
       <section class="p-xs">
         <Image
@@ -172,11 +174,16 @@ import pear from "../assets/images/drawingpear.webp";
         <div
           class="flex justify-center items-center md:justify-start hidden md:flex"
         >
-          <Image
-            src={lemoncurd}
-            alt="Lemon curd"
-            class="w-1/2 h-auto md:w-[60%]"
-          />
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="w-1/2 h-auto md:w-[50%]"
+          >
+            <source src="/poching.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
       <section class="pt-0 md:pb-xs">
@@ -195,25 +202,31 @@ import pear from "../assets/images/drawingpear.webp";
 
       <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 w-full">
         <div class="flex justify-center items-center md:justify-end">
-          <Image
-            src={dog}
-            alt="Klara cooking at home with her dog"
-            class="w-[70%] h-auto"
-          />
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="w-1/2 h-auto md:w-[50%]"
+          >
+            <source src="/flower.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div class="flex justify-start items-center">
           <Image
-            src={setup}
-            alt="Klaras setup for event"
-            class="w-[60%] h-auto hidden md:block"
+            src={lilac}
+            alt="End resault of the poched pear recipe"
+            class="w-[50%] h-auto mx-auto"
           />
         </div>
       </section>
 
       <section class="md:p-xs">
         <p class="max-w-prose">
-          Plate on whole pear with a scoop of mascarpone cream and voila,
-          you have a simple, sassy spring dessert. The perfect dessert for your dinner parties in may.
+          Plate on whole pear with a scoop of mascarpone cream and voila, you
+          have a simple, sassy spring dessert. The perfect dessert for your
+          dinner parties in may.
         </p>
       </section>
 
@@ -225,7 +238,11 @@ import pear from "../assets/images/drawingpear.webp";
       </section>
 
       <section class="p-xs">
-        <Image src={pink} alt="End resault of the poched pear recipe" class="w-[30%] h-auto mx-auto" />
+        <Image
+          src={pink}
+          alt="End resault of the poched pear recipe"
+          class="w-[30%] h-auto mx-auto"
+        />
       </section>
     </div>
 
@@ -254,5 +271,4 @@ import pear from "../assets/images/drawingpear.webp";
       </div>
     </article>
   </article>
- 
 </MainLayout>
