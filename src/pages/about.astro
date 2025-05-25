@@ -19,31 +19,32 @@ import pear from "../assets/images/drawingpear.webp";
 import cutlery from "../assets/images/cutlery.webp";
 import bialetti from "../assets/images/bialetti.webp";
 import cake from "../assets/images/cherrycake.webp";
+import { animate } from "motion"
 ---
 
 <MainLayout title="About">
   <article class="grid md:grid-cols-5 md:gap-x-6">
     <!--1. kolonne-->
     <article class="hidden md:block">
-      <div class="flex justify-end">
+      <div class="flex justify-end ">
         <Image
           src={mini}
           alt="Drawing of a small cake"
-          class="w-[30%] h-auto my-80"
+          class="w-[30%] h-auto my-80 box"
         />
       </div>
       <div class="flex justify-end">
         <Image
           src={lemon}
           alt="Drawing of a lemon"
-          class="w-[30%] h-auto my-180"
+          class="w-[30%] h-auto my-180 boxen"
         />
       </div>
       <div class="flex justify-end">
         <Image
           src={pear}
           alt="Drawing of a lemon"
-          class="w-[30%] h-auto my-120"
+          class="w-[30%] h-auto my-120 box"
         />
       </div>
     </article>
@@ -88,7 +89,7 @@ import cake from "../assets/images/cherrycake.webp";
         <Image
           src={sunflower}
           alt="illustration of a sunflower"
-          class="w-[15%] h-auto"
+          class="w-[15%] h-auto boxer"
         />
       </section>
 
@@ -182,23 +183,82 @@ import cake from "../assets/images/cherrycake.webp";
         <Image
           src={cutlery}
           alt="Drawing of cutlery"
-          class="w-[40%] h-auto my-120"
+          class="w-[40%] h-auto my-120 boxen"
         />
       </div>
       <div class="">
         <Image
           src={bialetti}
           alt="Drawing of cutlery"
-          class="w-[40%] h-auto my-220"
+          class="w-[40%] h-auto my-220 box"
         />
       </div>
       <div class="">
         <Image
           src={cake}
           alt="Drawing of cutlery"
-          class="w-[40%] h-auto mt-380"
+          class="w-[40%] h-auto mt-380 boxen"
         />
       </div>
     </article>
   </article>
+  <!-- <script type="module">
+    import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
+
+    animate(
+        ".box",
+        { rotate: 40 },
+        { type: "spring", repeat: Infinity, repeatDelay: 0.2 }
+    )
+</script> -->
+
+
+<!-- <script type="module">
+  import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
+
+  animate(
+    ".box",
+    { rotate: [-40, 40, -40] },  // rotate frem og tilbage
+    {
+      duration: 2,               // hvor lang tid én cyklus tager
+      repeat: Infinity,          // gentag for evigt
+      easing: "ease-in-out"      // glidende bevægelse
+    }
+  )
+</script> -->
+<script type="module">
+  import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
+
+  animate(
+    ".box",
+    { rotate: [-20, 20, -20] },  // vink frem og tilbage én gang
+    {
+      duration: 1,          // animationen varer 1 sekund
+      repeat: Infinity,     // gentages uendeligt
+      repeatDelay: 4,       // pause på 4 sekunder før næste gentagelse
+      easing: "ease-in-out" // glidende bevægelse
+    }
+  )
+
+  animate(
+    ".boxen",
+    { rotate: [-20, 20, -20] },  // vink frem og tilbage én gang
+    {
+      duration: 1,          // animationen varer 1 sekund
+      repeat: Infinity,     // gentages uendeligt
+      repeatDelay: 5,       // pause på 4 sekunder før næste gentagelse
+      easing: "ease-in-out" // glidende bevægelse
+    }
+  )
+
+  animate(".boxer", 
+  { rotate: 360 }, 
+  { 
+    duration: 2, 
+    repeat: Infinity,     // gentages uendeligt
+    repeatDelay: 10,       // pause på 4 sekunder før næste gentagelse
+    easing: "ease-in-out"
+    })
+</script>
+
 </MainLayout>
