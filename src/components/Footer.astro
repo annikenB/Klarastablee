@@ -5,15 +5,20 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import footerLogo from "../assets/images/footerLogo.webp";
 ---
-<section class="pt-lg h-full font-display ">
+
+<section class="pt-lg h-full font-display">
   <section class="md:grid grid-cols-5 gap-4 px-sm pt-lg">
     <!-- 1. kol i grid -->
     <nav class="col-span-1">
       <ul>
         <li class="pb-2 hover:text-primary-500"><a href="/about">About</a></li>
-        <li class="pb-2 hover:text-primary-500"><a href="/contact">Contact</a></li>
+        <li class="pb-2 hover:text-primary-500">
+          <a href="/contact">Contact</a>
+        </li>
         <li class="pb-2 hover:text-primary-500"><a href="/faq">FAQ</a></li>
-        <li class="pb-2 hover:text-primary-500"><a href="/faq">Terms and Conditions</a></li>
+        <li class="pb-2 hover:text-primary-500">
+          <a href="/Priser-og-politik.pdf">Terms and Conditions</a>
+        </li>
       </ul>
     </nav>
 
@@ -24,7 +29,9 @@ import footerLogo from "../assets/images/footerLogo.webp";
         <li class="pb-2">Copyright 2025©</li>
         <li class="pb-2 hover:text-primary-500">Smiley report</li>
         <li class="pb-2 hover:text-primary-500">
-          <a href="https://www.instagram.com/klaras.table/" target="_blank">Instagram</a>
+          <a href="https://www.instagram.com/klaras.table/" target="_blank"
+            >Instagram</a
+          >
         </li>
       </ul>
     </nav>
@@ -35,12 +42,14 @@ import footerLogo from "../assets/images/footerLogo.webp";
     <!-- 5. sign up -->
     <nav class="col-span-1">
       <ul class="space-y-4 border-b">
-        <li class="text-left md:text-center">Sign up for our monthly newsletter</li>
+        <li class="text-left md:text-center">
+          Sign up for our monthly newsletter
+        </li>
         <li>
-          <form class="flex w-full justify-between items-center ">
+          <form class="flex w-full justify-between items-center">
             <input
               type="email"
-              class=" text-beige-700 w-full border-0 hover:italic"
+              class="text-beige-700 w-full border-0 hover:italic"
               placeholder="Your email"
               required
             />
@@ -63,6 +72,3 @@ import footerLogo from "../assets/images/footerLogo.webp";
     <Image src={footerLogo} alt="tets" class="pt-xs" />
   </section>
 </section>
-
-
-
