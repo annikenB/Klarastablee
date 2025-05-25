@@ -2,9 +2,9 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Linkbutton from "../components/Linkbutton.astro";
+
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import Modal from "../components/Modal.astro";
 ---
 
 <MainLayout title="Step Three">
@@ -28,11 +28,8 @@ import Modal from "../components/Modal.astro";
     </div>
 
     <div class="max-w-2xl mx-auto">
-      <label
-        for="comment"
-        class="block w-full text-center mb-2"
-        
-      ><p>Write a comment</p>
+      <label for="comment" class="block w-full text-center mb-2"
+        ><p>Write a comment</p>
       </label>
       <textarea
         id="comment"
@@ -57,10 +54,13 @@ import Modal from "../components/Modal.astro";
       />
     </div>
 
-    <!-- der skal herefter komme en pop-up med tak for at sende en request, du hører tilbage snart bla -->
     <div class="mt-md">
       <Linkbutton href="/steptwo" label="Back" variant="secondary" />
-      <Linkbutton href="/" label="Send request" variant="primary" />
+      <Linkbutton
+        href="/orderconformation"
+        label="Send Request"
+        variant="primary"
+      />
     </div>
   </div>
 </MainLayout>
