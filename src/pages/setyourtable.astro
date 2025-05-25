@@ -25,15 +25,10 @@ import bialetti from "../assets/images/bialetti.webp";
   <div
     class="flex items-center justify-center min-h-screen relative flex-col gap-4"
   >
-    <!-- RESET-LENKE MED KOMPONENT -->
-    <div class="">
-      <Linkbutton href="#" label="Reset Table" variant="primary" />
-    </div>
-
     <!-- BORD -->
     <div
       id="drop-area"
-      class="relative w-[600px] h-[600px] bg-white overflow-hidden"
+      class="relative max-w-[600px] w-full aspect-square bg-white overflow-hidden"
     >
       <img
         id="table-img"
@@ -41,6 +36,11 @@ import bialetti from "../assets/images/bialetti.webp";
         alt="Table"
         class="w-full h-full object-cover pointer-events-none"
       />
+    </div>
+
+    <!-- RESET-LENKE UNDER BORDET -->
+    <div class="mt-6 flex justify-center">
+      <Linkbutton href="#" label="Reset Table" variant="primary" />
     </div>
 
     <!-- DRAGGABLE ITEMS -->
@@ -72,7 +72,7 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-30 h-30 draggable cursor-move"
       />
     </div>
-    <div class="absolute top-1/2 right-[5%] -translate-y-1/2">
+    <div class="absolute top-1/3 right-[5%] -translate-y-1/2">
       <img
         src={plate.src}
         alt="Plate"
@@ -86,21 +86,21 @@ import bialetti from "../assets/images/bialetti.webp";
         class="w-36 h-36 draggable cursor-move"
       />
     </div>
-    <div class="absolute bottom-[5%] left-1/2 -translate-x-1/2">
+    <div class="absolute bottom-[15%] left-3/4 -translate-x-1/2">
       <img
         src={karaffel.src}
         alt="Karaffel"
         class="w-26 h-26 draggable cursor-move"
       />
     </div>
-    <div class="absolute bottom-[10%] right-[10%]">
+    <div class="absolute bottom-[20%] right-[10%]">
       <img
         src={bialetti.src}
         alt="Bialetti"
         class="w-20 h-20 draggable cursor-move"
       />
     </div>
-    <div class="absolute bottom-[20%] right-[20%]">
+    <div class="absolute bottom-[40%] right-[15%]">
       <img
         src={flowers.src}
         alt="Flowers"
