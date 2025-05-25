@@ -9,16 +9,28 @@ import ProductCard from "../components/ProductCard.astro";
 import petitepies from "../assets/images/petitepies.webp";
 ---
 
-<MainLayout title="Private Event">
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 m-voress pt-20">
-    <!-- Høyre kolonne: Sticky produktcard først på mobil -->
-    <div class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4">
+<MainLayout title="Produkt">
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-40 pb-sm px-4 md:px-0"
+  >
+    <!-- Høyre kolonne: Sticky produktkort vises først på mobil -->
+    <div
+      class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4 mt-4 md:mt-0 ml-md"
+    >
       <ProductCard
-        title="Private Event"
-        price="from ..."
+        title="Private Events"
+        price="From 300 DKK per Guest"
         buttonLabel="Start your order"
-        details="Saftig og deilig eplekake bakt med kjærlighet."
-        otherInfo="Leveres innen 3 dager. Retur ikke mulig for matvarer."
+        details={[
+          "From elegant birthday dinners to unforgettable weddings, we bring your vision to life with thoughtful menus, curated decor, and seamless hosting. Whether it’s an intimate gathering or a larger celebration, we create a warm, personal atmosphere that reflects your style and story.",
+          "All cakes and desserts are planned in close collaboration with each client, each creation is unique and tailored to your wishes, dreams, and the occasion.",
+        ]}
+        otherInfo={[
+          "Delivery near Copenhagen is 300 DKK",
+          "Chef's fee at event 1,000 per hour",
+          "Rental of silver tray etc. price is upon request",
+          "Artistic tablescaping and curation, price by project",
+        ]}
       />
     </div>
 

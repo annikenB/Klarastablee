@@ -11,27 +11,39 @@ import petitepies from "../assets/images/petitepies.webp";
 ---
 
 <MainLayout title="Produkt">
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-40 pb-sm">
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-40 pb-sm px-4 md:px-0"
+  >
     <!-- Høyre kolonne: Sticky produktkort vises først på mobil -->
-    <div class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4">
+    <div
+      class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4 mt-4 md:mt-0 ml-md"
+    >
+      <ProductCard
+        title="Petite Pies"
+        price="50 dkk each, min. 10 pieces"
+        buttonLabel="Start your order"
+        details={[
+          "Small things matter! Petite four vibe, one bite beauty. Make it tiny shortcrust tarts or custom cookies",
+          "All cakes and desserts are planned in close collaboration with each client, each creation is unique and tailored to your wishes, dreams, and the occasion.",
+        ]}
+        otherInfo={[
+          "Delivery near Copenhagen is 300 DKK",
+          "Chef's fee at event 1,000 per hour",
+          "Rental of silver tray etc. price is upon request",
+          "Artistic tablescaping and curation, price by project",
+        ]}
+      />
     </div>
-    <ProductCard
-      title="Petite Pies"
-      price="65 dkk each"
-      buttonLabel="Start your order"
-      details="choose between many lorem ipsum"
-      otherInfo="Leveres x dager. Retur ikke mulig for matvarer."
-    />
-  </section>
 
-  <!-- Venstre kolonne: Bilder -->
-  <div class="order-2 md:order-1 w-full">
-    <form>
-      <div class="space-y-4 m-md">
-        <Image src={petitepies} alt="pie" class="" />
-        <Image src={petitepies} alt="pie" class="" />
-        <Image src={petitepies} alt="pie" class="" />
-      </div>
-    </form>
-  </div>
+    <!-- Venstre kolonne: Bilder -->
+    <div class="order-2 md:order-1 w-full">
+      <form>
+        <div class="space-y-4 m-md">
+          <Image src={petitepies} alt="pie" class="" />
+          <Image src={petitepies} alt="pie" class="" />
+          <Image src={petitepies} alt="pie" class="" />
+        </div>
+      </form>
+    </div>
+  </section>
 </MainLayout>
