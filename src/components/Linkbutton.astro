@@ -5,11 +5,10 @@ const {
   variant = "primary", // "primary" eller "secondary"
 } = Astro.props;
 
-const baseStyles =
-  "inline-block px-4 py-2 rounded font-semibold transition-colors duration-300";
+const baseStyles = "inline-block px-4 py-2 transition-colors duration-300";
 const variantStyles = {
   primary:
-    " border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-beige-100 font-display px-18 py-2",
+    " border-1 !border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-beige-100 font-display px-18 py-2",
   secondary:
     " border-2 border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-beige-100 font-display px-18 py-2",
 };
