@@ -7,9 +7,13 @@ import powderSugar from "../assets/images/powderSugar.webp";
 ---
 
 <MainLayout title="Produkt">
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-40 pb-sm">
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-40 pb-sm px-4 md:px-0"
+  >
     <!-- Høyre kolonne: Sticky produktkort vises først på mobil -->
-    <div class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4">
+    <div
+      class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4 mt-4 md:mt-0"
+    >
       <ProductCard
         title="Madeleines"
         price="40 dkk each, min. 10 pieces"
@@ -20,12 +24,12 @@ import powderSugar from "../assets/images/powderSugar.webp";
     </div>
 
     <!-- Venstre kolonne: Bilder -->
-    <div class="order-2 md:order-1 w-full">
+    <div class="order-2 md:order-1 w-full mt-4 md:mt-0">
       <form>
-        <div class="space-y-4 m-md">
-          <Image src={powderSugar} alt="Madeleine" class="" />
-          <Image src={chokMadeleine} alt="Madeleine" class="" />
-          <Image src={chokMadeleine} alt="Madeleine" class="" />
+        <div class="space-y-4">
+          <Image src={powderSugar} alt="Madeleine" class="w-full" />
+          <Image src={chokMadeleine} alt="Madeleine" class="w-full" />
+          <Image src={chokMadeleine} alt="Madeleine" class="w-full" />
         </div>
       </form>
     </div>
