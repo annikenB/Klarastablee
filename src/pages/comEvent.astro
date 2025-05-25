@@ -1,12 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
-
-import celebrationCake from "../assets/images/celebrationCake.webp";
-import walkingCake from "../assets/images/walkingCake.webp";
-import outsideCake from "../assets/images/outsideCake.webp";
 import ProductCard from "../components/ProductCard.astro";
-import petitepies from "../assets/images/petitepies.webp";
+import MBsetup from "../assets/images/MBsetup.webp";
+import apollo from "../assets/images/apollo.webp";
+import cc from "../assets/images/cc.webp";
+import ccccc from "../assets/images/ccccc.webp";
 ---
 
 <MainLayout title="Produkt">
@@ -36,10 +35,11 @@ import petitepies from "../assets/images/petitepies.webp";
     <!-- Venstre kolonne: Bilder -->
     <div class="order-2 md:order-1 w-full">
       <form>
-        <div class="space-y-4 m-md">
-          <Image src={petitepies} alt="event" class="" />
-          <Image src={petitepies} alt="event" class="" />
-          <Image src={petitepies} alt="event" class="" />
+        <div class="space-y-2 ">
+          <Image src={apollo} alt="Apollo event" class="w-4/5 ml-auto" />
+          <Image src={MBsetup} alt="H&M x Magda Bytrum event" class="w-4/5 ml-auto" />
+          <Image src={ccccc} alt="Commercial event" class="w-4/5 ml-auto" />
+          <Image src={cc} alt="Commercial event" class="w-4/5 ml-auto" />
         </div>
       </form>
     </div>

@@ -1,12 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
-
-import celebrationCake from "../assets/images/celebrationCake.webp";
-import walkingCake from "../assets/images/walkingCake.webp";
-import outsideCake from "../assets/images/outsideCake.webp";
 import ProductCard from "../components/ProductCard.astro";
 import petitepies from "../assets/images/petitepies.webp";
+import event from "../assets/images/event.webp";
+import event2 from "../assets/images/event2.webp";
+import breakfast from "../assets/images/breakfast.webp";
+import p from "../assets/images/p.webp";
+import pp from "../assets/images/pp.webp";
+import privat from "../assets/images/privat.webp";
+import privatt from "../assets/images/privatt.webp";
 ---
 
 <MainLayout title="Produkt">
@@ -37,10 +40,13 @@ import petitepies from "../assets/images/petitepies.webp";
     <!-- Venstre kolonne: Bilder -->
     <div class="order-2 md:order-1 w-full">
       <form>
-        <div class="space-y-4 m-md">
-          <Image src={petitepies} alt="event" class="" />
-          <Image src={petitepies} alt="event" class="" />
-          <Image src={petitepies} alt="event" class="" />
+        <div class="space-y-4">
+          <Image src={event} alt="privat event" class="w-4/5 ml-auto" />
+          <Image src={event2} alt="privat event" class="w-4/5 ml-auto" />
+          <Image src={breakfast} alt="privat event" class="w-4/5 ml-auto" />
+          <Image src={p} alt="privat event" class="w-4/5 ml-auto" />
+          <Image src={pp} alt="privat event" class="w-4/5 ml-auto" />
+          <Image src={privatt} alt="privat event" class="w-4/5 ml-auto" />
         </div>
       </form>
     </div>
