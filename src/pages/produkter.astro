@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import test3 from "../assets/images/cooking.webp";
+
 import cherryCakes from "../assets/images/cherryCakes.webp";
 import Cardtwo from "../components/Cardtwo.astro";
 import celebrationCake from "../assets/images/celebrationCake.webp";
@@ -12,7 +12,7 @@ import powderSugar from "../assets/images/powderSugar.webp";
 import MBsetup from "../assets/images/MBsetup.webp";
 import apollo from "../assets/images/apollo.webp";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import pil from "../assets/images/pil.webp";
 ---
 
 <MainLayout title="Shop All">
@@ -36,135 +36,193 @@ import thumbsup from "../assets/images/thumbsup.png";
     </section>
   </article>
 
-  <section class="py-12">
-    <h2 class="text-center">Shop all</h2>
+  <section class="relative py-12">
+    <h2 class="text-center mb-6">Shop all</h2>
 
-    <div
-      class="flex gap-4 overflow-x-auto px-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
-    >
-      <div class="shrink-0 snap-start w-40 md:w-[300px]">
-        <Cardtwo
-          title="Celebration Cake"
-          image={celebrationCake.src}
-          price="65 dk pr. person - min. 10 servings"
-          buttonLabel="Read More"
-          href="/celebrationCake"
-        />
+    <div class="relative w-full overflow-hidden">
+      <!-- Scroll container with transition -->
+      <div
+        class="flex gap-4 overflow-x-auto px-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
+      >
+        <div
+          id="shopCarousel"
+          class="flex transition-transform duration-700 ease-in-out gap-8"
+        >
+          <div class="flex gap-6 w-max">
+            <div class="shrink-0 snap-start w-40 md:w-[300px]">
+              <Cardtwo
+                title="Celebration Cake"
+                image={celebrationCake.src}
+                price="65 dk pr. person - min. 10 servings"
+                buttonLabel="Read More"
+                href="/celebrationCake"
+              />
+            </div>
+            <div class="shrink-0 snap-start w-40 md:w-[300px]">
+              <Cardtwo
+                title="Petite Pies"
+                image={petitepies.src}
+                price="65 dk pr. person - min. 10 servings"
+                buttonLabel="Read more"
+                href="/petitePies"
+              />
+            </div>
+            <div class="shrink-0 snap-start w-40 md:w-[300px]">
+              <Cardtwo
+                title="Tiny Treats"
+                image={manyPies.src}
+                price="65 dk pr. person - min. 10 servings"
+                buttonLabel="Read More"
+                href="/tinyTreats"
+              />
+            </div>
+            <div class="shrink-0 snap-start w-40 md:w-[300px]">
+              <Cardtwo
+                title="Madeleines"
+                image={powderSugar.src}
+                price="45 dk pr. person - min. 10 servings"
+                buttonLabel="Read More"
+                href="/madeleines"
+              />
+            </div>
+            <div class="shrink-0 snap-start w-40 md:w-[300px]">
+              <Cardtwo
+                title="Private Event"
+                image={apollo.src}
+                price="pris min. 10 servings"
+                buttonLabel="Read more"
+                href="/privateEvent"
+              />
+            </div>
+            <div class="shrink-0 snap-start w-40 md:w-[300px]">
+              <Cardtwo
+                title="Commercial Event"
+                image={MBsetup.src}
+                price="pris min. 10 servings"
+                buttonLabel="Read More"
+                href="/comEvent"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="shrink-0 snap-start w-40 md:w-[300px]">
-        <Cardtwo
-          title="Petite Pies"
-          image={petitepies.src}
-          price="65 dk pr. person - min. 10 servings"
-          buttonLabel="Read more"
-          href="/petitePies"
+
+      <!-- Venstre pil-knapp -->
+      <button
+        id="shopPrev"
+        class="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 z-10"
+      >
+        <Image
+          src={pil}
+          alt="pil venstre"
+          class="w-6 opacity-100 z-10 rotate-180"
         />
-      </div>
-      <div class="shrink-0 snap-start w-40 md:w-[300px]">
-        <Cardtwo
-          title="Tiny Treats"
-          image={manyPies.src}
-          price="65 dk pr. person - min. 10 servings"
-          buttonLabel="Read More"
-          href="/tinyTreats"
-        />
-      </div>
-      <div class="shrink-0 snap-start w-40 md:w-[300px]">
-        <Cardtwo
-          title="Madeleines"
-          image={powderSugar.src}
-          price="45 dk pr. person - min. 10 servings"
-          buttonLabel="Read More"
-          href="/madeleines"
-        />
-      </div>
-      <div class="shrink-0 snap-start w-40 md:w-[300px]">
-        <Cardtwo
-          title="Private Event"
-          image={apollo.src}
-          price="pris min. 10 servings"
-          buttonLabel="Read more"
-          href="/privateEvent"
-        />
-      </div>
-      <div class="shrink-0 snap-start w-40 md:w-[300px]">
-        <Cardtwo
-          title="Commercial Event"
-          image={MBsetup.src}
-          price="pris min. 10 servings"
-          buttonLabel="Read More"
-          href="/comEvent"
-        />
-      </div>
+      </button>
+
+      <!-- Høyre pil-knapp -->
+      <button
+        id="shopNext"
+        class="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 z-10"
+      >
+        <Image src={pil} alt="pil høyre" class="w-6 opacity-100 z-10" />
+      </button>
     </div>
-  </section>
+    <section id="sektion 4" class="p-20">
+      <section class="">
+        <h2 class="text-center p-20">Events and Catering</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="w-[500px]">
+            <Cardtwo
+              title="Private Event"
+              image={apollo.src}
+              price="pris min. 10 servings"
+              buttonLabel="Read more"
+              href="/privateEvent"
+            />
+          </div>
+          <div class="w-[500px]">
+            <Cardtwo
+              title="Commercial Event"
+              image={MBsetup.src}
+              price="pris min. 10 servings"
+              buttonLabel="Read More"
+              href="/comEvent"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <h2 class="text-center p-20">Cakes and Sweets</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="w-[500px]">
+            <Cardtwo
+              title="Celebration Cake"
+              image={celebrationCake.src}
+              price="65 dk pr. person - min. 10 servings"
+              buttonLabel="knap her"
+              href="/singleview"
+            />
+          </div>
+          <div class="w-[500px]">
+            <Cardtwo
+              title="Petite Pies"
+              image={petitepies.src}
+              price="65 dk pr. person - min. 10 servings"
+              buttonLabel="knap her"
+              href="/singleview"
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="w-[500px]">
+            <Cardtwo
+              title="Tiny Treats"
+              image={manyPies.src}
+              price="65 dk pr. person - min. 10 servings"
+              buttonLabel="knap her"
+              href="/singleview"
+            />
+          </div>
+          <div class="w-[500px]">
+            <Cardtwo
+              title="Madeleines"
+              image={powderSugar.src}
+              price="65 dk pr. person - min. 10 servings"
+              buttonLabel="knap her"
+              href="/singleview"
+            />
+          </div>
+        </div>
+      </section>
+    </section>
+    <script>
+      let shopIndex = 0;
+      const shopItemsPerView = 3; // Justér for mobil vs desktop om ønsket
+      const shopCarousel = document.getElementById("shopCarousel");
+      const shopTotalItems = shopCarousel.children[0].children.length;
 
-  <section id="sektion 4" class="p-20">
-    <section class="">
-      <h2 class="text-center p-20">Events and Catering</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="w-[500px]">
-          <Cardtwo
-            title="Private Event"
-            image={apollo.src}
-            price="pris min. 10 servings"
-            buttonLabel="Read more"
-            href="/privateEvent"
-          />
-        </div>
-        <div class="w-[500px]">
-          <Cardtwo
-            title="Commercial Event"
-            image={MBsetup.src}
-            price="pris min. 10 servings"
-            buttonLabel="Read More"
-            href="/comEvent"
-          />
-        </div>
-      </div>
-    </section>
-    <section class="">
-      <h2 class="text-center p-20">Cakes and Sweets</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="w-[500px]">
-          <Cardtwo
-            title="Celebration Cake"
-            image={celebrationCake.src}
-            price="65 dk pr. person - min. 10 servings"
-            buttonLabel="knap her"
-            href="/singleview"
-          />
-        </div>
-        <div class="w-[500px]">
-          <Cardtwo
-            title="Petite Pies"
-            image={petitepies.src}
-            price="65 dk pr. person - min. 10 servings"
-            buttonLabel="knap her"
-            href="/singleview"
-          />
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="w-[500px]">
-          <Cardtwo
-            title="Tiny Treats"
-            image={manyPies.src}
-            price="65 dk pr. person - min. 10 servings"
-            buttonLabel="knap her"
-            href="/singleview"
-          />
-        </div>
-        <div class="w-[500px]">
-          <Cardtwo
-            title="Madeleines"
-            image={powderSugar.src}
-            price="65 dk pr. person - min. 10 servings"
-            buttonLabel="knap her"
-            href="/singleview"
-          />
-        </div>
-      </div>
-    </section>
+      const shopPrev = document.getElementById("shopPrev");
+      const shopNext = document.getElementById("shopNext");
+
+      function updateShopCarousel() {
+        const offset = (-shopIndex * 100) / shopItemsPerView;
+        shopCarousel.style.transform = `translateX(${offset}%)`;
+      }
+
+      shopPrev.addEventListener("click", () => {
+        shopIndex = Math.max(shopIndex - 1, 0);
+        updateShopCarousel();
+      });
+
+      shopNext.addEventListener("click", () => {
+        shopIndex = Math.min(
+          shopIndex + 1,
+          Math.ceil(shopTotalItems / shopItemsPerView) - 1
+        );
+        updateShopCarousel();
+      });
+
+      updateShopCarousel();
+    </script>
   </section>
 </MainLayout>

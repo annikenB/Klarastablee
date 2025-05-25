@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import star from "../assets/images/bigStar.webp";
+import pil from "../assets/images/pil.webp";
 ---
 
 <section class="relative w-full mx-auto">
@@ -142,41 +143,24 @@ import star from "../assets/images/bigStar.webp";
       </div>
     </div>
 
+    <!-- Venstre pil-knapp -->
     <button
       id="prev"
-      class="absolute top-1/2 left-2 transform -translate-y-1/2 px-2 rounded-full"
+      class="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 z-10"
     >
-      <svg
-        class="w-6 h-6"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M15 19l-7-7 7-7"></path>
-      </svg>
+      <Image
+        src={pil}
+        alt="pil venstre"
+        class="w-6 opacity-100 z-10 rotate-180"
+      />
     </button>
+
+    <!-- Høyre pil-knapp -->
     <button
       id="next"
-      class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black rounded-full"
+      class="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 z-10"
     >
-      <svg
-        class="w-6 h-6"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M9 5l7 7-7 7"></path>
-      </svg>
+      <Image src={pil} alt="pil høyre" class="w-6 opacity-100 z-10" />
     </button>
   </div>
 
