@@ -5,12 +5,14 @@ const {
   variant = "primary", // "primary" eller "secondary"
 } = Astro.props;
 
-const baseStyles = "inline-block px-4 py-2 transition-colors duration-300";
+const baseStyles =
+  "inline-block text-sm sm:text-base text-center transition-colors duration-300 ";
+
 const variantStyles = {
   primary:
-    " border-1 !border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-beige-100 font-display px-18 py-2",
+    "border-1 !border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-beige-100 font-display px-6 sm:px-18 py-2",
   secondary:
-    " border-1 !border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-beige-100 font-display px-18 py-2",
+    "border-1 !border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-beige-100 font-display px-6 sm:px-18 py-2",
 };
 
 const linkClass = `${baseStyles} ${variantStyles[variant] || variantStyles.primary}`;
