@@ -1,12 +1,13 @@
 ---
 import Linkbutton from "../components/Linkbutton.astro";
+
 const {
   title = "Standard produkt",
   price = "Pris ikke oppgitt",
-  details = "Produktdetaljer kommer her.",
-  otherInfo = "Annen info som levering, vilkår osv.",
+  details = [],
+  otherInfo = [], // Brukes som array
   buttonLabel = "Start your Order",
-  href = "",
+  href = "/stepone",
 } = Astro.props;
 ---
 
@@ -17,22 +18,30 @@ const {
   </div>
 
   <!-- TABS -->
-  <div
-    class="flex flex-col items-center md:flex-row md:items-start text-center md:text-left"
-  >
+  <div class="items-center md:flex-row md:items-start text-center md:text-left">
     <!-- Description tab -->
     <div class="w-full md:w-1/2">
       <input type="radio" name="tabs" id="tab1" class="hidden peer" checked />
       <label
         for="tab1"
-        class="inline-block py-2 cursor-pointer border-b-1 !border-primary-900
-      peer-checked:!text-primary-500 peer-checked:italic
-      peer-checked:!border-primary-500 pb-1"
+        class="inline-block py-2 cursor-pointer border-b-1 !border-white
+        peer-checked:!text-primary-500 peer-checked:italic
+        peer-checked:!border-primary-500 pb-1"
       >
-        <h5 class="peer-checked:!text-primary-500">Description</h5>
+        <h5 class="peer-checked:!text-primary-500 hover:italic">Description</h5>
       </label>
       <div class="hidden peer-checked:block mt-4">
-        <p class="text-gray-700 max-w-prose mx-auto md:mx-0">{details}</p>
+        {details.length > 0 ? (
+<ul class="list-none font-display max-w-prose mx-auto md:mx-0 space-y-4">
+            {details.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p class="text-gray-700 max-w-prose mx-auto md:mx-0">
+            Ingen ekstra informasjon tilgjengelig.
+          </p>
+        )}
       </div>
     </div>
 
@@ -41,19 +50,30 @@ const {
       <input type="radio" name="tabs" id="tab2" class="hidden peer" />
       <label
         for="tab2"
-        class="inline-block py-2 cursor-pointer border-b-1 !border-primary-900
-      peer-checked:!text-primary-500 peer-checked:italic
-      peer-checked:!border-primary-500 pb-1"
+        class="inline-block py-2 cursor-pointer border-b-1 !border-white
+        peer-checked:!text-primary-500 peer-checked:italic
+        peer-checked:!border-primary-500 pb-1"
       >
-        <h5 class="inline-block pb-1">Additional services</h5>
+        <h5 class="inline-block pb-1 hover:italic mt-sm">Additional services</h5>
       </label>
       <div class="hidden peer-checked:block mt-4">
-        <p class="text-gray-700 max-w-prose mx-auto md:mx-0">{otherInfo}</p>
+        {otherInfo.length > 0 ? (
+<ul class="list-none font-display max-w-prose mx-auto md:mx-0 space-y-4">
+            {otherInfo.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p class="text-gray-700 max-w-prose mx-auto md:mx-0">
+            Ingen ekstra informasjon tilgjengelig.
+          </p>
+        )}
       </div>
     </div>
   </div>
+
   <!-- CTA button -->
   <div class="my-md text-center md:text-left">
-    <Linkbutton href="/stepone" label="START YOUR ORDER" variant="primary" />
+    <Linkbutton href={href} label={buttonLabel} variant="primary" />
   </div>
 </div>

@@ -8,28 +8,35 @@ import powderSugar from "../assets/images/powderSugar.webp";
 
 <MainLayout title="Produkt">
   <section
-    class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-40 pb-sm px-4 md:px-0"
+    class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-40 pb-sm px-4 md:px-0 "
   >
     <!-- Høyre kolonne: Sticky produktkort vises først på mobil -->
     <div
-      class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4 mt-4 md:mt-0"
-    >
-      <ProductCard
-        title="Madeleines"
-        price="40 dkk each, min. 10 pieces"
-        buttonLabel="Start your order"
-        details="All cakes and desserts are planned in close collaboration with each client, each creation is unique and tailored to your wishes, dreams, and the occasion."
-        otherInfo="Leveres innen 3 dager. Retur ikke mulig for matvarer."
-      />
+      class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4 mt-4 md:mt-0 ml-md"
+    ><ProductCard
+    title="Madeleines"
+    price="40 dkk each, min. 10 pieces"
+    buttonLabel="Start your order"
+    details={[
+       "A true classy classic. We do different flavors, from brown butter, to almond, to lemon and coated in choc. A stunner on every table! ",
+      "All cakes and desserts are planned in close collaboration with each client, each creation is unique and tailored to your wishes, dreams, and the occasion.",
+    ]}
+    otherInfo={[
+      "Delivery near Copenhagen is 300 DKK",
+      "Chef's fee at event 1,000 per hour",
+      "Rental of silver tray etc. price is upon request",
+      "Artistic tablescaping and curation, price by project",
+    ]}
+  />
     </div>
 
     <!-- Venstre kolonne: Bilder -->
-    <div class="order-2 md:order-1 w-full mt-4 md:mt-0">
+    <div class="order-2 md:order-1 w-full mx-xs mt-4 md:mt-0">
       <form>
-        <div class="space-y-4">
-          <Image src={powderSugar} alt="Madeleine" class="w-full" />
-          <Image src={chokMadeleine} alt="Madeleine" class="w-full" />
-          <Image src={chokMadeleine} alt="Madeleine" class="w-full" />
+        <div class="space-y-2">
+          <Image src={powderSugar} alt="Madeleine" class="w-4/5 ml-auto" />
+          <Image src={chokMadeleine} alt="Madeleine" class="w-4/5 ml-auto" />
+          <Image src={chokMadeleine} alt="Madeleine" class="w-4/5 ml-auto" />
         </div>
       </form>
     </div>
