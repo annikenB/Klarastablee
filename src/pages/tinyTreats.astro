@@ -7,6 +7,8 @@ import walkingCake from "../assets/images/walkingCake.webp";
 import outsideCake from "../assets/images/outsideCake.webp";
 import ProductCard from "../components/ProductCard.astro";
 import manyPies from "../assets/images/manyPies.webp";
+import pies2 from "../assets/images/1.webp";
+import pies3 from "../assets/images/miniCake.webp";
 ---
 
 <MainLayout title="Produkt">
@@ -37,10 +39,10 @@ import manyPies from "../assets/images/manyPies.webp";
     <!-- Venstre kolonne: Bilder -->
     <div class="order-2 md:order-1 w-full">
       <form class="">
-        <div class="space-y-4 m-md">
-          <Image src={manyPies} alt="treat" class="" />
-          <Image src={manyPies} alt="treat" class="" />
-          <Image src={manyPies} alt="treat" class="" />
+        <div class="space-y-4">
+          <Image src={pies2} alt="tiny treat" class="w-4/5 ml-auto" />
+          <Image src={manyPies} alt="tiny treat" class="w-4/5 ml-auto" />
+          <Image src={pies3} alt="tiny treat" class="w-4/5 ml-auto" />
         </div>
       </form>
     </div>

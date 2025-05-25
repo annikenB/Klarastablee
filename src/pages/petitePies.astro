@@ -2,12 +2,10 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import Linkbutton from "../components/Linkbutton.astro";
-
-import celebrationCake from "../assets/images/celebrationCake.webp";
-import walkingCake from "../assets/images/walkingCake.webp";
-import outsideCake from "../assets/images/outsideCake.webp";
 import ProductCard from "../components/ProductCard.astro";
 import petitepies from "../assets/images/petitepies.webp";
+import pp from "../assets/images/3.webp";
+import small from "../assets/images/smalltarts.webp";
 ---
 
 <MainLayout title="Produkt">
@@ -38,10 +36,10 @@ import petitepies from "../assets/images/petitepies.webp";
     <!-- Venstre kolonne: Bilder -->
     <div class="order-2 md:order-1 w-full">
       <form>
-        <div class="space-y-4 m-md">
-          <Image src={petitepies} alt="pie" class="" />
-          <Image src={petitepies} alt="pie" class="" />
-          <Image src={petitepies} alt="pie" class="" />
+        <div class="space-y-4">
+          <Image src={petitepies} alt="petite pies" class="w-4/5 ml-auto" />
+          <Image src={pp} alt="pie" class="petite pies" class="w-4/5 ml-auto"/>
+          <Image src={small} alt="petite pies" class="w-4/5 ml-auto" />
         </div>
       </form>
     </div>

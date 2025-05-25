@@ -1,11 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
-
 import celebrationCake from "../assets/images/celebrationCake.webp";
 import walkingCake from "../assets/images/walkingCake.webp";
 import outsideCake from "../assets/images/outsideCake.webp";
 import ProductCard from "../components/ProductCard.astro";
+import cake2 from "../assets/images/4.webp";
+import tiramisu from "../assets/images/cakee.webp";
 ---
 
 <MainLayout title="Produkt">
@@ -17,7 +18,7 @@ import ProductCard from "../components/ProductCard.astro";
       class="order-1 md:order-2 max-h-fit self-start md:sticky md:top-4 mt-4 md:mt-0 ml-md"
     >
       <ProductCard
-        title="Madeleines"
+        title="Celebration Cake"
         price="40 dkk each, min. 10 pieces"
         buttonLabel="Start your order"
         details={[
@@ -36,10 +37,11 @@ import ProductCard from "../components/ProductCard.astro";
     <!-- Venstre kolonne: Bilder -->
     <div class="order-2 md:order-1 w-full">
       <form>
-        <div class="space-y-4 m-md">
-          <Image src={celebrationCake} alt="Cake" class="" />
-          <Image src={walkingCake} alt="Cake" class="" />
-          <Image src={outsideCake} alt="Cake" class="" />
+        <div class="space-y-2">
+          <Image src={celebrationCake} alt="celebration cake" class="w-4/5 ml-auto" />
+          <Image src={cake2} alt="celebration cake" class="w-4/5 ml-auto" />
+          <Image src={tiramisu} alt="celebration cake" class="w-4/5 ml-auto" />
+          <Image src={walkingCake} alt="celebration cake" class="w-4/5 ml-auto" />
         </div>
       </form>
     </div>
