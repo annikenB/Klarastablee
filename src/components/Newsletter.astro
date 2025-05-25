@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import Button from "../components/Button.astro";
+import logo from "../assets/images/secondaryLogo.webp";
+import background from "../assets/images/newsletter.webp";
 ---
 
 <head>
@@ -9,38 +11,56 @@ import Button from "../components/Button.astro";
 
 <article
   id="newsletter-popup"
-  class="fixed top- left-0 w-full h-full flex justify-center items-center z-50 hidden"
+  class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden px-md"
 >
-  <div class="absolute inset-0 bg-opacity-50 backdrop-blur-sm z-40 mt-voresm">
-  </div>
+  <!-- Sløret bagrundt -->
+  <div class="absolute inset-0 bg-opacity-50 backdrop-blur-sm z-40"></div>
 
-  <div
-    class="p-0 max-w-5xl mx-auto relative flex rounded-3xl overflow-hidden z-50 border border-lilla-950"
-  >
-    <div class="flex-1 flex flex-col justify-center items-center p-6 bg-white">
-      <button
-        id="close-popup-btn"
-        class="bg-transparent text-sm absolute top-2.5 right-2.5 group"
-      >
-      </button>
+  <!-- bg billede-->
+  <div class="relative z-50">
+    <!-- Baggrundsbillede -->
+    <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
+      <Image
+        src={background}
+        alt="Newsletter background"
+        class="object-contain max-w-none w-[110%] h-auto"
+      />
+    </div>
 
-      <p>A Note from Klaras Table</p>
-      <p class="mb-4 text-center">
-        Little stories, curated inspiration and a new recipe every month
-      </p>
-      <p>Sign up for our newsletter</p>
-      <div class="w-full">
-        <label for="by" class="block mb-1 text-sm"> </label>
-        <input
-          type="text"
-          id="by"
-          class="w-full border-0 border-b-2 border-grey focus:outline-none text-center"
-          placeholder="Your Email"
-          required
-        />
-        <div class="max-w-xl mx-auto text-center mt-4 pb-voresxs">
-          <a href="/"><Button variant="secondary">Subscribe</Button></a>
-          <p>rund logo her</p>
+    <!-- indhold-->
+    <div class="p-0 max-w-5xl mx-auto relative flex overflow-hidden bg-transparent z-10">
+      <div class="flex-1 flex flex-col justify-center items-center p-6 px-lg bg-transparent">
+        <button
+          id="close-popup-btn"
+          class="bg-transparent text-sm absolute top-2.5 right-2.5 group"
+        >
+        </button>
+
+        <h5>A Note from Klaras Table</h5>
+        <p class="text-center m-xs">
+          Little stories, curated inspiration and a new recipe every month
+        </p>
+        <ul class="space-y-4 border-b">
+          <li class="text-left md:text-center font-display">Sign up for our monthly newsletter</li>
+          <li>
+            <form class="flex w-full items-center gap-4">
+              <input
+                type="email"
+                class="w-full max-w-[400px] border-0 text-beige-700 font-display transition-all duration-200 hover:italic"
+                placeholder="Your email"
+                required
+              />
+              <button
+                type="submit"
+                class="min-w-[80px] px-4 py-2 text-beige-700 hover:text-primary-500 font-display"
+              >
+                Submit
+              </button>
+            </form>
+          </li>
+        </ul>
+        <div class="max-w-xl mx-auto text-center mt-xs">
+          <Image src={logo} alt="Secondary logo" class="max-w-[100px] mx-auto" />
         </div>
       </div>
     </div>
@@ -50,14 +70,35 @@ import Button from "../components/Button.astro";
     window.onload = () => {
       const popup = document.getElementById("newsletter-popup");
       const closeButton = document.getElementById("close-popup-btn");
-
-      setTimeout(() => {
-        popup.classList.remove("hidden");
-      }, 10000);
-
+  
+      // Tjek om popup allerede er vist tidligere
+      const isPopupShown = localStorage.getItem("newsletterPopupShown");
+  
+      if (!isPopupShown) {
+        setTimeout(() => {
+          popup.classList.remove("hidden");
+        }, 10000); // Vis efter 10 sekunder
+  
+        // Marker popup som vist i localStorage
+        localStorage.setItem("newsletterPopupShown", "true");
+      }
+  
+      // Luk popup når man klikker udenfor indholdet
+      document.addEventListener("click", (e) => {
+        const content = popup.querySelector(".max-w-5xl");
+        const isInside = content.contains(e.target);
+        const isVisible = !popup.classList.contains("hidden");
+  
+        if (!isInside && isVisible) {
+          popup.classList.add("hidden");
+        }
+      });
+  
+      // Luk popup når man klikker på luk-knap (hvis du vil tilføje den funktion)
       closeButton.addEventListener("click", () => {
         popup.classList.add("hidden");
       });
     };
   </script>
+  
 </article>
