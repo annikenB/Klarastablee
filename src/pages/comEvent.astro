@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import ProductCard from "../components/ProductCard.astro";
 import MBsetup from "../assets/images/bigMBsetup.webp";
 import apollo from "../assets/images/bigapollo.webp";
-import cc from "../assets/images/biglilacc.webp"; //find et nyt billede her
+import cc from "../assets/images/biglilacc.webp";
 import ccccc from "../assets/images/bigccccc.webp";
 ---
 
@@ -35,9 +35,13 @@ import ccccc from "../assets/images/bigccccc.webp";
     <!-- Venstre kolonne: Bilder -->
     <div class="order-2 md:order-1 w-full">
       <form>
-        <div class="space-y-2 ">
+        <div class="space-y-2">
           <Image src={apollo} alt="Apollo event" class="w-4/5 ml-auto" />
-          <Image src={MBsetup} alt="H&M x Magda Bytrum event" class="w-4/5 ml-auto" />
+          <Image
+            src={MBsetup}
+            alt="H&M x Magda Bytrum event"
+            class="w-4/5 ml-auto"
+          />
           <Image src={ccccc} alt="Commercial event" class="w-4/5 ml-auto" />
           <Image src={cc} alt="Commercial event" class="w-4/5 ml-auto" />
         </div>
