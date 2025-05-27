@@ -6,7 +6,7 @@ import logoWhite from "../assets/images/logoWhite.webp";
 import logoRed from "../assets/images/logoRed.webp";
 ---
 
-<header class="z-50 fixed top-0">
+<header class="z-50 fixed top-0 w-full">
   <!-- Lukket burger -->
   <button
     id="menuToggle"
@@ -31,12 +31,12 @@ import logoRed from "../assets/images/logoRed.webp";
         alt="logo white"
         class="w-full absolute top-0 left-0 transition-opacity duration-300 group-hover:opacity-0"
       />
-      <!-- logo scrool -->
+      <!-- logo scroll og på alle andre sider -->
       <Image
         id="logoBlack"
         src={logoBlack}
         alt="logo black"
-        class="w-full absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-0"
+        class="w-full absolute top-0 left-0 opacity-0 transition-opacity duration-300"
       />
       <!-- logo i hover -->
       <Image
@@ -47,7 +47,7 @@ import logoRed from "../assets/images/logoRed.webp";
     </a>
   </div>
 
-  <!-- under er åben cheeseburger med farveskift osv-->
+  <!-- mobilmeny -->
   <nav
     id="mobileMenu"
     class="hidden fixed inset-0 bg-primary-500 text-beige-100 flex flex-col items-end justify-end gap-6 z-40 pb-60 pr-20"
@@ -55,7 +55,7 @@ import logoRed from "../assets/images/logoRed.webp";
     <button
       id="closeMenu"
       class="absolute top-4 left-4 z-50 flex flex-col justify-center items-center cursor-pointer h-10 w-15 p-2"
-      aria-label="Luk menu"
+      aria-label="Luk meny"
     >
       <span class="block absolute w-15 h-[1px] bg-white rotate-45"></span>
       <span class="block absolute w-15 h-[1px] bg-white -rotate-45"></span>
@@ -67,46 +67,39 @@ import logoRed from "../assets/images/logoRed.webp";
       <a
         href="/"
         class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+        >Home</a
       >
-        Home
-      </a>
       <a
         href="/produkter"
         class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+        >Book Cake or Event</a
       >
-        Book Cake or Event
-      </a>
       <a
         href="/gallery"
         class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+        >Gallery</a
       >
-        Gallery
-      </a>
       <a
         href="/about"
         class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+        >About</a
       >
-        About
-      </a>
       <a
         href="/setyourtable"
         class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+        >Set Your Table</a
       >
-        Set Your Table
-      </a>
       <a
         href="/recipe"
         class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+        >Recipe of the month</a
       >
-        Recipe of the month
-      </a>
       <a
         href="https://www.instagram.com/klaras.table/"
         target="_blank"
         class="block font-display text-beige-100 text-4xl sm:text-6xl md:text-8xl hover:italic"
+        >Instagram</a
       >
-        Instagram
-      </a>
     </div>
   </nav>
 
@@ -158,12 +151,13 @@ import logoRed from "../assets/images/logoRed.webp";
           }
         });
       } else {
+        // Ikke index-side: vis mørk logo + mørke linjer
         lines?.forEach((line) => {
           line.classList.remove("bg-white");
           line.classList.add("bg-primary-900");
         });
 
-        if (logoWhite) logoWhite.classList.add("hidden");
+        if (logoWhite) logoWhite.classList.add("opacity-0");
         if (logoBlack) logoBlack.classList.remove("opacity-0");
       }
     });
