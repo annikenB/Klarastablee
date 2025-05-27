@@ -2,9 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import sunflower from "../assets/images/sunflower.webp";
-import cooking from "../assets/images/cooking.webp";
 import portrait from "../assets/images/bigklaraMarie.webp";
-import closeup from "../assets/images/colseUp.webp";
 import Klara from "../assets/images/klara.webp";
 import lemoncurd from "../assets/images/lemonCurd.webp";
 import recipe from "../assets/images/recipe.webp";
@@ -17,14 +15,13 @@ import pear from "../assets/images/drawingpear.webp";
 import cutlery from "../assets/images/cutlery.webp";
 import bialetti from "../assets/images/bialetti.webp";
 import cake from "../assets/images/cherrycake.webp";
-import { animate } from "motion"
 ---
 
 <MainLayout title="About">
   <article class="grid md:grid-cols-5 md:gap-x-6">
     <!--1. kolonne-->
     <article class="hidden md:block">
-      <div class="flex justify-end ">
+      <div class="flex justify-end">
         <Image
           src={mini}
           alt="Drawing of a small cake"
@@ -210,8 +207,7 @@ import { animate } from "motion"
     )
 </script> -->
 
-
-<!-- <script type="module">
+  <!-- <script type="module">
   import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
 
   animate(
@@ -224,39 +220,40 @@ import { animate } from "motion"
     }
   )
 </script> -->
-<script type="module">
-  import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
+  <script type="module">
+    import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm";
 
-  animate(
-    ".box",
-    { rotate: [-20, 20, -20] },  // vink frem og tilbage én gang
-    {
-      duration: 1,          // animationen varer 1 sekund
-      repeat: Infinity,     // gentages uendeligt
-      repeatDelay: 4,       // pause på 4 sekunder før næste gentagelse
-      easing: "ease-in-out" // glidende bevægelse
-    }
-  )
+    animate(
+      ".box",
+      { rotate: [-20, 20, -20] }, // vink frem og tilbage én gang
+      {
+        duration: 1, // animationen varer 1 sekund
+        repeat: Infinity, // gentages uendeligt
+        repeatDelay: 4, // pause på 4 sekunder før næste gentagelse
+        easing: "ease-in-out", // glidende bevægelse
+      }
+    );
 
-  animate(
-    ".boxen",
-    { rotate: [-20, 20, -20] },  // vink frem og tilbage én gang
-    {
-      duration: 1,          // animationen varer 1 sekund
-      repeat: Infinity,     // gentages uendeligt
-      repeatDelay: 5,       // pause på 4 sekunder før næste gentagelse
-      easing: "ease-in-out" // glidende bevægelse
-    }
-  )
+    animate(
+      ".boxen",
+      { rotate: [-20, 20, -20] }, // vink frem og tilbage én gang
+      {
+        duration: 1, // animationen varer 1 sekund
+        repeat: Infinity, // gentages uendeligt
+        repeatDelay: 5, // pause på 4 sekunder før næste gentagelse
+        easing: "ease-in-out", // glidende bevægelse
+      }
+    );
 
-  animate(".boxer", 
-  { rotate: 360 }, 
-  { 
-    duration: 2, 
-    repeat: Infinity,     // gentages uendeligt
-    repeatDelay: 10,       // pause på 4 sekunder før næste gentagelse
-    easing: "ease-in-out"
-    })
-</script>
-
+    animate(
+      ".boxer",
+      { rotate: 360 },
+      {
+        duration: 2,
+        repeat: Infinity, // gentages uendeligt
+        repeatDelay: 10, // pause på 4 sekunder før næste gentagelse
+        easing: "ease-in-out",
+      }
+    );
+  </script>
 </MainLayout>
