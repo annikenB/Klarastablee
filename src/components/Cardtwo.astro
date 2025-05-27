@@ -14,40 +14,42 @@ const cardStyling = "bg-white px-4 transition";
 const imageWrapperStyling = "relative overflow-hidden";
 const imageStyling =
   "w-full object-contain transition-transform duration-100 hover:scale-110";
-const titleStyling = "font-semibold ";
-const priceStyling = "text-gray-600 mt-1";
+const titleStyling = " text-primary-900 font-semibold ";
+const priceStyling = " text-primary-900 mt-1";
 const buttonWrapperStyling = "mt-1";
-
 ---
 
 <article class={`${cardStyling} group`}>
-  <div class={`${imageWrapperStyling} relative`}> 
   <div class={`${imageWrapperStyling} relative`}>
-    <!-- Første billede -->
-    <img
-      src={image}
-      alt={title}
-      class="w-full object-contain transition-opacity duration-300 group-hover:opacity-0"
-    />
-  
-    <!-- Hover-billede, vises kun hvis hoverImage findes -->
-    {hoverImage && (
+    <div class={`${imageWrapperStyling} relative`}>
+      <!-- Første billede -->
       <img
-        src={hoverImage}
-        alt={`${title} hover`}
-        class="w-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        src={image}
+        alt={title}
+        class="w-full object-contain transition-opacity duration-300 group-hover:opacity-0"
       />
-    )}
-  </div>
-  <h3 class={titleStyling}>{title}</h3>
-  {price && <p class={priceStyling}>{price}</p>}
 
-  <div class={buttonWrapperStyling}>
-    <Link
-      href={href}
-      class="group-hover:text-primary-500 transition-colors duration-300 font-display"
-    >
-      {buttonLabel}
-    </Link>
+      <!-- Hover-billede, vises kun hvis hoverImage findes -->
+      {
+        hoverImage && (
+          <img
+            src={hoverImage}
+            alt={`${title} hover`}
+            class="w-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        )
+      }
+    </div>
+    <h3 class={titleStyling}>{title}</h3>
+    {price && <p class={priceStyling}>{price}</p>}
+
+    <div class={buttonWrapperStyling}>
+      <Link
+        href={href}
+        class="group-hover:text-primary-500 transition-colors duration-300 font-display"
+      >
+        {buttonLabel}
+      </Link>
+    </div>
   </div>
 </article>

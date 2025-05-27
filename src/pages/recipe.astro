@@ -10,13 +10,14 @@ import pear from "../assets/images/drawingpear.webp";
 
 <MainLayout title="Recipe of the Month">
   <article class="grid md:grid-cols-5 md:gap-x-6">
-    <!--1. kolonne-->
+    <!-- 1. kolonne -->
     <article class="hidden md:block">
       <div class="flex justify-end">
         <Image
           src={pear}
           alt="Drawing of a pear"
           class="w-[30%] h-auto my-80 box"
+          decoding="async"
         />
       </div>
       <div class="flex justify-end">
@@ -24,6 +25,8 @@ import pear from "../assets/images/drawingpear.webp";
           src={pear}
           alt="Drawing of a pear"
           class="w-[30%] h-auto my-180 box"
+          decoding="async"
+          loading="lazy"
         />
       </div>
       <div class="flex justify-end">
@@ -31,6 +34,8 @@ import pear from "../assets/images/drawingpear.webp";
           src={pear}
           alt="Drawing of a pear"
           class="w-[30%] h-auto my-120 boxen"
+          decoding="async"
+          loading="lazy"
         />
       </div>
     </article>
@@ -42,7 +47,7 @@ import pear from "../assets/images/drawingpear.webp";
       <section class="pb-xs md:p-xs">
         <h1 class="mt-40 md:p-xs">Recipe of the month</h1>
         <p class="max-w-prose">
-          <span> Poched pears</span> with elderflower and hibiscus in May <br />
+          <span>Poched pears</span> with elderflower and hibiscus in May <br />
           Spring has sprung, and every corner of Copenhagen smells like lilac and
           elderflower and I am so here for it. What screams spring more than poaching
           fruit with spring flowers in it? (Okay maybe hibiscus doesn’t exactly scream
@@ -54,21 +59,22 @@ import pear from "../assets/images/drawingpear.webp";
           > or longer, so make them the day before you need to use them!
         </p>
       </section>
+
       <section class="md:p-xs">
-        <span> You need</span>:
-        <ul class="">
-          <p>5 pears</p>
-          <p>1 liter of water</p>
-          <p>1dl of white sugar</p>
-          <p>1 lemon</p>
-          <p>2 tablespoons of dried hibiscus flowers</p>
-          <p>
-            2,5 dl of elderflower nectar (possible homemade oor just buy it in
+        <span>You need</span>:
+        <ul class="text-mobile-base font-display text-primary-900">
+          <li>5 pears</li>
+          <li>1 liter of water</li>
+          <li>1dl of white sugar</li>
+          <li>1 lemon</li>
+          <li>2 tablespoons of dried hibiscus flowers</li>
+          <li>
+            2,5 dl of elderflower nectar (possible homemade or just buy it in
             any grocery store)
-          </p>
-          <p>250g of mascarpone</p>
-          <p>1 egg, pasteurized</p>
-          <p>0.5dl of white sugar</p>
+          </li>
+          <li>250g of mascarpone</li>
+          <li>1 egg, pasteurized</li>
+          <li>0.5dl of white sugar</li>
         </ul>
       </section>
 
@@ -77,6 +83,8 @@ import pear from "../assets/images/drawingpear.webp";
           src={done}
           alt="Poched pears with hibiscus and elderflower"
           class="w-[50%] h-auto mx-auto"
+          loading="lazy"
+          decoding="async"
         />
       </section>
 
@@ -104,6 +112,8 @@ import pear from "../assets/images/drawingpear.webp";
             src={fresh}
             alt="Portrait of Klara"
             class="w-2/3 h-auto md:w-[80%]"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div
@@ -114,6 +124,7 @@ import pear from "../assets/images/drawingpear.webp";
             loop
             muted
             playsinline
+            preload="metadata"
             class="w-1/2 h-auto md:w-[50%]"
           >
             <source src="/poching.mp4" type="video/mp4" />
@@ -121,6 +132,7 @@ import pear from "../assets/images/drawingpear.webp";
           </video>
         </div>
       </section>
+
       <section class="pt-0 md:pb-xs">
         <h4 class="p-10">Day two</h4>
         <p class="max-w-prose">
@@ -142,6 +154,7 @@ import pear from "../assets/images/drawingpear.webp";
             loop
             muted
             playsinline
+            preload="metadata"
             class="w-1/2 h-auto md:w-[50%]"
           >
             <source src="/flower.mp4" type="video/mp4" />
@@ -151,17 +164,19 @@ import pear from "../assets/images/drawingpear.webp";
         <div class="flex justify-start items-center">
           <Image
             src={lilac}
-            alt="End resault of the poched pear recipe"
+            alt="End result of the poached pear recipe"
             class="w-[50%] h-auto mx-auto"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </section>
 
       <section class="md:p-xs">
         <p class="max-w-prose">
-          Plate on whole pear with a scoop of mascarpone cream and voila, you
+          Plate one whole pear with a scoop of mascarpone cream and voila, you
           have a simple, sassy spring dessert. The perfect dessert for your
-          dinner parties in may.
+          dinner parties in May.
         </p>
       </section>
 
@@ -175,61 +190,68 @@ import pear from "../assets/images/drawingpear.webp";
       <section class="p-xs">
         <Image
           src={pink}
-          alt="End resault of the poched pear recipe"
+          alt="End result of the poached pear recipe"
           class="w-[30%] h-auto mx-auto"
+          loading="lazy"
+          decoding="async"
         />
       </section>
     </div>
 
     <!-- 5. kolonne -->
     <article class="hidden md:block">
-      <div class="">
+      <div>
         <Image
           src={pear}
           alt="Drawing of a pear"
           class="w-[40%] h-auto my-120 box"
+          decoding="async"
         />
       </div>
-      <div class="">
+      <div>
         <Image
           src={pear}
           alt="Drawing of a pear"
           class="w-[40%] h-auto my-220 boxen"
+          decoding="async"
+          loading="lazy"
         />
       </div>
-      <div class="">
+      <div>
         <Image
           src={pear}
           alt="Drawing of a pear"
           class="w-[40%] h-auto mt-380 box"
+          decoding="async"
+          loading="lazy"
         />
       </div>
     </article>
   </article>
+
   <script type="module">
-    import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
-  
+    import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm";
+
     animate(
       ".box",
-      { rotate: [-20, 20, -20] },  // vink frem og tilbage én gang
+      { rotate: [-20, 20, -20] }, // vink frem og tilbage én gang
       {
-        duration: 1,          // animationen varer 1 sekund
-        repeat: Infinity,     // gentages uendeligt
-        repeatDelay: 4,       // pause på 4 sekunder før næste gentagelse
-        easing: "ease-in-out" // glidende bevægelse
+        duration: 1, // animationen varer 1 sekund
+        repeat: Infinity, // gentages uendeligt
+        repeatDelay: 4, // pause på 4 sekunder før næste gentagelse
+        easing: "ease-in-out", // glidende bevægelse
       }
-    )
-  
+    );
+
     animate(
       ".boxen",
-      { rotate: [-20, 20, -20] },  // vink frem og tilbage én gang
+      { rotate: [-20, 20, -20] }, // vink frem og tilbage én gang
       {
-        duration: 1,          // animationen varer 1 sekund
-        repeat: Infinity,     // gentages uendeligt
-        repeatDelay: 6,       // pause på 4 sekunder før næste gentagelse
-        easing: "ease-in-out" // glidende bevægelse
+        duration: 1, // animationen varer 1 sekund
+        repeat: Infinity, // gentages uendeligt
+        repeatDelay: 6, // pause på 6 sekunder før næste gentagelse
+        easing: "ease-in-out", // glidende bevægelse
       }
-    )
-
+    );
   </script>
 </MainLayout>

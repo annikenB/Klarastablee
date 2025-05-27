@@ -29,7 +29,9 @@ import cake from "../assets/images/cherrycake.webp";
     </article>
 
     <!-- FAQ  -->
-    <div class="col-span-full md:col-span-3 flex flex-col items-center text-center">
+    <div
+      class="col-span-full md:col-span-3 flex flex-col items-center text-center"
+    >
       <section class="text-center pt-40 pb-sm">
         <h1 class="text-center mx-auto pt-sm max-w-4xl">
           Frequently Asked Questions
@@ -39,96 +41,192 @@ import cake from "../assets/images/cherrycake.webp";
         <div class="max-w-4xl mx-auto my-xs px-xs sm:px-sm">
           <div class="space-y-4">
             <div class="faq-item border-b-1 !border-primary-900">
-              <button class="w-full text-left py-2 focus:outline-none flex justify-between items-center group" id="faq1Button">
-                <h4 class="hover:italic">Is it possible to get cakes and catering outside of Copenhagen?</h4>
+              <button
+                class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
+                id="faq1Button"
+              >
+                <h4 class="hover:italic">
+                  Is it possible to get cakes and catering outside of
+                  Copenhagen?
+                </h4>
                 <div class="relative w-4 h-4 ml-lg group">
-                  <Image src={pil} alt="pil" class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90" />
+                  <Image
+                    src={pil}
+                    alt="pil"
+                    class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90"
+                  />
                 </div>
               </button>
               <div id="faq1Answer" class="faq-answer hidden pb-sm">
-                <p>Of course it is! We do that upon request and the prices vary depending on where we should deliver or cater.</p>
+                <p class="text-left">
+                  Of course it is! We do that upon request and the prices vary
+                  depending on where we should deliver or cater.
+                </p>
               </div>
             </div>
 
             <div class="faq-item border-b-1 !border-primary-900">
-              <button class="w-full text-left py-xs focus:outline-none flex justify-between items-center group" id="faq2Button">
+              <button
+                class="w-full text-left py-xs focus:outline-none flex justify-between items-center group"
+                id="faq2Button"
+              >
                 <h4 class="hover:italic">Where can I pick up my order?</h4>
                 <div class="relative w-4 h-4 ml-lg group">
-                  <Image src={pil} alt="pil" class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90" />
+                  <Image
+                    src={pil}
+                    alt="pil"
+                    class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90"
+                  />
                 </div>
               </button>
               <div id="faq2Answer" class="faq-answer hidden pb-sm">
-                <p>As our production kitchen is remote, pick up addresses may vary around Copenhagen. But we always deliver near the Copenhagen area!</p>
+                <p class="text-left">
+                  As our production kitchen is remote, pick up addresses may
+                  vary around Copenhagen. But we always deliver near the
+                  Copenhagen area!
+                </p>
               </div>
             </div>
 
             <div class="faq-item border-b-1 !border-primary-900">
-              <button class="w-full text-left py-xs focus:outline-none flex justify-between items-center group" id="faq3Button">
+              <button
+                class="w-full text-left py-xs focus:outline-none flex justify-between items-center group"
+                id="faq3Button"
+              >
                 <h4 class="hover:italic">What are the prices?</h4>
                 <div class="relative w-4 h-4 ml-lg group">
-                  <Image src={pil} alt="pil" class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90" />
+                  <Image
+                    src={pil}
+                    alt="pil"
+                    class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90"
+                  />
                 </div>
               </button>
               <div id="faq3Answer" class="faq-answer hidden pb-sm">
-                <p>All prices are listed in our <a href="/Priser-og-politik.pdf" target="_blank" class="hover:text-primary-500" rel="noopener noreferrer">Terms and Conditions</a></p>
+                <p class="text-left">
+                  All prices are listed in our <a
+                    href="/Priser-og-politik.pdf"
+                    target="_blank"
+                    class="hover:text-primary-500"
+                    rel="noopener noreferrer">Terms and Conditions</a
+                  >
+                </p>
               </div>
             </div>
 
             <div class="faq-item border-b-1 !border-primary-900">
-              <button class="w-full text-left py-xs focus:outline-none flex justify-between items-center group" id="faq4Button">
-                <h4 class="hover:italic">How long time does it take from order to pick up?</h4>
+              <button
+                class="w-full text-left py-xs focus:outline-none flex justify-between items-center group"
+                id="faq4Button"
+              >
+                <h4 class="hover:italic">
+                  How long time does it take from order to pick up?
+                </h4>
                 <div class="relative w-4 h-4 ml-lg group">
-                  <Image src={pil} alt="pil" class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90" />
+                  <Image
+                    src={pil}
+                    alt="pil"
+                    class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90"
+                  />
                 </div>
               </button>
               <div id="faq4Answer" class="faq-answer hidden">
-                <p>You have to order cake at least a week beforehand. We recommend booking an event 2 months in advance, as our calendar fills up quickly!</p>
+                <p class="text-left">
+                  You have to order cake at least a week beforehand. We
+                  recommend booking an event 2 months in advance, as our
+                  calendar fills up quickly!
+                </p>
               </div>
             </div>
 
             <div class="faq-item border-b-1 !border-primary-900">
-              <button class="w-full text-left py-xs focus:outline-none flex justify-between items-center group" id="faq5Button">
+              <button
+                class="w-full text-left py-xs focus:outline-none flex justify-between items-center group"
+                id="faq5Button"
+              >
                 <h4 class="hover:italic">What ingredients will be used?</h4>
                 <div class="relative w-4 h-4 ml-lg group">
-                  <Image src={pil} alt="pil" class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90" />
+                  <Image
+                    src={pil}
+                    alt="pil"
+                    class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90"
+                  />
                 </div>
               </button>
               <div id="faq5Answer" class="faq-answer hidden pb-sm">
-                <p>We focus on seasonal ingredients, and always use danish dairy and organic eggs. Non negotiable!</p>
+                <p class="text-left">
+                  We focus on seasonal ingredients, and always use danish dairy
+                  and organic eggs. Non negotiable!
+                </p>
               </div>
             </div>
 
             <div class="faq-item border-b-1 !border-primary-900">
-              <button class="w-full text-left py-xs focus:outline-none flex justify-between items-center group" id="faq6Button">
-                <h4 class="hover:italic">What if i or my guests have allergies? (lactose, gluten etc.)</h4>
+              <button
+                class="w-full text-left py-xs focus:outline-none flex justify-between items-center group"
+                id="faq6Button"
+              >
+                <h4 class="hover:italic">
+                  What if i or my guests have allergies? (lactose, gluten etc.)
+                </h4>
                 <div class="relative w-4 h-4 ml-lg group">
-                  <Image src={pil} alt="pil" class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90" />
+                  <Image
+                    src={pil}
+                    alt="pil"
+                    class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90"
+                  />
                 </div>
               </button>
               <div id="faq6Answer" class="faq-answer hidden pb-sm">
-                <p>We are happy to inform you and take allergies into consideration. We don’t do glutenfree cakes, but we can always make you a dessert without flour. Our pavlova for example!
-                For further information or questions please reach out to
-                <a href="https://mail.google.com/mail/?view=cm&to=infoklarastable@gmail.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-primary-500">infoklarastable@gmail.com</a></p>
+                <p class="text-left">
+                  We are happy to inform you and take allergies into
+                  consideration. We don’t do glutenfree cakes, but we can always
+                  make you a dessert without flour. Our pavlova for example! For
+                  further information or questions please reach out to
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&to=infoklarastable@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="underline hover:text-primary-500"
+                    >infoklarastable@gmail.com</a
+                  >
+                </p>
               </div>
             </div>
 
             <div class="faq-item border-b-1 !border-primary-900">
-              <button class="w-full text-left py-2 focus:outline-none flex justify-between items-center group" id="faq7Button">
+              <button
+                class="w-full text-left py-2 focus:outline-none flex justify-between items-center group"
+                id="faq7Button"
+              >
                 <h4 class="hover:italic">I am vegan - what can I get?</h4>
                 <div class="relative w-4 h-4 ml-lg group">
-                  <Image src={pil} alt="pil" class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90" />
+                  <Image
+                    src={pil}
+                    alt="pil"
+                    class="absolute inset-0 w-6 mt-1 z-10 transition-transform duration-100 group-hover:rotate-90"
+                  />
                 </div>
               </button>
               <div id="faq7Answer" class="faq-answer hidden pb-sm">
-                <p>We don't specialize in entire vegan or gluten free cakes, but don’t hesitate to contact us if you need an alternative to a cake you ordered.
-                For further information or questions please reach out to
-                <a href="https://mail.google.com/mail/?view=cm&to=infoklarastable@gmail.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-primary-500">infoklarastable@gmail.com</a></p>
+                <p class="text-left">
+                  We don't specialize in entire vegan or gluten free cakes, but
+                  don’t hesitate to contact us if you need an alternative to a
+                  cake you ordered. For further information or questions please
+                  reach out to
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&to=infoklarastable@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="underline hover:text-primary-500"
+                    >infoklarastable@gmail.com</a
+                  >
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </div>
 
     <!-- 5. kolonne med illustrationer -->
@@ -149,7 +247,7 @@ import cake from "../assets/images/cherrycake.webp";
       </div>
     </article>
   </article>
-  
+
   <script type="module" client:load>
     const faqItems = document.querySelectorAll(".faq-item");
 
@@ -169,29 +267,28 @@ import cake from "../assets/images/cherrycake.webp";
       });
     });
 
-    import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
-  
+    import { animate } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm";
+
     animate(
       ".box",
-      { rotate: [-20, 20, -20] },  // vink frem og tilbage én gang
+      { rotate: [-20, 20, -20] },
       {
-        duration: 1,          // animationen varer 1 sekund
-        repeat: Infinity,     // gentages uendeligt
-        repeatDelay: 4,       // pause på 4 sekunder før næste gentagelse
-        easing: "ease-in-out" // glidende bevægelse
+        duration: 1,
+        repeat: Infinity,
+        repeatDelay: 4,
+        easing: "ease-in-out",
       }
-    )
-  
+    );
+
     animate(
       ".boxen",
-      { rotate: [-20, 20, -20] },  // vink frem og tilbage én gang
+      { rotate: [-20, 20, -20] },
       {
-        duration: 1,          // animationen varer 1 sekund
-        repeat: Infinity,     // gentages uendeligt
-        repeatDelay: 5,       // pause på 4 sekunder før næste gentagelse
-        easing: "ease-in-out" // glidende bevægelse
+        duration: 1,
+        repeat: Infinity,
+        repeatDelay: 5,
+        easing: "ease-in-out",
       }
-    )
-  
+    );
   </script>
 </MainLayout>

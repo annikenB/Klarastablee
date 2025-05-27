@@ -1,8 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Linkbutton from "../components/Linkbutton.astro";
-import Link from "../components/Link.astro";
 import Cardone from "../components/Cardone.astro";
 import Review from "../components/Review.astro";
 import Newsletter from "../components/Newsletter.astro";
@@ -65,6 +63,7 @@ import miniCake from "../assets/images/miniCake.webp";
           target="_blank"
           rel="noopener noreferrer"
           class="underline hover:text-primary-500"
+          title="Send en e-mail til Klaras Table"
         >
           infoklarastable@gmail.com
         </a>
@@ -75,27 +74,46 @@ import miniCake from "../assets/images/miniCake.webp";
       </p>
     </section>
 
-    <section class="max-w-6xl mx-auto text-center pt-lg">
-      <h2 class="text-2xl font-semibold pb-sm">What are you looking for?</h2>
+    <section
+      class="max-w-6xl mx-auto text-center pt-lg"
+      aria-labelledby="section-title-products"
+    >
+      <h2 id="section-title-products" class="text-2xl font-semibold pb-sm">
+        What are you looking for?
+      </h2>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-s">
-        <a href="/produkter#cakes">
-          <Cardone
-            title="Celebration Cakes"
-            image={celebrationCake.src}
-            alt="Shop Celebration Cake"
-          />
-        </a>
-        <a href="/produkter#cakes">
-          <Cardone title="Smaller Cakes" 
-          image={miniCake.src} 
-          alt="Shop Smaller cakes"/>
-        </a>
-        <a href="/produkter#events">
-          <Cardone title="Events"
-          image={Apollo.src}
-          alt="Shop Events"/>
-        </a>
+        <article>
+          <a href="/produkter#cakes" aria-label="Shop Celebration Cakes">
+            <Cardone
+              title="Celebration Cakes"
+              image={celebrationCake.src}
+              alt="Celebration Cake with decorations"
+            />
+          </a>
+        </article>
+
+        <article>
+          <a href="/produkter#cakes" aria-label="Shop Smaller Cakes">
+            <Cardone
+              title="Smaller Cakes"
+              image={miniCake.src}
+              alt="Selection of smaller cakes"
+            />
+          </a>
+        </article>
+
+        <article>
+          <a href="/produkter#events" aria-label="Shop Events">
+            <Cardone
+              title="Events"
+              image={Apollo.src}
+              alt="Catering setup for events"
+            />
+          </a>
+        </article>
       </div>
+
       <!-- Primær link-knapp -->
       <div class="py-sm">
         <Linkbutton href="/produkter" label="VIEW ALL" variant="primary" />

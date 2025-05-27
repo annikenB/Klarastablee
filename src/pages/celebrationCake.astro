@@ -3,7 +3,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import celebrationCake from "../assets/images/celebrationCake.webp";
 import walkingCake from "../assets/images/walkingCake.webp";
-import outsideCake from "../assets/images/outsideCake.webp";
 import ProductCard from "../components/ProductCard.astro";
 import cake2 from "../assets/images/4.webp";
 import tiramisu from "../assets/images/cakee.webp";
@@ -38,10 +37,18 @@ import tiramisu from "../assets/images/cakee.webp";
     <div class="order-2 md:order-1 w-full">
       <form>
         <div class="space-y-2">
-          <Image src={celebrationCake} alt="celebration cake" class="w-4/5 ml-auto" />
+          <Image
+            src={celebrationCake}
+            alt="celebration cake"
+            class="w-4/5 ml-auto"
+          />
           <Image src={cake2} alt="celebration cake" class="w-4/5 ml-auto" />
           <Image src={tiramisu} alt="celebration cake" class="w-4/5 ml-auto" />
-          <Image src={walkingCake} alt="celebration cake" class="w-4/5 ml-auto" />
+          <Image
+            src={walkingCake}
+            alt="celebration cake"
+            class="w-4/5 ml-auto"
+          />
         </div>
       </form>
     </div>

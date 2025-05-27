@@ -31,17 +31,19 @@ const {
         <h5 class="peer-checked:!text-primary-500 hover:italic">Description</h5>
       </label>
       <div class="hidden peer-checked:block mt-4">
-        {details.length > 0 ? (
-<ul class="list-none font-display max-w-prose mx-auto md:mx-0 space-y-4">
-            {details.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-        ) : (
-          <p class="text-gray-700 max-w-prose mx-auto md:mx-0">
-            Ingen ekstra informasjon tilgjengelig.
-          </p>
-        )}
+        {
+          details.length > 0 ? (
+            <ul class="list-none font-display max-w-prose mx-auto md:mx-0 space-y-4">
+              {details.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p class="text-gray-700 max-w-prose mx-auto md:mx-0">
+              Ingen ekstra informasjon tilgjengelig.
+            </p>
+          )
+        }
       </div>
     </div>
 
@@ -54,20 +56,24 @@ const {
         peer-checked:!text-primary-500 peer-checked:italic
         peer-checked:!border-primary-500 pb-1"
       >
-        <h5 class="inline-block pb-1 hover:italic mt-sm">Additional services</h5>
+        <h5 class="inline-block pb-1 hover:italic mt-sm">
+          Additional services
+        </h5>
       </label>
       <div class="hidden peer-checked:block mt-4">
-        {otherInfo.length > 0 ? (
-<ul class="list-none font-display max-w-prose mx-auto md:mx-0 space-y-4">
-            {otherInfo.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-        ) : (
-          <p class="text-gray-700 max-w-prose mx-auto md:mx-0">
-            Ingen ekstra informasjon tilgjengelig.
-          </p>
-        )}
+        {
+          otherInfo.length > 0 ? (
+            <ul class="list-none font-display max-w-prose mx-auto md:mx-0 space-y-4">
+              {otherInfo.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p class="text-gray-700 max-w-prose mx-auto md:mx-0">
+              Ingen ekstra informasjon tilgjengelig.
+            </p>
+          )
+        }
       </div>
     </div>
   </div>

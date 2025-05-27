@@ -1,21 +1,22 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import footerLogo from "../assets/images/footerLogo.webp";
 ---
 
-<section class="pt-lg h-full font-display">
+<footer class="pt-lg h-full font-display" role="contentinfo">
   <section class="md:grid grid-cols-5 gap-4 px-sm pt-lg">
-    <!-- 1. kol i grid -->
-    <nav class="col-span-1">
+    <!-- 1. kolonne -->
+    <nav class="col-span-1" aria-label="Company links">
       <ul>
-        <li class="pb-2 hover:text-primary-500"><a href="/about">About</a></li>
+        <li class="pb-2 hover:text-primary-500">
+          <a href="/about">About</a>
+        </li>
         <li class="pb-2 hover:text-primary-500">
           <a href="/contact">Contact</a>
         </li>
-        <li class="pb-2 hover:text-primary-500"><a href="/faq">FAQ</a></li>
+        <li class="pb-2 hover:text-primary-500">
+          <a href="/faq">FAQ</a>
+        </li>
         <li class="pb-2 hover:text-primary-500">
           <a
             href="/Priser-og-politik.pdf"
@@ -28,60 +29,69 @@ import footerLogo from "../assets/images/footerLogo.webp";
       </ul>
     </nav>
 
-    <!-- 2. kol i grid -->
-    <nav class="col-span-1">
+    <!-- 2. kolonne -->
+    <nav class="col-span-1" aria-label="Legal and external links">
       <ul>
         <li class="pb-2">CVR: 3984978</li>
-        <li class="pb-2">Copyright 2025©</li>
+        <li class="pb-2">Copyright © 2025</li>
         <li class="pb-2 hover:text-primary-500">
           <a
             href="https://www.findsmiley.dk/english/Pages/Frontpage.aspx"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            Smiley report</a
-          >
+            Smiley report
+          </a>
         </li>
         <li class="pb-2 hover:text-primary-500">
-          <a href="https://www.instagram.com/klaras.table/" target="_blank"
-            >Instagram</a
+          <a
+            href="https://www.instagram.com/klaras.table/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            Instagram
+          </a>
         </li>
       </ul>
     </nav>
 
-    <!-- 3-4 i grid er komme, lille smart fix -->
-    <div class="col-span-2"></div>
+    <!-- 3-4 kolonner: tomme for spacing -->
+    <div class="col-span-2" aria-hidden="true"></div>
 
-    <!-- 5. sign up -->
-    <nav class="col-span-1">
+    <!-- 5. Newsletter signup -->
+    <nav class="col-span-1" aria-label="Newsletter signup">
       <ul class="space-y-4 border-b">
         <li class="text-left md:text-center">
           Sign up for our monthly newsletter
         </li>
         <li>
-          <form class="flex w-full justify-between items-center">
+          <form
+            class="flex w-full justify-between items-center"
+            aria-label="Newsletter form"
+          >
+            <label for="footer-email" class="sr-only">Email address</label>
             <input
               type="email"
+              id="footer-email"
+              name="email"
               class="text-beige-700 w-full border-0 hover:italic"
               placeholder="Your email"
               required
             />
-            <a href="/konto">
-              <button
-                type="submit"
-                class="px-4 py-2 text-beige-700 hover:text-primary-500"
-              >
-                Submit
-              </button>
-            </a>
+            <button
+              type="submit"
+              class="px-4 py-2 text-beige-700 hover:text-primary-500"
+            >
+              Submit
+            </button>
           </form>
         </li>
       </ul>
     </nav>
   </section>
 
-  <!-- kæmpe logo -->
+  <!-- Footer logo -->
   <section class="text-center mt-sm">
-    <Image src={footerLogo} alt="tets" class="pt-xs" />
+    <Image src={footerLogo} alt="Klaras Table footer logo" class="pt-xs" />
   </section>
-</section>
+</footer>

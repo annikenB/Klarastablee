@@ -1,7 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import Cardtwo from "../components/Cardtwo.astro";
 import celebrationCake from "../assets/images/celebrationCake.webp";
 import petitepies from "../assets/images/petitepies.webp";
@@ -29,22 +27,25 @@ import hover5 from "../assets/images/5.webp";
         Dessert is the highlight of the event. Make yours stand out. We offer
         <span>cakes</span> and <span>desserts </span>for your next <span
           >commercial</span
-        > or <span>private event</span>. All orders are <span>made to order</span> can be adjusted for
-        allergies or specific needs. We also complementary delivery near Cph, table set ups,
-        and catering in the Copenhagen area.
-      </p> <br>
+        > or <span>private event</span>. All orders are <span
+          >made to order</span
+        > can be adjusted for allergies or specific needs. We also complementary
+        delivery near Cph, table set ups, and catering in the Copenhagen area.
+      </p>
+      <br />
       <p>
         Please reach out to us for further questions or inquiries - we would
         love to assist you
       </p>
       <a
-          href="https://mail.google.com/mail/?view=cm&to=infoklarastable@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="underline hover:text-primary-500 font-display"
-        >
-          infoklarastable@gmail.com
-        </a>
+        href="https://mail.google.com/mail/?view=cm&to=infoklarastable@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline hover:text-primary-500 font-display"
+        title="Send en e-mail til Klaras Table"
+      >
+        infoklarastable@gmail.com
+      </a>
     </section>
   </article>
 
@@ -54,7 +55,7 @@ import hover5 from "../assets/images/5.webp";
     <div class="relative w-full overflow-hidden px-lg">
       <!-- Scroll container with transition -->
       <div
-        class="flex gap-7 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+        class="flex gap-7 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4"
       >
         <div
           id="shopCarousel"
@@ -62,76 +63,70 @@ import hover5 from "../assets/images/5.webp";
         >
           <div class="flex gap-2 w-max">
             <div class="shrink-0 snap-start w-40 md:w-[300px]">
-            <a href="/madeleines">
-              <Cardtwo
-                title="Madeleines"
-                image={powderSugar.src}
-                hoverImage={hover5.src}
-                price="40 dkk pr. person - min. 10 servings"
-                buttonLabel="Read More"
-                href="/madeleines"
-              />
-            </a>
+              <a href="/madeleines">
+                <Cardtwo
+                  title="Madeleines"
+                  image={powderSugar.src}
+                  hoverImage={hover5.src}
+                  price="40 dkk pr. person - min. 10 servings"
+                  buttonLabel="Read More"
+                />
+              </a>
             </div>
             <div class="shrink-0 snap-start w-40 md:w-[300px]">
               <a href="/tinyTreats">
-              <Cardtwo
-                title="Tiny Treats"
-                image={hover.src}
-                hoverImage={manyPies.src}
-                price="50 dkk pr. person - min. 10 servings"
-                buttonLabel="Read More"
-                href="/tinyTreats"
-              />
-            </a>
+                <Cardtwo
+                  title="Tiny Treats"
+                  image={hover.src}
+                  hoverImage={manyPies.src}
+                  price="50 dkk pr. person - min. 10 servings"
+                  buttonLabel="Read More"
+                />
+              </a>
             </div>
             <div class="shrink-0 snap-start w-40 md:w-[300px]">
               <a href="/petitePies">
-              <Cardtwo
-                title="Petite Pies"
-                image={petitepies.src}
-                hoverImage={hover3.src}
-                price="60 dkk pr. person - min. 10 servings"
-                buttonLabel="Read more"
-                href="/petitePies"
-              />
-            </a>
+                <Cardtwo
+                  title="Petite Pies"
+                  image={petitepies.src}
+                  hoverImage={hover3.src}
+                  price="60 dkk pr. person - min. 10 servings"
+                  buttonLabel="Read more"
+                />
+              </a>
             </div>
             <div class="shrink-0 snap-start w-40 md:w-[300px]">
               <a href="/celebrationCake">
-              <Cardtwo
-                title="Celebration Cake"
-                image={celebrationCake.src}
-                hoverImage={hover4.src}
-                price="From 95 dkk pr. person - min. 10 servings"
-                buttonLabel="Read More"
-                href="/celebrationCake"
-              />
-            </a>
+                <Cardtwo
+                  title="Celebration Cake"
+                  image={celebrationCake.src}
+                  hoverImage={hover4.src}
+                  price="From 95 dkk pr. person - min. 10 servings"
+                  buttonLabel="Read More"
+                />
+              </a>
             </div>
             <div class="shrink-0 snap-start w-40 md:w-[300px]">
               <a href="/privateEvent">
-              <Cardtwo
-                title="Private Event"
-                image={event.src}
-                hoverImage={event2.src}
-                price="from 200 pr. guest, 10 servings"
-                buttonLabel="Read more"
-                href="/privateEvent"
-              />
-            </a>
+                <Cardtwo
+                  title="Private Event"
+                  image={event.src}
+                  hoverImage={event2.src}
+                  price="From 200 dkk pr. guest, 10 servings"
+                  buttonLabel="Read more"
+                />
+              </a>
             </div>
             <div class="shrink-0 snap-start w-40 md:w-[300px]">
               <a href="/comEvent">
-              <Cardtwo
-                title="Commercial Event"
-                image={apollo.src}
-                hoverImage={MBsetup.src}
-                price="from 200 pr. guest, min. 20 servings"
-                buttonLabel="Read More"
-                href="/comEvent"
-              />
-            </a>
+                <Cardtwo
+                  title="Commercial Event"
+                  image={apollo.src}
+                  hoverImage={MBsetup.src}
+                  price="from 200 pr. guest, min. 20 servings"
+                  buttonLabel="Read More"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -158,8 +153,8 @@ import hover5 from "../assets/images/5.webp";
       </button>
     </div>
 
-          <!-- overblik -->
-    <section id="sektion 4" class="pt-md">
+    <!-- overblik -->
+    <section id="eventsandcakes" class="pt-md">
       <section id="events">
         <h2 class="text-center mt-sm mb-sm">Events and Catering</h2>
         <div class="flex justify-center items-center gap-4">
@@ -204,7 +199,7 @@ import hover5 from "../assets/images/5.webp";
                 href="/madeleines"
               />
             </a>
-            </div>
+          </div>
           <div class="shrink-0 snap-start w-40 md:w-[350px]">
             <a href="/tinyTreats">
               <Cardtwo
@@ -216,94 +211,49 @@ import hover5 from "../assets/images/5.webp";
                 href="/tinyTreats"
               />
             </a>
-            </div>
           </div>
         </div>
-        <div class="flex justify-center items-center gap-4 mt-sm">
-          <div class="shrink-0 snap-start w-40 md:w-[350px]">
-            <a href="/petitePies">
-              <Cardtwo
-                title="Petite Pies"
-                image={petitepies.src}
-                hoverImage={hover3.src}
-                price="60 dkk pr. person - min. 10 servings"
-                buttonLabel="Read more"
-                href="/petitePies"
-              />
-            </a>
-          </div>
-          <div class="shrink-0 snap-start w-40 md:w-[350px]">
-            <a href="/celebrationCake">
-              <Cardtwo
-                title="Celebration Cake"
-                image={celebrationCake.src}
-                hoverImage={hover4.src}
-                price="From 95 dkk pr. person - min. 10 servings"
-                buttonLabel="Read More"
-                href="/celebrationCake"
-              />
-            </a>
-          </div>
-        </div>
-
       </section>
-      <!-- <section class="">
-        <h2 class="text-center p-20">Cakes and Sweets</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="w-[500px]">
-            <Cardtwo
-              title="Celebration Cake"
-              image={celebrationCake.src}
-              price="65 dk pr. person - min. 10 servings"
-              buttonLabel="knap her"
-              href="/singleview"
-            />
-          </div>
-          <div class="w-[500px]">
+      <div class="flex justify-center items-center gap-4 mt-sm">
+        <div class="shrink-0 snap-start w-40 md:w-[350px]">
+          <a href="/petitePies">
             <Cardtwo
               title="Petite Pies"
               image={petitepies.src}
-              price="65 dk pr. person - min. 10 servings"
-              buttonLabel="knap her"
-              href="/singleview"
+              hoverImage={hover3.src}
+              price="60 dkk pr. person - min. 10 servings"
+              buttonLabel="Read more"
+              href="/petitePies"
             />
-          </div>
+          </a>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="w-[500px]">
+        <div class="shrink-0 snap-start w-40 md:w-[350px]">
+          <a href="/celebrationCake">
             <Cardtwo
-              title="Tiny Treats"
-              image={manyPies.src}
-              price="65 dk pr. person - min. 10 servings"
-              buttonLabel="knap her"
-              href="/singleview"
+              title="Celebration Cake"
+              image={celebrationCake.src}
+              hoverImage={hover4.src}
+              price="From 95 dkk pr. person - min. 10 servings"
+              buttonLabel="Read More"
+              href="/celebrationCake"
             />
-          </div>
-          <div class="w-[500px]">
-            <Cardtwo
-              title="Madeleines"
-              image={powderSugar.src}
-              price="65 dk pr. person - min. 10 servings"
-              buttonLabel="knap her"
-              href="/singleview"
-            />
-          </div>
+          </a>
         </div>
-      </section> -->
+      </div>
     </section>
-    <script>
-      let shopIndex = 0;
-      const shopItemsPerView = 3; // Justér for mobil vs desktop om ønsket
-      const shopCarousel = document.getElementById("shopCarousel");
-      const shopTotalItems = shopCarousel.children[0].children.length;
-
-      const shopPrev = document.getElementById("shopPrev");
-      const shopNext = document.getElementById("shopNext");
-
-      function updateShopCarousel() {
-        const offset = (-shopIndex * 100) / shopItemsPerView;
-        shopCarousel.style.transform = `translateX(${offset}%)`;
-      }
-    </script>
   </section>
+  <script>
+    let shopIndex = 0;
+    const shopItemsPerView = 3; // Justér for mobil vs desktop om ønsket
+    const shopCarousel = document.getElementById("shopCarousel");
+    const shopTotalItems = shopCarousel.children[0].children.length;
+
+    const shopPrev = document.getElementById("shopPrev");
+    const shopNext = document.getElementById("shopNext");
+
+    function updateShopCarousel() {
+      const offset = (-shopIndex * 100) / shopItemsPerView;
+      shopCarousel.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
 </MainLayout>

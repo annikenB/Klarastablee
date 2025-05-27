@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Button from "../components/Button.astro";
 import logo from "../assets/images/secondaryLogo.webp";
 import background from "../assets/images/newsletter.webp";
 ---
@@ -8,44 +7,67 @@ import background from "../assets/images/newsletter.webp";
 <head>
   <meta charset="UTF-8" />
 </head>
-
 <article
   id="newsletter-popup"
   class="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 hidden px-md"
+  role="dialog"
+  aria-labelledby="newsletter-title"
+  aria-describedby="newsletter-description"
+  aria-modal="true"
 >
-  <!-- Sløret bagrundt -->
+  <!-- Sløret baggrund -->
   <div class="absolute inset-0 bg-opacity-50 backdrop-blur-sm z-40"></div>
 
-  <!-- bg billede-->
+  <!-- Popup container -->
   <div class="relative z-50">
-    <!-- Baggrundsbillede -->
-    <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
+    <!-- Bakgrunnsbilde -->
+    <div
+      class="absolute inset-0 flex justify-center items-center pointer-events-none z-0"
+      aria-hidden="true"
+    >
       <Image
         src={background}
-        alt="Newsletter background"
+        alt=""
         class="object-contain max-w-none w-[110%] h-auto"
       />
     </div>
 
-    <!-- indhold-->
-    <div class="p-0 max-w-5xl mx-auto relative flex overflow-hidden bg-transparent z-10">
-      <div class="flex-1 flex flex-col justify-center items-center p-6 px-lg bg-transparent">
+    <!-- Innhold -->
+    <div
+      class="p-0 max-w-5xl mx-auto relative flex overflow-hidden bg-transparent z-10"
+    >
+      <div
+        class="flex-1 flex flex-col justify-center items-center p-6 px-lg bg-transparent"
+      >
+        <!-- Lukke-knapp -->
         <button
           id="close-popup-btn"
           class="bg-transparent text-sm absolute top-2.5 right-2.5 group"
+          aria-label="Close newsletter popup"
         >
+          ✕
         </button>
 
-        <h5>A Note from Klaras Table</h5>
-        <p class="text-center m-xs">
-          Little stories, curated inspiration and a new recipe every month
+        <h5 id="newsletter-title">A Note from Klaras Table</h5>
+        <p id="newsletter-description" class="text-center m-xs">
+          Little stories, curated inspiration and a new recipe every month.
         </p>
+
         <ul class="space-y-4 border-b">
-          <li class="text-left md:text-center font-display">Sign up for our monthly newsletter</li>
+          <li class="text-left md:text-center font-display">
+            Sign up for our monthly newsletter
+          </li>
           <li>
-            <form class="flex w-full items-center gap-4">
+            <form
+              class="flex w-full items-center gap-4"
+              aria-label="Newsletter signup form"
+            >
+              <label for="newsletter-email" class="sr-only">Email address</label
+              >
               <input
                 type="email"
+                id="newsletter-email"
+                name="email"
                 class="w-full max-w-[400px] border-0 text-beige-700 font-display transition-all duration-200 hover:italic"
                 placeholder="Your email"
                 required
@@ -59,46 +81,45 @@ import background from "../assets/images/newsletter.webp";
             </form>
           </li>
         </ul>
+
         <div class="max-w-xl mx-auto text-center mt-xs">
-          <Image src={logo} alt="Secondary logo" class="max-w-[100px] mx-auto" />
+          <Image
+            src={logo}
+            alt="Klaras Table secondary logo"
+            class="max-w-[100px] mx-auto"
+          />
         </div>
       </div>
     </div>
   </div>
 
+  <!-- JS: åpne/lukke -->
   <script>
     window.onload = () => {
       const popup = document.getElementById("newsletter-popup");
       const closeButton = document.getElementById("close-popup-btn");
-  
-      // Tjek om popup allerede er vist tidligere
+
       const isPopupShown = localStorage.getItem("newsletterPopupShown");
-  
+
       if (!isPopupShown) {
         setTimeout(() => {
           popup.classList.remove("hidden");
-        }, 10000); // Vis efter 10 sekunder
-  
-        // Marker popup som vist i localStorage
+        }, 10000);
         localStorage.setItem("newsletterPopupShown", "true");
       }
-  
-      // Luk popup når man klikker udenfor indholdet
+
       document.addEventListener("click", (e) => {
         const content = popup.querySelector(".max-w-5xl");
         const isInside = content.contains(e.target);
         const isVisible = !popup.classList.contains("hidden");
-  
         if (!isInside && isVisible) {
           popup.classList.add("hidden");
         }
       });
-  
-      // Luk popup når man klikker på luk-knap (hvis du vil tilføje den funktion)
+
       closeButton.addEventListener("click", () => {
         popup.classList.add("hidden");
       });
     };
   </script>
-  
 </article>
