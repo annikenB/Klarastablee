@@ -6,8 +6,8 @@ const {
   price = "Pris ikke oppgitt",
   details = [],
   otherInfo = [], // Brukes som array
-  buttonLabel = "Start your Order",
-  href = "/stepone",
+  buttonLabel = "Contact us to order",
+  href="https://mail.google.com/mail/?view=cm&to=infoklarastable@gmail.com",
 } = Astro.props;
 ---
 
@@ -70,7 +70,7 @@ const {
             </ul>
           ) : (
             <p class="text-gray-700 max-w-prose mx-auto md:mx-0">
-              Ingen ekstra informasjon tilgjengelig.
+              No additional information.
             </p>
           )
         }

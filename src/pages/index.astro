@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Linkbutton from "../components/Linkbutton.astro";
 import Cardone from "../components/Cardone.astro";
-import Review from "../components/Review.astro";
 import Newsletter from "../components/Newsletter.astro";
 import celebrationCake from "../assets/images/celebrationCake.webp";
 import Apollo from "../assets/images/apollo.webp";
@@ -12,21 +11,19 @@ import miniCake from "../assets/images/miniCake.webp";
 <Newsletter />
 <MainLayout title="Home">
   <article>
-    <section
-      class="relative h-svh w-full flex items-center justify-center overflow-hidden"
-    >
-      <video
-        autoplay
-        loop
-        muted
-        playsinline
-        class="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src="indexvideo.MP4" type="video/mp4" />
-      </video>
-
-      <div class="relative z-10">
-        <h1 class="!text-beige-100 text-center whitespace-nowrap">
+    <section class="relative w-full overflow-hidden">
+      <div class="relative w-full h-[60vh] md:h-svh flex items-center justify-center">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="indexvideo.MP4" type="video/mp4" />
+        </video>
+    
+        <h1 class="!text-beige-100 relative z-10 text-center whitespace-nowrap">
           Personalised cakes, desserts and events
         </h1>
       </div>
@@ -115,15 +112,14 @@ import miniCake from "../assets/images/miniCake.webp";
 
       <!-- Primær link-knapp -->
       <div class="py-sm">
-        <Linkbutton href="/produkter" label="VIEW ALL" variant="primary" />
+        <Linkbutton href="/produkter" label="View all" variant="primary" />
       </div>
     </section>
 
     <!-- sektion 3, trustpilot -->
-    <section id="sektion 3">
+    <!-- <section id="sektion 3">
       <h2 class="text-center pt-lg">Trustpilot</h2>
       <div class="mx-md">
-        <Review />
         <div class="">
           <div class="py-sm text-center">
             <Linkbutton
@@ -135,6 +131,6 @@ import miniCake from "../assets/images/miniCake.webp";
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </article>
 </MainLayout>
