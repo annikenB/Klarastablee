@@ -115,7 +115,7 @@
   }
 
   h3 {
-    @apply     text-mobile-xxlarge font-display text-primary-900;
+    @apply     text-mobile-large font-display text-primary-900;
   }
 
   h4 {
