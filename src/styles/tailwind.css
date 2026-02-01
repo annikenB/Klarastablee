@@ -127,10 +127,10 @@
   }
 
   p {
-    @apply     text-mobile-xsmall font-display text-primary-900;
+    @apply     text-mobile-small font-display text-primary-900;
   }
   span {
-    @apply     text-mobile-xsmall italic font-display text-primary-500;
+    @apply     text-mobile-small italic font-display text-primary-500;
   }
   
 
